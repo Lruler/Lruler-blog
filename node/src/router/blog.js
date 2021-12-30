@@ -2,7 +2,7 @@ const handleBlogRouter = (req, res) => {
 
     const method = req.method
     const url = req.url
-    const path = url.split('?')[0]
+    const path = url.split('?')[1]
 
     // 获取博客列表
     if (method === 'GET' && path === '/api/blog/list') {
