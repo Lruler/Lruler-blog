@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.10/libexec/bin/yarn.js add @types/fullpage_react-fullpage
+  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.10/libexec/bin/yarn.js add @types/react-fullpage
 
 PATH: 
   /opt/homebrew/opt/mongodb-community@4.0/bin:/opt/homebrew/opt/mongodb-community@4.0/bin:/Users/lruler/.autojump/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.npm.taobao.org/@types%2ffullpage_react-fullpage: Not found
+  Error: https://registry.npm.taobao.org/@types%2freact-fullpage: Not found
       at Request.params.callback [as _callback] (/opt/homebrew/Cellar/yarn/1.22.10/libexec/lib/cli.js:66988:18)
       at Request.self.callback (/opt/homebrew/Cellar/yarn/1.22.10/libexec/lib/cli.js:140749:22)
       at Request.emit (events.js:376:20)
@@ -310,7 +310,7 @@ Lockfile:
   
   "@fullpage/react-fullpage@^0.1.19":
     version "0.1.19"
-    resolved "https://registry.npmmirror.com/@fullpage/react-fullpage/download/@fullpage/react-fullpage-0.1.19.tgz#770ecfc96475900007ce1c29376da7fa11fb26a8"
+    resolved "https://registry.nlark.com/@fullpage/react-fullpage/download/@fullpage/react-fullpage-0.1.19.tgz#770ecfc96475900007ce1c29376da7fa11fb26a8"
     integrity sha1-dw7PyWR1kAAHzhwpN22n+hH7Jqg=
     dependencies:
       "@babel/polyfill" "^7.2.5"
@@ -567,7 +567,7 @@ Lockfile:
   
   fullpage.js@^3.1.0:
     version "3.1.2"
-    resolved "https://registry.nlark.com/fullpage.js/download/fullpage.js-3.1.2.tgz#ee6289f52edb2a9f9c25d09c4022043b701d3cc0"
+    resolved "https://registry.npmmirror.com/fullpage.js/download/fullpage.js-3.1.2.tgz#ee6289f52edb2a9f9c25d09c4022043b701d3cc0"
     integrity sha1-7mKJ9S7bKp+cJdCcQCIEO3AdPMA=
   
   function-bind@^1.1.1:
