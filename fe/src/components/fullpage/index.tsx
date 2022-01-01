@@ -3,9 +3,16 @@ import "./index.css";
 
 interface FullpageProps {
   tips?: string[];
+  color?: string;
+  navColor?: string;
 }
 
-const Fullpage: React.FC<FullpageProps> = ({ children, tips = [] }) => {
+const Fullpage: React.FC<FullpageProps> = ({
+  children,
+  tips = [],
+  color = "white",
+  navColor = "white",
+}) => {
   const pageSum = (children as Array<any>).length;
   const [pageNum, setPageNum] = useState(0);
   const [isScroll, setIsScroll] = useState(false);
@@ -51,9 +58,9 @@ const Fullpage: React.FC<FullpageProps> = ({ children, tips = [] }) => {
           {nav.map((_, index) => (
             <li key={index} onClick={() => handlePage(index)}>
               <div className={index === pageNum ? "active" : "pending"}>
-                <span className="nav" />
+                <span className="nav" style={{ backgroundColor: navColor }} />
               </div>
-              {tips.length ? <span className="tips">{tips[index]}</span> : null}
+              {tips.length ? <span className="tips" style={{color}}>{tips[index]}</span> : null}
             </li>
           ))}
         </ul>

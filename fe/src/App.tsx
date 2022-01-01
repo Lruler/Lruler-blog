@@ -1,27 +1,17 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/homepage";
+import Blog from "./pages/blog";
+import Resume from "./pages/resume";
 import Fullpage from "./components/fullpage";
-import "./app.css";
-
-const Red: React.FC = () => {
-  return <div className="red">red</div>;
-};
-
-const Yellow: React.FC = () => {
-  return <div className="yellow">yellow</div>;
-};
-
-const Blue: React.FC = () => {
-  return <div className="blue">blue</div>;
-};
 
 const App: React.FC = () => {
   return (
     <>
-      <Fullpage tips={['red', 'blue', 'yellow']}>
-        <Red />
-        <Yellow />
-        <Blue />
+      <Fullpage tips={['主页', '个人博客', '我的简历']} navColor="black" color="black">
+        <HomePage />
+        <Blog />
+        <Resume />
       </Fullpage>
     </>
   );
