@@ -44,16 +44,13 @@ const Fullpage: React.FC<FullpageProps> = ({
     return <div className="fullpage-item">{c}</div>;
   });
   useEffect(() => {
-    if (!routes.includes(window.location.pathname.slice(1))) {
-      window.location.href = window.location.origin + `/${routes[0]}`;
-    } else {
+    if (routes.includes(window.location.pathname.slice(1)))
       setPageNum(routes.indexOf(window.location.pathname.slice(1)));
-    }
   }, []);
   useEffect(() => {
     if (!isScroll) return;
     else {
-      history.pushState({}, "", routes[pageNum]);
+      history.replaceState({}, "", routes[pageNum]);
     }
   }, [pageNum]);
   return (

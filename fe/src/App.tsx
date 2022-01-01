@@ -1,23 +1,16 @@
-import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/homepage";
-import Blog from "./pages/blog";
-import Resume from "./pages/resume";
-import Fullpage from "./components/fullpage";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Home from "./pages/home";
+
 
 const App: React.FC = () => {
   return (
     <>
-      <Fullpage
-        routes={["home", "blog", "resume"]}
-        tips={["主页", "个人博客", "我的简历"]}
-        navColor="black"
-        color="black"
-      >
-        <HomePage />
-        <Blog />
-        <Resume />
-      </Fullpage>
+      <Router>
+        <Routes>
+          <Route path='home' element={<Home />} />
+          <Route path='/' element={<Navigate to='home' />} />
+        </Routes>
+      </Router>
     </>
   );
 };
