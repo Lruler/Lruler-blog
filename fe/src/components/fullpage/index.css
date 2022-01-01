@@ -20,7 +20,6 @@
     height: 13px;
     margin: 7px;
     position: relative;
-    cursor: pointer;
 }
 
 .fullpage-nav ul li div {
@@ -31,6 +30,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .nav {
@@ -44,11 +44,11 @@
     position: absolute;
     right: 20px;
     top: -5px;
-    width: 0;
     display: inline-block;
     color: white;
     opacity: 0;
     transition: all .2s ease-in;
+    user-select: none;
 }
 
 .active .nav {
@@ -66,18 +66,9 @@
     width: 10px;
 }
 
-.pending:hover .tips {
+.pending:hover + .tips {
     opacity: 1;
 }
-
-.pending:hover{
-    overflow: visible;
-}
-
-.active:hover{
-    overflow: visible;
-}
-
 
 
 

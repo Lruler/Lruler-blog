@@ -1,0 +1,6 @@
+fe/node_modules
+be/node/node_modules
+.DS_Store
+dist
+dist-ssr
+*.local

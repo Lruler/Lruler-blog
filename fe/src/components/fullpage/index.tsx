@@ -48,9 +48,9 @@ const Fullpage: React.FC<FullpageProps> = ({ children, tips = [] }) => {
           {nav.map((_, index) => (
             <li key={index} onClick={() => handlePage(index)}>
               <div className={index === pageNum ? "active" : "pending"}>
-                <span className="nav"></span>
-                      {tips.length ? <span className="tips">{tips[index]}</span> : null}
+                <span className="nav" />
               </div>
+              {tips.length ? <span className="tips">{tips[index]}</span> : null}
             </li>
           ))}
         </ul>
