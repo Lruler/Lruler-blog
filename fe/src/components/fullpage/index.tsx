@@ -48,10 +48,7 @@ const Fullpage: React.FC<FullpageProps> = ({
       setPageNum(routes.indexOf(window.location.pathname.slice(1)));
   }, []);
   useEffect(() => {
-    if (!isScroll) return;
-    else {
-      history.replaceState({}, "", routes[pageNum]);
-    }
+    history.replaceState({}, "", routes[pageNum]);
   }, [pageNum]);
   return (
     <>
