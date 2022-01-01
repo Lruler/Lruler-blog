@@ -31,6 +31,9 @@ const Fullpage: React.FC<FullpageProps> = ({ children, tips = [] }) => {
     setPageNum(index);
   };
   const nav = Array(pageSum).fill(null);
+  const fullPageItem = React.Children.map(children, (c) => {
+    return <div className="fullpage-item">{c}</div>;
+  });
   return (
     <>
       <div
@@ -41,7 +44,7 @@ const Fullpage: React.FC<FullpageProps> = ({ children, tips = [] }) => {
         }}
         id="fullpage-wrapper"
       >
-        {children}
+        {fullPageItem}
       </div>
       <div className="fullpage-nav">
         <ul>

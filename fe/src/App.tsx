@@ -4,15 +4,15 @@ import Fullpage from "./components/fullpage";
 import "./app.css";
 
 const Red: React.FC = () => {
-  return <div className="red"></div>;
+  return <div className="red">red</div>;
 };
 
 const Yellow: React.FC = () => {
-  return <div className="yellow"></div>;
+  return <div className="yellow">yellow</div>;
 };
 
 const Blue: React.FC = () => {
-  return <div className="blue"></div>;
+  return <div className="blue">blue</div>;
 };
 
 const App: React.FC = () => {
