@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
 
 interface FullpageProps {
+  routes: string[];
   tips?: string[];
   color?: string;
   navColor?: string;
@@ -9,6 +10,7 @@ interface FullpageProps {
 
 const Fullpage: React.FC<FullpageProps> = ({
   children,
+  routes,
   tips = [],
   color = "white",
   navColor = "white",
@@ -41,6 +43,19 @@ const Fullpage: React.FC<FullpageProps> = ({
   const fullPageItem = React.Children.map(children, (c) => {
     return <div className="fullpage-item">{c}</div>;
   });
+  useEffect(() => {
+    if (!routes.includes(window.location.pathname.slice(1))) {
+      window.location.href = window.location.origin + `/${routes[0]}`;
+    } else {
+      setPageNum(routes.indexOf(window.location.pathname.slice(1)));
+    }
+  }, []);
+  useEffect(() => {
+    if (!isScroll) return;
+    else {
+      history.pushState({}, "", routes[pageNum]);
+    }
+  }, [pageNum]);
   return (
     <>
       <div
@@ -60,7 +75,11 @@ const Fullpage: React.FC<FullpageProps> = ({
               <div className={index === pageNum ? "active" : "pending"}>
                 <span className="nav" style={{ backgroundColor: navColor }} />
               </div>
-              {tips.length ? <span className="tips" style={{color}}>{tips[index]}</span> : null}
+              {tips.length ? (
+                <span className="tips" style={{ color }}>
+                  {tips[index]}
+                </span>
+              ) : null}
             </li>
           ))}
         </ul>
