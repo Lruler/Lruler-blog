@@ -7,3 +7,41 @@
     background:url(../../assets/login.jpg) no-repeat;
     background-size: cover;
 }
+
+.login-button {
+    height: 60px;
+    width: 140px;
+    line-height: 60px;
+    text-align: center;
+    margin: 40px;
+    text-decoration: none;
+    position: relative;
+}
+
+.login-button::after,
+.login-button::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid plum;
+}
+
+.login-button::before {
+    top: 0;
+    left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.login-button::after {
+    right: 0;
+    bottom: 0;
+    border-top: 0;
+    border-left: 0;
+}
+
+.login-button:hover {
+    background-color: plum;
+    box-shadow: 0 0 50px plum;
+}
