@@ -1,0 +1,16 @@
+.blog-layout {
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+    width: 100vw;
+}
+
+.blog-header {
+    height: 10vh;
+    width: 100vw;
+    background-color: wheat;
+}
+
+.blog-sidebar {
+    background-color: wheat;
+}

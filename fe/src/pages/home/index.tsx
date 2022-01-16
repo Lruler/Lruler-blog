@@ -7,7 +7,7 @@ import Fullpage from "../../components/fullpage";
 const Home: React.FC = () => {
   return (
     <Fullpage
-      routes={["home", "blog", "resume"]}
+      routes={["home", "blog", "resume", "1", "2", "3"]}
       tips={["主页", "个人博客", "我的简历"]}
     >
       <Login />
