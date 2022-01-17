@@ -2,7 +2,11 @@ import React from "react";
 import "./index.css";
 
 const Header: React.FC = () => {
-  return <header className="blog-header">头部</header>;
+  return (
+    <header className="blog-header">
+      <p>Lruler</p>
+    </header>
+  );
 };
 
 const SidebarR: React.FC = () => {

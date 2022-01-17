@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "DarkFalconDemoRegular-2";
+    src:  url("../../../assets/font/DarkFalconDemoRegular-2.ttf") format("truetype");/* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    font-style: normal;
+    font-weight: normal;
+}
+
 .blog-layout {
     display: flex;
     justify-content: space-between;
@@ -9,6 +16,7 @@
     height: 10vh;
     width: 100vw;
     background-color: wheat;
+    font-family:  "DarkFalconDemoRegular-2";
 }
 
 .blog-sidebar {
