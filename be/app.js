@@ -7,9 +7,6 @@ const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 // const session = require('koa-generic-session')
 // const redisStore = require('koa-redis ')
-const models = require('./db/models/index')
-
-const index = require('./routes/index')
 const users = require('./routes/users')
 
 
@@ -36,7 +33,6 @@ app.use(async (ctx, next) => {
 })
 
 // routes
-app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
 
 // error-handling

@@ -1,17 +1,44 @@
 const models = require('../db/models')
 const router = require('koa-router')()
 
-router.prefix('/users')
+router.prefix('/login')
 
-router.get('/', function (ctx, next) {
-  ctx.body = 'this is a users response!'
+const { User } = models
+
+router.post('/', async (ctx) => {
+  try {
+    const {
+      userName,
+      password
+    } = ctx.request.body
+
+    console.log(userName, password);
+
+    let users = await User.findOne({
+      where: {
+        userName,
+        password
+      }
+    })
+
+    if (users) {
+      ctx.body = {
+        users,
+        msg: '登陆成功'
+      }
+    } else {
+      ctx.body = {
+        msg: '该用户不存在'
+      }
+    }
+
+  } catch (error) {
+    throw error
+  }
 })
 
-router.get('/bar', function (ctx, next) {
-  ctx.body = 'this is a users/bar response'
-})
-
-router.post('/add', async (ctx) => {
+/*
+ router.post('/add', async (ctx) => {
   try {
     const { Username, password} = ctx.request.body
 
@@ -67,6 +94,8 @@ router.get('/look', async () => {
     limit
   })
 })
-// pm2
+pm2 
+
+*/
 
 module.exports = router
