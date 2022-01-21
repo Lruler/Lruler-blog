@@ -1,0 +1,22 @@
+.msg-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2.5em;
+    min-width: 130px;
+    width: fit-content;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+}
+
+.msg-icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
