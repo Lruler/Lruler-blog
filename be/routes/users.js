@@ -32,10 +32,10 @@ router.post('/add', async (ctx) => {
 
 })
 
-router.post('/update', async (ctx) => {
+router.post('/update', async (ctx) => { 
   try {
     const {userName, password, id } = ctx.request.body
-    // findOne 查找
+    // findOne 查找 只写where就是查全部
     let user = await models.User.findOne({
       where: {
         id
