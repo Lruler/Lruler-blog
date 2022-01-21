@@ -11,7 +11,7 @@
 .resume-logo {
     height: 500px;
     width: 500px;
-    background: url(../../assets/resume.png) no-repeat;
+    background: url(../../assets/images/resume.png) no-repeat;
     background-size: cover;
     animation: rotate 30s linear infinite;
 }

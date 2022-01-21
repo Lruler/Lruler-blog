@@ -1,5 +1,4 @@
 import React from "react";
-import resume from "../../assets/resume.png";
 import "./index.css";
 
 const Resume: React.FC = () => {
