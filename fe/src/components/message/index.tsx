@@ -33,13 +33,24 @@ const Msg: React.FC<messageProps> = ({ msg, status }) => {
 
 interface messageComp extends React.FC<messageProps> {
   success: (msg: string) => void;
-  error?: (msg: string) => void;
+  error: (msg: string) => void;
 }
 
 const Message = Msg as messageComp;
 
 Message.success = (msg: string) => {
   const success = <Msg msg={msg} status={1} />;
+  const div = document.createElement("div");
+  document.body.append(div);
+  ReactDOM.render(success, div);
+  setTimeout(() => {
+    ReactDOM.unmountComponentAtNode(div);
+    div.remove();
+  }, 1000);
+};
+
+Message.error = (msg: string) => {
+  const success = <Msg msg={msg} status={0} />;
   const div = document.createElement("div");
   document.body.append(div);
   ReactDOM.render(success, div);

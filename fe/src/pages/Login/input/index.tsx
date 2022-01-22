@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, ReactNode } from "react";
 import { Login } from "../../../services/api/login";
-import { Test } from "../../../services/api/test";
+import Message from "../../../components/message";
 import "./index.css";
 
 export interface input {
@@ -34,7 +34,8 @@ const Input: React.FC = () => {
 
   const login = () => {
     Login(userInput).then((res) => {
-      console.log(res);
+      if (res.code === 0) Message.success(res.msg)
+      else Message.error(res.msg)
     })
   };
 

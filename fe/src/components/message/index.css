@@ -13,10 +13,21 @@
     padding: 10px;
     background-color: white;
     box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+    animation: appear 0.2s;
 }
 
 .msg-icon {
     height: 20px;
     width: 20px;
     margin-right: 10px;
+}
+
+@keyframes appear {
+    from {
+        top: 2vh;
+    }
+
+    to {
+        top: 10vh
+    }
 }
