@@ -5,6 +5,21 @@ router.prefix('/blog')
 
 const { Blog } = model
 
+// 获得所有文章
+router.get('/list', async (ctx) => {
+    const { page } = ctx.request.query
+    // 设置分页
+    let limit = 2
+    let offset = (page - 1) * 2
+
+    const blogs = await Blog.findAndCountAll({
+        limit,
+        offset
+    })
+
+    ctx.body = blogs
+})
+
 // 新增文章
 router.post('/add', async (ctx) => {
     const blog = await Blog.create(ctx.request.body)
@@ -15,6 +30,7 @@ router.post('/add', async (ctx) => {
 router.delete('/delete', async (ctx) => {
     const { id } = ctx.request.query
 
+    console.log(Blog.findOne, Blog.findById);
     const blog = await Blog.findOne({
         where: +id
     })
@@ -32,7 +48,7 @@ router.delete('/delete', async (ctx) => {
 
 })
 
-// 查找文章
+// 查看文章
 router.get('/get', async (ctx) => {
     const { id } = ctx.request.query
     const blog = await Blog.findOne({
@@ -54,7 +70,6 @@ router.get('/get', async (ctx) => {
 // 修改文章
 router.post('/edit', async (ctx) => {
     const { content, id } = ctx.request.body
-    console.log(111);
     const blog = await Blog.findOne({
         where: id
     })
