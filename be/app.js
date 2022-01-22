@@ -8,6 +8,7 @@ const logger = require('koa-logger')
 // const session = require('koa-generic-session')
 // const redisStore = require('koa-redis ')
 const users = require('./routes/users')
+const blogs = require('./routes/blog')
 
 
 // error handler
@@ -34,6 +35,7 @@ app.use(async (ctx, next) => {
 
 // routes
 app.use(users.routes(), users.allowedMethods())
+app.use(blogs.routes(), users.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
