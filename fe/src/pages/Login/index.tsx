@@ -1,19 +1,19 @@
-import React, { MouseEventHandler, useState } from "react";
+import React, { useState } from "react";
+import close from "../../assets/images/close2.png";
 import Input from "./input";
 import "./index.css";
 
 const Login: React.FC = () => {
   const [isLogin, setIsLogin] = useState(false);
-  const handleLogin = (type: number) => {
-    if (type === 0 && isLogin) setIsLogin(!isLogin);
-    else if (type === 1) setIsLogin(!isLogin);
+  const handleLogin = () => {
+    setIsLogin(!isLogin);
   };
   return (
-    <div className="login-wrapper" onClick={() => handleLogin(0)}>
+    <div className="login-wrapper">
       {isLogin ? (
         <Input />
       ) : (
-        <div className="login-button" onClick={() => handleLogin(1)}>
+        <div className="login-button" onClick={handleLogin}>
           登陆
         </div>
       )}

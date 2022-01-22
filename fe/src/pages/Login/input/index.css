@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-* {
-  box-sizing: border-box;
-}
-
 .container {
+  position: relative;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 20px 40px;
   border-radius: 5px;
@@ -25,6 +22,15 @@
     font-family: 'Muli', sans-serif;
     color: white;
     font-size: 12px;
+}
+
+.container img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 30px;
+  width: auto;
+  cursor: pointer;
 }
 
 .btn {

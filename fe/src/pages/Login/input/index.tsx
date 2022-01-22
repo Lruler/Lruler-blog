@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, ReactNode } from "react";
+import close from "../../../assets/images/close2.png";
 import { Login } from "../../../services/api/login";
 import Message from "../../../components/message";
 import "./index.css";
@@ -34,44 +35,45 @@ const Input: React.FC = () => {
 
   const login = () => {
     Login(userInput).then((res) => {
-      if (res.code === 0) Message.success(res.msg)
-      else Message.error(res.msg)
-    })
+      if (res.code === 0) Message.success(res.msg);
+      else Message.error(res.msg);
+    });
   };
 
   return (
     <div className="container">
-      <h1>Please Login</h1>
-        <div className="form-control">
-          <input
-            onChange={(e) =>
-              setUseInput((pre) => ({
-                ...pre,
-                userName: e.target.value,
-              }))
-            }
-            ref={inputRef}
-            type="text"
-          />
-          <label>{labelContent[0]}</label>
-        </div>
+        <h1>Please Login</h1>
+        <img src={close} alt="" />
+      <div className="form-control">
+        <input
+          onChange={(e) =>
+            setUseInput((pre) => ({
+              ...pre,
+              userName: e.target.value,
+            }))
+          }
+          ref={inputRef}
+          type="text"
+        />
+        <label>{labelContent[0]}</label>
+      </div>
 
-        <div className="form-control">
-          <input
-            type="password"
-            onChange={(e) =>
-              setUseInput((pre) => ({
-                ...pre,
-                password: e.target.value,
-              }))
-            }
-          />
-          <label>{labelContent[1]}</label>
-        </div>
-        <button className="btn" onClick={login}>
-          Login
-        </button>
-        <p className="text">如果您是访客，则不需要登陆</p>
+      <div className="form-control">
+        <input
+          type="password"
+          onChange={(e) =>
+            setUseInput((pre) => ({
+              ...pre,
+              password: e.target.value,
+            }))
+          }
+        />
+        <label>{labelContent[1]}</label>
+      </div>
+      <button className="btn" onClick={login}>
+        Login
+      </button>
+      <p className="text">如果您是访客，则不需要登陆</p>
     </div>
   );
 };
