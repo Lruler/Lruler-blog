@@ -14,7 +14,7 @@ const login = async (ctx) => {
             where: {
                 userName,
             }
-        })
+        }) 
 
         if (user) {
             ctx.body = user.password === password ? new SuccessModel('登陆成功') : new ErrorModel('密码错误')
@@ -23,6 +23,7 @@ const login = async (ctx) => {
         }
 
     } catch (error) {
+        ctx.body = new ErrorModel(error)
         throw error
     }
 }
