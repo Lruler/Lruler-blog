@@ -1,34 +1,29 @@
-import React from "react";
+import { useState } from "react";
 import Editor from "react-markdown-editor-lite";
 import ReactMarkdown from "react-markdown";
 import "react-markdown-editor-lite/lib/index.css";
+import './index.less'
 
-export default function App() {
-  const mdEditor = React.useRef(null);
-  const [value, setValue] = React.useState("xxx");
+interface editPro {
+  html: string;
+  text: string;
+}
 
-  const handleClick = () => {
-    if (mdEditor.current) {
-      alert(mdEditor.current.getMdValue());
-    }
-  };
+export default function Edit() {
+  const [content, setContent] = useState("");
 
-  const handleEditorChange = ({ html, text }) => {
-    const newValue = text.replace(/\d/g, "");
-    console.log(newValue);
-    setValue(newValue);
+  const handleChange = ({ html, text }: editPro) => {
+    setContent(text);
   };
 
   return (
     <div className="App">
-      <button onClick={handleClick}>Get value</button>
       <Editor
-        ref={mdEditor}
-        value={value}
+        value={content}
+        onChange={handleChange}
         style={{
-          height: "500px",
+          height: `${window.screen.height}px`,
         }}
-        onChange={handleEditorChange}
         renderHTML={(text) => <ReactMarkdown children={text} />}
       />
     </div>
