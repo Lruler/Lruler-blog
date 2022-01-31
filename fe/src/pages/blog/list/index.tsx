@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "./index.less";
 
 const Header: React.FC = () => {
   return (
@@ -10,11 +10,11 @@ const Header: React.FC = () => {
 };
 
 const SidebarR: React.FC = () => {
-  return <div className="blog-sidebar">侧边栏</div>;
+  return <div className="blog-sidebar">侧边栏 展示分类</div>;
 };
 
 const SidebarL: React.FC = () => {
-  return <div className="blog-sidebar">侧边栏</div>;
+  return <div className="blog-sidebar">侧边栏 展示标签</div>;
 };
 
 const List: React.FC = () => {

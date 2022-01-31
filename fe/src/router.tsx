@@ -7,8 +7,8 @@ const App: React.FC = () => {
     <>
       <Router>
         <Routes>
-          <Route path="home" element={<Home />} />
           <Route path="blog/list" element={<Blog />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </Router>
     </>

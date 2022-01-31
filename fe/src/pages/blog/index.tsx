@@ -1,11 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./index.css";
+import "./index.less";
 
 const Blog: React.FC = () => {
-  const goBlog = () => {
-
-  }
   return (
     <div className="blog-wrapper">
       <Link to='/blog/list'>
