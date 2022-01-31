@@ -15,6 +15,18 @@
         justify-content: space-between;
         height: 90vh;
         width: 100vw;
+
+        .@{prefix}-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60vw;
+        }
+
+        // @media screen and (max-width: 768px) {
+        //     height: 100vh;
+        //     width: 100vw;
+        // }
     }
 
     &-header {
@@ -22,10 +34,37 @@
         width: 100vw;
         background-color: wheat;
         font-family: "DarkFalconDemoRegular-2";
+
+        &-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 60vw;
+            height: 100%;
+            font-size: 30px;
+        }
+
+        .@{prefix}-search {
+            
+            input {
+                border: none;
+                outline: none;
+            }
+        }
+
+        // @media screen and (max-width: 768px) {
+        //     display: none;
+        // }
     }
 
     &-sidebar {
         background-color: wheat;
+        flex: 1;
+
+        // @media screen and (max-width: 768px) {
+        //     display: none;
+        // }
     }
-    
+
 }

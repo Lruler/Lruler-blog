@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./index.less";
 
 const Header: React.FC = () => {
+  const [search, setSearch] = useState("");
   return (
     <header className="blog-header">
-      <p>Lruler</p>
+      <div className="blog-header-content">
+        <p>Lruler</p>
+        <div className="blog-search">
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+      </div>
     </header>
   );
 };
@@ -27,6 +38,7 @@ const List: React.FC = () => {
         <li>博客文章</li>
         <li>博客文章</li>
         <li>博客文章</li>
+        <Link to='/blog/edit'>去编辑界面</Link>
       </ul>
     </div>
   );
