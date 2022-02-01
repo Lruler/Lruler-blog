@@ -65,7 +65,10 @@ const BlogList: React.FC = () => {
     // getList(1).then((res) => {
     //   console.log(res);
     // })
-    useFetch(getList, 2);
+    const data = useFetch(getList, 2).then((res) => {
+      console.log(res);
+      return res
+    });
   }, []);
 
   return (
