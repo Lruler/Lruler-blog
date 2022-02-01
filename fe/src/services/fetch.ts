@@ -8,6 +8,7 @@ type fetchAPI<T> = (params: T) => Promise<any>;
 
 export const useFetch = async <T>(req: fetchAPI<T>, params: T) => {
   const data = await req(params);
+  console.log(data);
   return data
 };
 

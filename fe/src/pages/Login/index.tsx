@@ -9,11 +9,7 @@ const Login: React.FC = () => {
   };
   return (
     <div className="login-wrapper">
-      {/* {isLogin ? (
-        <Input />
-      ) : (
-        </div>
-      )} */}
+      {isLogin ? <Input /> : null}
       <div className="login-image">
         <div className="login-image-a"></div>
         <div className="login-image-b"></div>
@@ -22,8 +18,8 @@ const Login: React.FC = () => {
         <p className="login-image-text">LRULER HOME</p>
       </div>
       <div className="login-button" onClick={handleLogin}>
-          登陆
-        </div>
+        登陆
+      </div>
     </div>
   );
 };

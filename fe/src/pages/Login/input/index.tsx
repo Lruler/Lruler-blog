@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, ReactNode } from "react";
 import close from "../../../assets/images/close2.png";
 import { Login } from "../../../services/api/login";
+import { useFetch } from "../../../services/fetch";
 import Message from "../../../components/message";
 import "./index.css";
 
@@ -34,16 +35,19 @@ const Input: React.FC = () => {
   }, []);
 
   const login = () => {
-    Login(userInput).then((res) => {
-      if (res.code === 0) Message.success(res.msg);
-      else Message.error(res.msg);
-    });
+    // const data = useFetch(Login, userInput).then((res) => {
+    //   console.log(res);
+    // })  
+    // Login(userInput).then((res) => {
+    //   if (res.code === 0) Message.success(res.msg);
+    //   else Message.error(res.msg);
+    // });
   };
 
   return (
     <div className="container">
-        <h1>Please Login</h1>
-        <img src={close} alt="" />
+      <h1>Please Login</h1>
+      <img src={close} alt="" />
       <div className="form-control">
         <input
           onChange={(e) =>

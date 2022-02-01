@@ -62,13 +62,10 @@ const BlogLayout: React.FC = ({ children }) => {
 const BlogList: React.FC = () => {
   // const blogList = React.createContext()
   useEffect(() => {
-    // getList(1).then((res) => {
-    //   console.log(res);
-    // })
-    const data = useFetch(getList, 2).then((res) => {
-      console.log(res);
-      return res
-    });
+    (async () => {
+      const data = await useFetch(getList, 2);
+      console.log(data);
+    })();
   }, []);
 
   return (
