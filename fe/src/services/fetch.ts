@@ -4,6 +4,13 @@ interface req extends RequestInit {
   data?: object;
 }
 
+type fetchAPI<T> = (params: T) => Promise<any>;
+
+export const useFetch = async <T>(req: fetchAPI<T>, params: T) => {
+  const data = await req(params);
+  console.log(data);
+};
+
 export default function Fetch(url: string, opt?: req) {
   url = BASE + url;
   if (opt) {
@@ -34,7 +41,7 @@ export default function Fetch(url: string, opt?: req) {
       }
     })
     .catch((e) => {
-      console.log(`服务端错误：${e.message}`);
+      console.log(`服务端错误:${e.message}`);
       throw e;
     });
 }

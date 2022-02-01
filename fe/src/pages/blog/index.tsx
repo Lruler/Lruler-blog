@@ -5,7 +5,7 @@ import "./index.less";
 const Blog: React.FC = () => {
   return (
     <div className="blog-wrapper">
-      <Link to='/blog/list'>
+      <Link to="/blog/list">
         <button>点我去博客</button>
       </Link>
     </div>

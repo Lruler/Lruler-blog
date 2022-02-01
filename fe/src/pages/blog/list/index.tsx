@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { getList } from "../../../services/api/blog";
+import { useFetch } from "../../../services/fetch";
 import "./index.less";
 
 const Header: React.FC = () => {
@@ -38,7 +40,7 @@ const List: React.FC = () => {
         <li>博客文章</li>
         <li>博客文章</li>
         <li>博客文章</li>
-        <Link to='/blog/edit'>去编辑界面</Link>
+        <Link to="/blog/edit">去编辑界面</Link>
       </ul>
     </div>
   );
@@ -58,6 +60,14 @@ const BlogLayout: React.FC = ({ children }) => {
 };
 
 const BlogList: React.FC = () => {
+  // const blogList = React.createContext()
+  useEffect(() => {
+    // getList(1).then((res) => {
+    //   console.log(res);
+    // })
+    useFetch(getList, 2);
+  }, []);
+
   return (
     <BlogLayout>
       <List />

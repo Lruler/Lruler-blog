@@ -2,7 +2,7 @@ import { useState } from "react";
 import Editor from "react-markdown-editor-lite";
 import ReactMarkdown from "react-markdown";
 import "react-markdown-editor-lite/lib/index.css";
-import './index.less'
+import "./index.less";
 
 interface editPro {
   html: string;

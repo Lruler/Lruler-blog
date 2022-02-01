@@ -20,6 +20,7 @@
     height: 13px;
     margin: 7px;
     position: relative;
+    list-style: none;
 }
 
 .fullpage-nav ul li div {
