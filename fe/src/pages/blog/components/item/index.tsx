@@ -1,7 +1,21 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import './index.less'
 
-const BlogItem: React.FC = () => {
-    return (<></>)
+interface ItemProp {
+  id: number;
 }
 
-export default BlogItem
+const BlogItem: React.FC<ItemProp> = ({ children, id }) => {
+  useEffect(() => {
+    const item = document.getElementsByClassName('blog-item')[id];
+    item.innerHTML = children as string
+  }, []);
+
+  return (
+    <li className="blog-item">
+      {children}
+    </li>
+  );
+};
+
+export default BlogItem;

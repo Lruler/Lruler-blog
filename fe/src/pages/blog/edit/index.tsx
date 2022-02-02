@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Editor from "react-markdown-editor-lite";
-import ReactMarkdown from "react-markdown";
+import MarkdownIt from "markdown-it";
 import "react-markdown-editor-lite/lib/index.css";
 import { useFetch } from "../../../services/fetch";
 import { postBlog } from "../../../services/api/blog";
@@ -17,6 +17,8 @@ interface BlogPro {
   category: string;
 }
 
+const mdRender = new MarkdownIt();
+
 export default function Edit() {
   const [content, setContent] = useState("");
   const [blogMsg, setBlogMsg] = useState<BlogPro>({
@@ -31,7 +33,7 @@ export default function Edit() {
 
   const post = async () => {
     const blog = { ...blogMsg, content };
-    const data = await useFetch(postBlog, blog)
+    const data = await useFetch(postBlog, blog);
   };
 
   return (
@@ -66,7 +68,7 @@ export default function Edit() {
         style={{
           height: `${window.screen.height}px`,
         }}
-        renderHTML={(text) => <ReactMarkdown children={text} />}
+        renderHTML={(text) => mdRender.render(text)}
       />
     </div>
   );

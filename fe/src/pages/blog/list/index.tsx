@@ -1,16 +1,18 @@
 // 官方库导入
 import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
+import MarkdownIt from "markdown-it";
 // 组件导入
 import Message from "../../../components/message";
 import Header from "../components/header";
 import { SidebarL, SidebarR } from "../components/sidebar";
+import BlogItem from "../components/item";
 // http导入
 import { getList } from "../../../services/api/blog";
 import { useFetch } from "../../../services/fetch";
 // less导入
 import "./index.less";
+import ReactMarkdown from "react-markdown";
 
 export type blog = {
   title: string;
@@ -22,6 +24,8 @@ export type blog = {
 
 type blogList = Array<blog>;
 
+const mdRender = new MarkdownIt();
+
 export let BlogCtx: React.Context<blogList>;
 
 const List: React.FC = () => {
@@ -29,11 +33,13 @@ const List: React.FC = () => {
   return (
     <div className="blog-list">
       <ul>
-        {lists.map((list) => (
-          <li key={list.id}>
-            <ReactMarkdown children={list.content} />
-          </li>
-        ))}
+        {lists.map((list, i) => {
+          return (
+            <BlogItem key={list.id} id={i}>
+              {mdRender.render(list.content)}
+            </BlogItem>
+          );
+        })}
         <Link to="/blog/edit">去编辑界面</Link>
       </ul>
     </div>
