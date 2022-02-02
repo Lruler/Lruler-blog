@@ -8,8 +8,7 @@ type fetchAPI<T> = (params: T) => Promise<any>;
 
 export const useFetch = async <T>(req: fetchAPI<T>, params: T) => {
   const data = await req(params);
-  console.log(data);
-  return data
+  return data;
 };
 
 export default async (url: string, opt?: httpReq) => {
@@ -34,41 +33,6 @@ export default async (url: string, opt?: httpReq) => {
     else return null;
   } catch (e) {
     console.log(e);
-    throw e;
+    return e;
   }
 };
-
-// export default function Fetch(url: string, opt?: httpReq) {
-//   url = BASE + url;
-//   if (opt) {
-//     opt.method = opt.method || "GET";
-
-//     opt.headers = opt.headers || {
-//       Accept: "application/json",
-//       "Content-Type": "application/json",
-//     };
-
-//     if (opt.data) {
-//       opt.body = JSON.stringify(opt.data);
-//     }
-//   }
-
-//   return fetch(url, opt)
-//     .then((response) => {
-//       if (response.ok) {
-//         return response.json().then((res) => {
-//           return res;
-//         });
-//       } else {
-//         return response.json().then((res) => {
-//           return new Promise((_, reject) => {
-//             reject(res);
-//           });
-//         });
-//       }
-//     })
-//     .catch((e: Error) => {
-//       console.log(`服务端错误:${e.message}`);
-//       throw e;
-//     });
-// }
