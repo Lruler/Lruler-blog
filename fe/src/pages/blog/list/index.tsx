@@ -1,6 +1,7 @@
 // 官方库导入
 import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 // 组件导入
 import Message from "../../../components/message";
 import Header from "../components/header";
@@ -11,14 +12,12 @@ import { useFetch } from "../../../services/fetch";
 // less导入
 import "./index.less";
 
-type blog = {
-  id: number;
+export type blog = {
   title: string;
   content: string;
   tag: string;
   category: string;
-  createdAt: string;
-  updatedAt: string;
+  [key: string]: any;
 };
 
 type blogList = Array<blog>;
@@ -30,7 +29,11 @@ const List: React.FC = () => {
   return (
     <div className="blog-list">
       <ul>
-        {lists.map((list) => <li key={list.id}>{list.content}</li>)}
+        {lists.map((list) => (
+          <li key={list.id}>
+            <ReactMarkdown children={list.content} />
+          </li>
+        ))}
         <Link to="/blog/edit">去编辑界面</Link>
       </ul>
     </div>
@@ -56,7 +59,8 @@ const BlogList: React.FC = () => {
 
   useEffect(() => {
     (async () => {
-      const data = await useFetch(getList, 2);
+      const data = await useFetch(getList, 3);
+      console.log(data);
 
       if (data instanceof Error) Message.error("服务端错误");
       else setBlogList(data.rows);

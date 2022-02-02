@@ -4,10 +4,12 @@ interface httpReq extends RequestInit {
   data?: object;
 }
 
-type fetchAPI<T> = (params: T) => Promise<any>;
+type fetchWithParams<T> = (params: T) => Promise<any>;
+type fetchWithoutParams = () => Promise<any>
+type fetchAPI<T> = fetchWithParams<T> | fetchWithoutParams
 
-export const useFetch = async <T>(req: fetchAPI<T>, params: T) => {
-  const data = await req(params);
+export const useFetch = async <T>(req: fetchAPI<T>, params?: T) => {
+  const data = params ? (req as fetchWithParams<T>)(params) : (req as fetchWithoutParams)();
   return data;
 };
 

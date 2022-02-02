@@ -2,6 +2,8 @@ import { useState } from "react";
 import Editor from "react-markdown-editor-lite";
 import ReactMarkdown from "react-markdown";
 import "react-markdown-editor-lite/lib/index.css";
+import { useFetch } from "../../../services/fetch";
+import { postBlog } from "../../../services/api/blog";
 import "./index.less";
 
 interface editPro {
@@ -9,18 +11,58 @@ interface editPro {
   text: string;
 }
 
+interface BlogPro {
+  title: string;
+  tag: string;
+  category: string;
+}
+
 export default function Edit() {
   const [content, setContent] = useState("");
+  const [blogMsg, setBlogMsg] = useState<BlogPro>({
+    title: "",
+    tag: "",
+    category: "",
+  });
 
-  const handleChange = ({ html, text }: editPro) => {
+  const handleContent = ({ html, text }: editPro) => {
     setContent(text);
   };
 
+  const post = async () => {
+    const blog = { ...blogMsg, content };
+    const data = await useFetch(postBlog, blog)
+  };
+
   return (
-    <div className="App">
+    <div className="edid-wrapper">
+      <button onClick={post}>发表文章</button>
+      <form>
+        title:
+        <input
+          type="text"
+          onChange={(e) =>
+            setBlogMsg((pre) => ({ ...pre, title: e.target.value }))
+          }
+        />
+        tag:
+        <input
+          type="text"
+          onChange={(e) =>
+            setBlogMsg((pre) => ({ ...pre, tag: e.target.value }))
+          }
+        />
+        category:
+        <input
+          type="text"
+          onChange={(e) =>
+            setBlogMsg((pre) => ({ ...pre, category: e.target.value }))
+          }
+        />
+      </form>
       <Editor
         value={content}
-        onChange={handleChange}
+        onChange={handleContent}
         style={{
           height: `${window.screen.height}px`,
         }}
