@@ -8,8 +8,8 @@ const getBlogList = async (ctx) => {
         page
     } = ctx.request.query
     // 设置分页
-    let limit = 2
-    let offset = (page - 1) * 2
+    let limit = 10
+    let offset = (page - 1) * 10
 
     const blogs = await Blog.findAndCountAll({
         limit,
