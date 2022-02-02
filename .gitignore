@@ -4,3 +4,5 @@ be/node_modules
 dist
 dist-ssr
 *.local
+.gitignore
+yarn.lock
