@@ -1,29 +1,29 @@
 class BaseModel {
-    constructor(data, message) {
+    constructor(data, msg) {
         if (typeof data === 'string') {
-            this.message = data
+            this.msg = data
             data = null
-            message = null
+            msg = null
         }
         if (data) {
             this.data = data
         }
-        if (message) {
-            this.message = message
+        if (msg) {
+            this.msg = msg
         }
     }
 }
 
 class SuccessModel extends BaseModel {
-    constructor(data, message) {
-        super(data, message)
+    constructor(data, msg = '返回成功') {
+        super(data, msg)
         this.code = 0
     }
 }
 
 class ErrorModel extends BaseModel {
-    constructor(data, message) {
-        super(data, message)
+    constructor(data, msg = '服务端错误') {
+        super(data, msg)
         this.code = -1
     }
 }
