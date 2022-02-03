@@ -2,6 +2,7 @@ import { useState } from "react";
 import Editor from "react-markdown-editor-lite";
 import MarkdownIt from "markdown-it";
 import "react-markdown-editor-lite/lib/index.css";
+import Message from "../../../components/message";
 import { useFetch } from "../../../services/fetch";
 import { postBlog } from "../../../services/api/blog";
 import "./index.less";
@@ -32,8 +33,13 @@ export default function Edit() {
   };
 
   const post = async () => {
-    const blog = { ...blogMsg, content };
-    const data = await useFetch(postBlog, blog);
+    if (blogMsg.category && blogMsg.tag && blogMsg.title) {
+      const blog = { ...blogMsg, content };
+      const data = await useFetch(postBlog, blog);
+      Message.success(data.msg);
+    } else {
+      Message.error("请填写完整!");
+    }
   };
 
   return (
