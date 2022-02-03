@@ -1,15 +1,13 @@
-const BASE = "/api";
+import { httpReq, httpRes } from "./interface";
 
-interface httpReq extends RequestInit {
-  data?: object;
-}
+const BASE = "/api";
 
 type fetchWithParams<T> = (params: T) => Promise<any>;
 type fetchWithoutParams = () => Promise<any>
 type fetchAPI<T> = fetchWithParams<T> | fetchWithoutParams
 
-export const useFetch = async <T>(req: fetchAPI<T>, params?: T) => {
-  const data = params ? (req as fetchWithParams<T>)(params) : (req as fetchWithoutParams)();
+export const useFetch = async <T>(req: fetchAPI<T>, params?: T): Promise<httpRes> => {
+  const data = params ? await (req as fetchWithParams<T>)(params) : (req as fetchWithoutParams)();
   return data;
 };
 

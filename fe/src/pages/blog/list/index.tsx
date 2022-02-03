@@ -65,11 +65,10 @@ const BlogList: React.FC = () => {
 
   useEffect(() => {
     (async () => {
-      const data = await useFetch(getList, 3);
-      console.log(data);
+      const res = await useFetch(getList, 3);
 
-      if (data instanceof Error) Message.error("服务端错误");
-      else setBlogList(data.rows);
+      if (res instanceof Error) Message.error("服务端错误");
+      else setBlogList(res.data.rows);
     })();
   }, []);
 
