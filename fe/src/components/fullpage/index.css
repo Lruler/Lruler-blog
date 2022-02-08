@@ -1,3 +1,7 @@
+.fullpage-wrapper {
+    overflow: hidden;
+}
+
 #fullpage-wrapper {
     position: relative;
     height: 100vh;

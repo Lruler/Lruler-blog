@@ -18,7 +18,7 @@ const Fullpage: React.FC<FullpageProps> = ({
   const pageSum = (children as Array<any>).length;
   const [pageNum, setPageNum] = useState(0);
   const [isScroll, setIsScroll] = useState(false);
-  
+
   const handleScroll = (e: React.WheelEvent) => {
     if (isScroll) return false;
     if (e.deltaY > 0) {
@@ -46,7 +46,6 @@ const Fullpage: React.FC<FullpageProps> = ({
     return <div className="fullpage-item">{c}</div>;
   });
 
-
   useEffect(() => {
     if (
       routes.includes(window.location.pathname.slice(1)) &&
@@ -60,8 +59,15 @@ const Fullpage: React.FC<FullpageProps> = ({
     history.pushState({}, "", routes[pageNum]);
   }, [pageNum]);
 
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  }, [pageNum]);
+
   return (
-    <>
+    <div className="fullpage-wrapper">
       <div
         onWheel={handleScroll}
         style={{
@@ -88,7 +94,7 @@ const Fullpage: React.FC<FullpageProps> = ({
           ))}
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 
