@@ -39,7 +39,7 @@ const deleteBlog = async (ctx) => {
 
     try {
         const { id } = ctx.request.query
-
+        console.log(id);
         const blog = await Blog.findOne({ where: +id })
 
         if (blog) {
