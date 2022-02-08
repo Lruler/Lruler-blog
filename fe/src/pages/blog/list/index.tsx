@@ -30,31 +30,29 @@ export let BlogCtx: React.Context<blogList>;
 const List: React.FC = () => {
   const lists = useContext(BlogCtx);
   return (
-    <div className="blog-list">
-      <ul>
-        {lists.map((list, i) => {
-          return (
-            <BlogItem key={list.id} id={i}>
-              {mdRender.render(list.content)}
-            </BlogItem>
-          );
-        })}
-        <Link to="/blog/edit">去编辑界面</Link>
-      </ul>
-    </div>
+    <ul>
+      {lists.map((list, i) => {
+        return (
+          <BlogItem key={list.id} id={i}>
+            {mdRender.render(list.content)}
+          </BlogItem>
+        );
+      })}
+      <Link to="/blog/edit">去编辑界面</Link>
+    </ul>
   );
 };
 
 const BlogLayout: React.FC = ({ children }) => {
   return (
-    <>
+    <div className="blog-layout">
       <Header />
-      <div className="blog-layout">
+      <div className="blog-content">
         <SidebarR />
-        <div className="blog-content">{children}</div>
+        <div className="blog-list">{children}</div>
         <SidebarL />
       </div>
-    </>
+    </div>
   );
 };
 

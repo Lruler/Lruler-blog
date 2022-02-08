@@ -9,20 +9,23 @@
 }
 
 .@{prefix} {
-
     &-layout {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        height: 90vh;
+        height: 100vh;
         width: 100vw;
 
-        .@{prefix}-content {
+        .blog-content {
+            top: 10vh;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 60vw;
-        }
+            width: 100%;
+            height: 90vh;
 
+            .blog-list {
+                flex: 3;
+            }
+        }
         // @media screen and (max-width: 768px) {
         //     height: 100vh;
         //     width: 100vw;
@@ -30,10 +33,13 @@
     }
 
     &-header {
+        top: 0;
         height: 10vh;
         width: 100vw;
         background-color: wheat;
         font-family: "DarkFalconDemoRegular-2";
+        border-bottom: 2px black solid;
+        z-index: 5;
 
         &-content {
             display: flex;
@@ -46,7 +52,7 @@
         }
 
         .@{prefix}-search {
-            
+
             input {
                 border: none;
                 outline: none;

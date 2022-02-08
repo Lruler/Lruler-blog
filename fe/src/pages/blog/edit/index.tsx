@@ -33,7 +33,7 @@ export default function Edit() {
   };
 
   const post = async () => {
-    if (blogMsg.category && blogMsg.tag && blogMsg.title) {
+    if (blogMsg.category && blogMsg.tag && blogMsg.title && content) {
       const blog = { ...blogMsg, content };
       const data = await useFetch(postBlog, blog);
       Message.success(data.msg);
