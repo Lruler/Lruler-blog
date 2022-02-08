@@ -1,9 +1,5 @@
 @prefix: login;
 
-:root {
-    --login-button: rgb(181, 181, 181);
-}
-
 .@{prefix} {
 
     &-wrapper {
@@ -119,62 +115,6 @@
         &:hover &-text {
             opacity: 1;
         }
-    }
-
-    &-button {
-        height: 60px;
-        width: 140px;
-        line-height: 60px;
-        text-align: center;
-        color: calc(var(--i)*60deg);
-        text-decoration: none;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 10vh;
-        cursor: pointer;
-        transition: all .3s ease-in-out;
-        filter: hue-rotate(calc(10*60deg));
-        color: var(--login-button);
-    }
-
-    &-button::after,
-    &-button::before {
-        content: "";
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        border: 2px solid var(--login-button);
-        transition: all .3s ease-in-out .3s;
-    }
-
-    &-button::before {
-        top: 0;
-        left: 0;
-        border-right: 0;
-        border-bottom: 0;
-    }
-
-    &-button::after {
-        right: 0;
-        bottom: 0;
-        border-top: 0;
-        border-left: 0;
-    }
-
-    &-button:hover {
-        background-color: var(--login-button);
-        box-shadow: 0 0 50px var(--login-button);
-        -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3));
-        transition-delay: .4s;
-        color: white;
-    }
-
-    &-button:hover::after,
-    &-button:hover::before {
-        width: 138px;
-        height: 58px;
-        transition-delay: 0s;
     }
 
 }

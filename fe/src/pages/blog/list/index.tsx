@@ -12,7 +12,6 @@ import { getList } from "../../../services/api/blog";
 import { useFetch } from "../../../services/fetch";
 // less导入
 import "./index.less";
-import ReactMarkdown from "react-markdown";
 
 export type blog = {
   title: string;

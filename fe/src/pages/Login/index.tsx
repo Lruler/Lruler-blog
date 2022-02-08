@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../../components/button";
 import Input from "./input";
 import "./index.less";
 
@@ -17,9 +18,10 @@ const Login: React.FC = () => {
         <div className="login-image-d"></div>
         <p className="login-image-text">LRULER HOME</p>
       </div>
-      <div className="login-button" onClick={handleLogin}>
+      <Button>登陆</Button>
+      {/* <div className="login-button" onClick={handleLogin}>
         登陆
-      </div>
+      </div> */}
     </div>
   );
 };
