@@ -1,10 +1,12 @@
 // 官方库导入
 import React, { useEffect, useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import { useNavigate } from "react-router";
 import MarkdownIt from "markdown-it";
 // 组件导入
 import Message from "../../../components/message";
 import Header from "../components/header";
+import Card from "../components/card";
 import { SidebarL, SidebarR } from "../components/sidebar";
 import BlogItem from "../components/item";
 // http导入
@@ -27,15 +29,22 @@ const mdRender = new MarkdownIt();
 
 export let BlogCtx: React.Context<blogList>;
 
-const List: React.FC = () => {
+export const List: React.FC = () => {
+  const nav = useNavigate();
   const lists = useContext(BlogCtx);
+
+  const getBlog = (id: number) => {
+    nav(`${id}`);
+  };
   return (
     <ul>
       {lists.map((list, i) => {
         return (
-          <BlogItem key={list.id} id={i}>
-            {mdRender.render(list.content)}
-          </BlogItem>
+          <Card key={i} onClick={() => getBlog(list.id)}>
+            <BlogItem key={list.id} id={i}>
+              {mdRender.render(list.content)}
+            </BlogItem>
+          </Card>
         );
       })}
       <Link to="/blog/edit">去编辑界面</Link>
@@ -72,7 +81,7 @@ const BlogList: React.FC = () => {
   return (
     <BlogCtx.Provider value={blogList}>
       <BlogLayout>
-        <List />
+        <Outlet />
       </BlogLayout>
     </BlogCtx.Provider>
   );
