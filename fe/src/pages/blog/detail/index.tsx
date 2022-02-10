@@ -6,7 +6,6 @@ import { getBlog } from "../../../services/api/blog";
 
 const Detail: React.FC = () => {
   const { id } = useParams();
-  const [content, setContent] = useState("");
 
   const mRender = new MarkdownIt();
 

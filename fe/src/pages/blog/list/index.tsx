@@ -23,32 +23,41 @@ export type blog = {
   [key: string]: any;
 };
 
-type blogList = Array<blog>;
+type BlogList = Array<blog>;
 
-const mdRender = new MarkdownIt();
+type BlogCtx = {
+  blogList: BlogList;
+  nextPage: () => void;
+};
 
-export let BlogCtx: React.Context<blogList>;
+export let BlogCtx: React.Context<BlogCtx>;
 
 export const List: React.FC = () => {
   const nav = useNavigate();
-  const lists = useContext(BlogCtx);
+  const mdRender = new MarkdownIt();
+  const ctx = useContext(BlogCtx);
+  const { blogList, nextPage } = ctx;
 
   const getBlog = (id: number) => {
     nav(`${id}`);
   };
   return (
-    <ul>
-      {lists.map((list, i) => {
-        return (
-          <Card key={i} onClick={() => getBlog(list.id)}>
-            <BlogItem key={list.id} id={i}>
-              {mdRender.render(list.content)}
-            </BlogItem>
-          </Card>
-        );
-      })}
-      <Link to="/blog/edit">去编辑界面</Link>
-    </ul>
+    <>
+      <ul>
+        {blogList.map((list, i) => {
+          return (
+            <Card key={i} onClick={() => getBlog(list.id)}>
+              <BlogItem key={list.id} id={i}>
+                {mdRender.render(list.content)}
+              </BlogItem>
+            </Card>
+          );
+        })}
+        <Link to="/blog/edit">去编辑界面</Link>
+        <button onClick={nextPage}>下一页</button>
+        <h1></h1>
+      </ul>
+    </>
   );
 };
 
@@ -66,20 +75,27 @@ const BlogLayout: React.FC = ({ children }) => {
 };
 
 const BlogList: React.FC = () => {
-  const [blogList, setBlogList] = useState<blogList>([]);
-  BlogCtx = React.createContext(blogList);
+  const [blogList, setBlogList] = useState<BlogList>([]);
+  const [page, setPage] = useState(0);
+
+  const nextPage = () => {
+    console.log(111)
+    setPage(page + 1);
+  };
+
+  BlogCtx = React.createContext({ blogList, nextPage });
 
   useEffect(() => {
     (async () => {
-      const res = await useFetch(getList, 3);
+      const res = await useFetch(getList, page + 1);
 
       if (res instanceof Error) Message.error("服务端错误");
       else setBlogList(res.data.rows);
     })();
-  }, []);
+  }, [page]);
 
   return (
-    <BlogCtx.Provider value={blogList}>
+    <BlogCtx.Provider value={{ blogList, nextPage }}>
       <BlogLayout>
         <Outlet />
       </BlogLayout>
