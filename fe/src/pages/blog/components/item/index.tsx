@@ -11,7 +11,7 @@ const BlogItem: React.FC<ItemProp> = ({ children, id }) => {
     item.innerHTML = children as string;
   }, []);
 
-  return <li className="blog-item">{children}</li>;
+  return <li className="blog-item" />;
 };
 
 export default BlogItem;
