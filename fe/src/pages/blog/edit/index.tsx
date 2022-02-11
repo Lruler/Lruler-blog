@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Editor from "react-markdown-editor-lite";
 import MarkdownIt from "markdown-it";
 import "react-markdown-editor-lite/lib/index.css";
 import Message from "../../../components/message";
+import FileUpload from "../../../components/fileUpload";
 import { useFetch } from "../../../services/fetch";
 import { postBlog } from "../../../services/api/blog";
 import "./index.less";
@@ -41,6 +42,13 @@ export default function Edit() {
       Message.error("请填写完整!");
     }
   };
+
+  useEffect(() => {
+    const img = document.getElementsByClassName("rmel-icon-image")[0];
+    img.addEventListener("click", () => {
+      console.log("上传图片");
+    });
+  }, []);
 
   return (
     <div className="edid-wrapper">

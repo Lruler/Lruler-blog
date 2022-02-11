@@ -6,12 +6,12 @@ interface ItemProp {
 }
 
 const BlogItem: React.FC<ItemProp> = ({ children, id }) => {
-  useEffect(() => {
-    const item = document.getElementsByClassName("blog-item")[id];
-    item.innerHTML = children as string;
-  }, []);
-
-  return <li className="blog-item" />;
+  return (
+    <li
+      dangerouslySetInnerHTML={{ __html: children as string }}
+      className="blog-item"
+    />
+  );
 };
 
 export default BlogItem;

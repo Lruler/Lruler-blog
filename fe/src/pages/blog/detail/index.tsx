@@ -6,17 +6,19 @@ import { getBlog } from "../../../services/api/blog";
 
 const Detail: React.FC = () => {
   const { id } = useParams();
+  const [content, setContent] = useState("");
 
   const mRender = new MarkdownIt();
 
   useEffect(() => {
     (async () => {
       const res = await useFetch(getBlog, id);
-      const blog = document.getElementById("blog-detail");
-      if (blog) blog.innerHTML = mRender.render(res.data.content);
+      setContent(mRender.render(res.data.content));
     })();
   }, []);
-  return <div id="blog-detail"></div>;
+  return (
+    <div id="blog-detail" dangerouslySetInnerHTML={{ __html: content }}></div>
+  );
 };
 
 export default Detail;
