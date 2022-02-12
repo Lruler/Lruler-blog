@@ -98,6 +98,7 @@ const lookBlog = async (ctx) => {
 
 const uploadImg = async (ctx) => {
     const file = ctx.request.files.file
+    console.log(file)
     const basename = path.basename(file.path)
     ctx.body = { "url": `${ctx.origin}/images/${basename}` }
 }
