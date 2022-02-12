@@ -12,3 +12,9 @@ export const postBlog = (blog: blog) =>
     method: "POST",
     data: blog,
   });
+
+export const fileUpload = (file: FormData) =>
+  Fetch(`${BASE}/upload`, {
+    method: "POST",
+    body: file,
+  });

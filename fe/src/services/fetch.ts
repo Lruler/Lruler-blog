@@ -3,11 +3,16 @@ import { httpReq, httpRes } from "./interface";
 const BASE = "/api";
 
 type fetchWithParams<T> = (params: T) => Promise<any>;
-type fetchWithoutParams = () => Promise<any>
-type fetchAPI<T> = fetchWithParams<T> | fetchWithoutParams
+type fetchWithoutParams = () => Promise<any>;
+type fetchAPI<T> = fetchWithParams<T> | fetchWithoutParams;
 
-export const useFetch = async <T>(req: fetchAPI<T>, params?: T): Promise<httpRes> => {
-  const data = params ? await (req as fetchWithParams<T>)(params) : (req as fetchWithoutParams)();
+export const useFetch = async <T>(
+  req: fetchAPI<T>,
+  params?: T
+): Promise<httpRes> => {
+  const data = params
+    ? await (req as fetchWithParams<T>)(params)
+    : await (req as fetchWithoutParams)();
   return data;
 };
 
@@ -24,6 +29,9 @@ export default async (url: string, opt?: httpReq) => {
 
       if (opt.data) {
         opt.body = JSON.stringify(opt.data);
+      }
+      else {
+        opt.headers = {}
       }
     }
 

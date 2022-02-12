@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.root {
+  position: relative;
+}
+
 body {
   margin: 0;
   touch-action: none;

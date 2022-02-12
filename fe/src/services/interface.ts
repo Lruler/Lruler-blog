@@ -5,5 +5,5 @@ export interface httpRes {
 }
 
 export interface httpReq extends RequestInit {
-  data?: object;
+  data?: object | FormData;
 }
