@@ -3,7 +3,8 @@ const {
     addBlog,
     deleteBlog,
     editBlog,
-    lookBlog
+    lookBlog,
+    uploadImg
 } = require('../controller/blog')
 const router = require('koa-router')()
 
@@ -19,5 +20,7 @@ router.delete('/delete', deleteBlog)
 router.get('/get', lookBlog)
 // 修改文章
 router.post('/edit', editBlog)
+// 上传图片
+router.post('/upload', uploadImg)
 
 module.exports = router

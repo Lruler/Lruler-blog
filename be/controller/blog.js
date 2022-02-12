@@ -1,3 +1,4 @@
+const path = require('path')
 const model = require('../db/models')
 const { SuccessModel, ErrorModel } = require('../middleware/model')
 
@@ -95,10 +96,16 @@ const lookBlog = async (ctx) => {
     }
 }
 
+const uploadImg = async (ctx) => {
+    const file = ctx.request.files.file
+    const basename = path.basename(file.path)
+    ctx.body = { "url": `${ctx.origin}/images/${basename}` }
+}
 module.exports = {
     getBlogList,
     addBlog,
     deleteBlog,
     editBlog,
-    lookBlog
+    lookBlog,
+    uploadImg
 }

@@ -5,6 +5,9 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
+const koaBody = require('koa-body')
+const koaStatic = require('koa-static')
+const path = require('path')
 // const session = require('koa-generic-session')
 // const redisStore = require('koa-redis ')
 const users = require('./routes/users')
@@ -15,11 +18,19 @@ const blogs = require('./routes/blog')
 onerror(app)
 // middlewares
 app.use(bodyparser({
-  enableTypes:['json', 'form', 'text']
+  enableTypes: ['json', 'form', 'text']
 }))
 app.use(json())
 app.use(logger())
-app.use(require('koa-static')(__dirname + '/public'))
+app.use(koaStatic(path.join(__dirname, 'public')))
+app.use(koaBody({
+  multipart: true,
+  formidable: {
+    uploadDir: path.join(__dirname, 'public/images'),
+    // 保留文件扩展名
+    keepExtensions: true,
+  }
+}))
 
 app.use(views(__dirname + '/views', {
   extension: 'pug'
