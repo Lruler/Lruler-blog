@@ -1,13 +1,20 @@
 const path = require('path')
 const model = require('../db/models')
-const { SuccessModel, ErrorModel } = require('../middleware/model')
+const {
+    SuccessModel,
+    ErrorModel
+} = require('../middleware/model')
 
-const { Blog } = model
+const {
+    Blog
+} = model
 
 const getBlogList = async (ctx) => {
 
     try {
-        const { page } = ctx.request.query
+        const {
+            page
+        } = ctx.request.query
         console.log(page)
         // 设置分页
         let limit = 10
@@ -19,7 +26,7 @@ const getBlogList = async (ctx) => {
         })
 
         ctx.body = new SuccessModel(blogs)
-        
+
     } catch (error) {
         ctx.body = new ErrorModel(error)
         throw error
@@ -40,9 +47,13 @@ const addBlog = async (ctx) => {
 const deleteBlog = async (ctx) => {
 
     try {
-        const { id } = ctx.request.query
+        const {
+            id
+        } = ctx.request.query
         console.log(id);
-        const blog = await Blog.findOne({ where: +id })
+        const blog = await Blog.findOne({
+            where: +id
+        })
 
         if (blog) {
             blog.destroy()
@@ -61,16 +72,23 @@ const deleteBlog = async (ctx) => {
 const editBlog = async (ctx) => {
 
     try {
-        const { content, id } = ctx.request.body
-        const blog = await Blog.findOne( {where: id} ) 
+        const {
+            content,
+            id
+        } = ctx.request.body
+        const blog = await Blog.findOne({
+            where: id
+        })
 
         if (blog) {
-            blog.update({ content })
+            blog.update({
+                content
+            })
             ctx.body = new SuccessModel(blog, '更新成功')
         } else {
             ctx.body = new ErrorModel('更新失败')
         }
-        
+
     } catch (error) {
         ctx.body = new ErrorModel(error)
         throw error
@@ -81,15 +99,19 @@ const editBlog = async (ctx) => {
 const lookBlog = async (ctx) => {
 
     try {
-        const { id } = ctx.request.query
-        const blog = await Blog.findOne({ where: +id })
+        const {
+            id
+        } = ctx.request.query
+        const blog = await Blog.findOne({
+            where: +id
+        })
 
         if (blog) {
             ctx.body = new SuccessModel(blog, '查找成功')
         } else {
             ctx.body = new ErrorModel('查找失败')
         }
-        
+
     } catch (error) {
         ctx.body = new ErrorModel(error)
         throw error
@@ -97,10 +119,19 @@ const lookBlog = async (ctx) => {
 }
 
 const uploadImg = async (ctx) => {
-    const file = ctx.request.files.file
-    console.log(file)
-    const basename = path.basename(file.path)
-    ctx.body = { "url": `${ctx.origin}/images/${basename}` }
+    try {
+
+        const file = ctx.request.files.file
+        const basename = path.basename(file.path)
+        ctx.body = new SuccessModel({
+            "url": `${ctx.origin}/images/${basename}`
+        }, '上传成功')
+
+    } catch (error) {
+        ctx.body = new ErrorModel(error)
+        throw error
+    }
+
 }
 module.exports = {
     getBlogList,
