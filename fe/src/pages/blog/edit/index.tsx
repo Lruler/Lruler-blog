@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import Editor from "react-markdown-editor-lite";
 import MarkdownIt from "markdown-it";
+import Editor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
+import useScrollToTop from "../../../hooks/useScrollToTop";
 import Message from "../../../components/message";
 import FileUpload from "../../../components/fileUpload";
 import { useFetch } from "../../../services/fetch";
@@ -22,13 +23,14 @@ interface BlogPro {
 const mdRender = new MarkdownIt();
 
 export default function Edit() {
+  useScrollToTop();
   const [content, setContent] = useState("");
   const [blogMsg, setBlogMsg] = useState<BlogPro>({
     title: "",
     tag: "",
     category: "",
   });
-  const [imgUpload, setImgUpload] = useState({ isUplpad: false, imgUrl: "" });
+  const [imgUpload, setImgUpload] = useState({ isUpload: false, imgUrl: [""] });
 
   const handleContent = ({ html, text }: editPro) => {
     setContent(text);
@@ -50,20 +52,27 @@ export default function Edit() {
       const imgData = new FormData();
       imgData.append("file", imgFile);
       const res = await useFetch(fileUpload, imgData);
+      setImgUpload((pre) => ({
+        ...pre,
+        imgUrl: [...pre.imgUrl, res.data.url],
+      }));
+      if (FileUpload.success) FileUpload.success(res.data.url);
     }
   };
+
+  console.log(imgUpload.isUpload)
 
   useEffect(() => {
     const img = document.getElementsByClassName("rmel-icon-image")[0];
     img.addEventListener("click", () => {
-      setImgUpload((pre) => ({ ...pre, isUplpad: true }));
+      setImgUpload((pre) => ({ ...pre, isUpload: true }));
     });
   }, []);
 
   return (
     <>
-      {imgUpload.isUplpad ? <FileUpload onChange={uploadImg} /> : null}
-      <div className="edid-wrapper">
+      {imgUpload.isUpload ? <FileUpload onChange={uploadImg} /> : null}
+      <div className="edit-wrapper">
         <button onClick={post}>发表文章</button>
         <form>
           title:
@@ -91,9 +100,7 @@ export default function Edit() {
         <Editor
           value={content}
           onChange={handleContent}
-          style={{
-            height: `${window.screen.height}px`,
-          }}
+          style={{ height: "100%" }}
           renderHTML={(text) => mdRender.render(text)}
         />
       </div>

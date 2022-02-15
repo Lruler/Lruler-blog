@@ -1,4 +1,9 @@
 .upload-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(185, 216, 247);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,6 +11,7 @@
     height: 400px;
     width: 400px;
     border: 1px solid rgb(81, 154, 236);
+    z-index: 10;
 
     p {
         color: rgb(161, 160, 160);
@@ -17,5 +23,21 @@
         position: absolute;
         height: 100%;
         width: 100%;
+    }
+
+    .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(50%, -50%);
+        height: 40px;
+        width: 40px;
+        background-color: rgb(81, 154, 236);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: rgb(185, 216, 247);
+        font-size: 20px;
+        cursor: pointer;
     }
 }

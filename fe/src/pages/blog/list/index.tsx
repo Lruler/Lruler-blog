@@ -79,7 +79,6 @@ const BlogList: React.FC = () => {
   const [page, setPage] = useState(0);
 
   const nextPage = () => {
-    console.log(111)
     setPage(page + 1);
   };
 
