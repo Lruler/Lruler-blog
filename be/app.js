@@ -22,15 +22,15 @@ app.use(bodyparser({
 }))
 app.use(json())
 app.use(logger())
-app.use(koaStatic(path.join(__dirname, 'public')))
-app.use(koaBody({
-  multipart: true,
-  formidable: {
-    uploadDir: path.join(__dirname, 'public/images'),
-    // 保留文件扩展名
-    keepExtensions: true,
-  }
-}))
+// app.use(koaStatic(path.join(__dirname, 'public')))
+// app.use(koaBody({
+//   multipart: true,
+//   formidable: {
+//     uploadDir: path.join(__dirname, 'public/images'),
+//     // 保留文件扩展名
+//     keepExtensions: true,
+//   }
+// }))
 
 app.use(views(__dirname + '/views', {
   extension: 'pug'
