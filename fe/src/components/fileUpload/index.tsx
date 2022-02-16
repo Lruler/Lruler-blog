@@ -1,14 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
+import ReactDOM from "react-dom";
 import Button from "../button";
 import useClipboard from "../../hooks/useClipboard";
 import "./index.less";
 
+type ChangeEvent = React.ChangeEventHandler<HTMLInputElement>;
+
 interface UploadProps {
-  onChange: React.ChangeEventHandler<HTMLInputElement>;
+  onChange: ChangeEvent;
 }
 
 interface CompoundedFileUpload<T> extends React.FC<T> {
   success?: (url: string) => void;
+  useUpload: (onChange: ChangeEvent) => void;
 }
 
 const FileUpload: CompoundedFileUpload<UploadProps> = ({ onChange }) => {
@@ -28,14 +32,16 @@ const FileUpload: CompoundedFileUpload<UploadProps> = ({ onChange }) => {
   };
 
   const close = () => {
-
-  }
+    const div = document.getElementById("fileUpload");
+    ReactDOM.unmountComponentAtNode(div as Element);
+    (div as Element).remove();
+  };
   
   return (
     <div className="upload-wrapper">
       {uploadSuc ? (
         <>
-          <p>该图片链接是</p>
+          <p>该图片链接是:</p>
           <p>{imgUrl}</p>
           <p>已复制到剪切版</p>
         </>
@@ -51,14 +57,16 @@ const FileUpload: CompoundedFileUpload<UploadProps> = ({ onChange }) => {
           <Button onClick={clickUpload}>上传文件</Button>
         </>
       )}
-      <div className="close">X</div>
+      <div className="close" onClick={close}>X</div>
     </div>
   );
 };
 
-// FileUpload.success = (url) => {
-//   useClipboard(url);
-
-// };
+FileUpload.useUpload = (onChange) => {
+  const div = document.createElement("div");
+  div.id = "fileUpload";
+  document.body.append(div);
+  ReactDOM.render(<FileUpload onChange={onChange} />, div);
+};
 
 export default FileUpload;

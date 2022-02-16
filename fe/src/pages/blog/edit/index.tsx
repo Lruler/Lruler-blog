@@ -30,7 +30,6 @@ export default function Edit() {
     tag: "",
     category: "",
   });
-  const [imgUpload, setImgUpload] = useState({ isUpload: false, imgUrl: [""] });
 
   const handleContent = ({ html, text }: editPro) => {
     setContent(text);
@@ -52,26 +51,20 @@ export default function Edit() {
       const imgData = new FormData();
       imgData.append("file", imgFile);
       const res = await useFetch(fileUpload, imgData);
-      setImgUpload((pre) => ({
-        ...pre,
-        imgUrl: [...pre.imgUrl, res.data.url],
-      }));
       if (FileUpload.success) FileUpload.success(res.data.url);
     }
   };
 
-  console.log(imgUpload.isUpload)
-
   useEffect(() => {
     const img = document.getElementsByClassName("rmel-icon-image")[0];
     img.addEventListener("click", () => {
-      setImgUpload((pre) => ({ ...pre, isUpload: true }));
+      FileUpload.useUpload(uploadImg);
     });
   }, []);
 
+
   return (
     <>
-      {imgUpload.isUpload ? <FileUpload onChange={uploadImg} /> : null}
       <div className="edit-wrapper">
         <button onClick={post}>发表文章</button>
         <form>
