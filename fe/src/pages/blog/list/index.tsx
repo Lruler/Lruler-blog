@@ -10,23 +10,12 @@ import Card from "../components/card";
 import { SidebarL, SidebarR } from "../components/sidebar";
 import BlogItem from "../components/item";
 // http导入
-import { getList } from "../../../services/api/blog";
-import { useFetch } from "../../../services/fetch";
+import useFetch from "../../../services/fetch";
 // less导入
 import "./index.less";
 
-export type blog = {
-  title: string;
-  content: string;
-  tag: string;
-  category: string;
-  [key: string]: any;
-};
-
-type BlogList = Array<blog>;
-
 type BlogCtx = {
-  blogList: BlogList;
+  blogList: Blog[];
   nextPage: () => void;
 };
 
@@ -75,7 +64,7 @@ const BlogLayout: React.FC = ({ children }) => {
 };
 
 const BlogList: React.FC = () => {
-  const [blogList, setBlogList] = useState<BlogList>([]);
+  const [blogList, setBlogList] = useState<Blog[]>([]);
   const [page, setPage] = useState(0);
 
   const nextPage = () => {
@@ -86,10 +75,8 @@ const BlogList: React.FC = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await useFetch(getList, page + 1);
-
-      if (res instanceof Error) Message.error("服务端错误");
-      else setBlogList(res.data.rows);
+      const res = await useFetch('getList', { page: page + 1 })
+      setBlogList(res.data.rows)
     })();
   }, [page]);
 

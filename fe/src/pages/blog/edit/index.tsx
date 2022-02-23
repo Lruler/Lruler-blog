@@ -5,8 +5,7 @@ import "react-markdown-editor-lite/lib/index.css";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import Message from "../../../components/message";
 import FileUpload from "../../../components/fileUpload";
-import { useFetch } from "../../../services/fetch";
-import { postBlog, fileUpload } from "../../../services/api/blog";
+import useFetch from "../../../services/fetch";
 import "./index.less";
 
 interface editPro {
@@ -38,7 +37,7 @@ export default function Edit() {
   const post = async () => {
     if (blogMsg.category && blogMsg.tag && blogMsg.title && content) {
       const blog = { ...blogMsg, content };
-      const data = await useFetch(postBlog, blog);
+      const data = await useFetch('postBlog', blog);
       Message.success(data.msg);
     } else {
       Message.error("请填写完整!");
@@ -50,7 +49,7 @@ export default function Edit() {
       const imgFile = e.currentTarget.files[0];
       const imgData = new FormData();
       imgData.append("file", imgFile);
-      const res = await useFetch(fileUpload, imgData);
+      const res = await useFetch('fileUpload', {file: imgData});
       if (FileUpload.success) FileUpload.success(res.data.url);
     }
   };
