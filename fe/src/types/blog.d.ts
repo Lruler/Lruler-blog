@@ -16,7 +16,7 @@ interface getListRes {
 }
 
 interface getBlogReq {
-  id: number;
+  id: string;
 }
 
 interface getBlogRes extends Blog {}
@@ -25,9 +25,7 @@ interface postBlogReq extends Partial<Blog> {}
 
 interface postBlogRes {}
 
-interface fileUploadReq {
-  file: FormData;
-}
+interface fileUploadReq extends FormData {}
 
 interface fileUploadRes {
   url: string;

@@ -100,24 +100,21 @@ const Fetch = async <T>(url: string, opt?: httpReq): Promise<T | any> => {
   try {
     url = BASE + url;
     if (opt) {
-      opt.method = opt.method || "GET";
-
       opt.headers = opt.headers || {
         Accept: "application/json",
         "Content-Type": "application/json",
       };
 
-      if (opt.data) {
-        opt.body = JSON.stringify(opt.data);
-      } else {
-        opt.headers = {};
-      }
+      if (opt.body && opt.body instanceof FormData) opt.headers = {}
+      else opt.body = JSON.stringify(opt.body)
+        
     }
+
+    console.log(opt)
 
     const res = await fetch(url, opt);
     const data = await res.json();
-    if (data) return data;
-    else return null;
+    return data;
   } catch (e) {
     console.log(e);
     return e;
@@ -134,9 +131,10 @@ const useFetch = async <api extends keyof API>(
     data = reqData ? await Fetch<res>(getUrl(reqAPI, Object.values(reqData))) : await Fetch<res>(getUrl(reqAPI))
   }
   else {
-    data = await Fetch<Promise<httpRes<API[api]['res']>>>(getUrl(reqAPI), { method, data: reqData })
+    data = await Fetch<Promise<httpRes<API[api]['res']>>>(getUrl(reqAPI), { method, body: reqData })
   }
   return data;
 };
 
 export default useFetch
+

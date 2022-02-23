@@ -5,6 +5,5 @@ interface httpRes<T> {
 }
 
 interface httpReq extends RequestInit {
-  data?: object | FormData;
+  body?: BodyInit | null | undefined | any
 }
-
