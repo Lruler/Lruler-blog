@@ -3,7 +3,6 @@ const app = new Koa()
 const views = require('koa-views')
 const json = require('koa-json')
 const onerror = require('koa-onerror')
-const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 const koaBody = require('koa-body')
 const koaStatic = require('koa-static')
@@ -17,20 +16,21 @@ const blogs = require('./routes/blog')
 // error handler
 onerror(app)
 // middlewares
-app.use(bodyparser({
-  enableTypes: ['json', 'form', 'text']
+app.use(koaBody({
+  enableTypes: ["json", "form", "text"],
+  multipart: true,
+  strict: false,
+  formidable: {
+    maxFileSize: 5 * 1024 * 1024,
+    uploadDir: path.join(__dirname, 'public/images'),
+    // 保留文件扩展名
+    keepExtensions: true,
+  }
 }))
 app.use(json())
 app.use(logger())
-// app.use(koaStatic(path.join(__dirname, 'public')))
-// app.use(koaBody({
-//   multipart: true,
-//   formidable: {
-//     uploadDir: path.join(__dirname, 'public/images'),
-//     // 保留文件扩展名
-//     keepExtensions: true,
-//   }
-// }))
+app.use(koaStatic(path.join(__dirname, 'public')))
+
 
 app.use(views(__dirname + '/views', {
   extension: 'pug'

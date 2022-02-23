@@ -7,7 +7,8 @@ const login = async (ctx) => {
     try {
         const { userName, password  } = ctx.request.body
 
-        let user = await User.findOne({ where: { userName} }) 
+        let user = await User.findOne({ where: { userName } }) 
+        console.log(user.password, ctx.request.body)
 
         if (user) {
             ctx.body = user.password === password ? new SuccessModel('登陆成功') : new ErrorModel('密码错误')
