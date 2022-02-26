@@ -286,3 +286,9 @@
 2022-02-26 17:27:59,925 INFO 52985 [egg-schedule]: register schedule /Users/lruler/Desktop/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
 2022-02-26 17:27:59,925 INFO 52985 [egg-schedule]: register schedule /Users/lruler/Desktop/egg/node_modules/egg-logrotator/app/schedule/clean_log.js
 2022-02-26 17:27:59,925 INFO 52985 [egg-schedule]: register schedule /Users/lruler/Desktop/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2022-02-26 21:46:20,060 INFO 54792 [Timer] /Users/lruler/Desktop/lruler-blog/be/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 24219941ms at 2022-02-27 04:30:00.001
+2022-02-26 21:46:20,060 INFO 54792 [Timer] /Users/lruler/Desktop/lruler-blog/be/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 8019940ms at 2022-02-27 00:00:00.000
+2022-02-26 21:46:20,060 INFO 54792 [Timer] /Users/lruler/Desktop/lruler-blog/be/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 8020940ms at 2022-02-27 00:00:01.000
+2022-02-26 21:46:19,716 INFO 54794 [egg-schedule]: register schedule /Users/lruler/Desktop/lruler-blog/be/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2022-02-26 21:46:19,716 INFO 54794 [egg-schedule]: register schedule /Users/lruler/Desktop/lruler-blog/be/node_modules/egg-logrotator/app/schedule/clean_log.js
+2022-02-26 21:46:19,716 INFO 54794 [egg-schedule]: register schedule /Users/lruler/Desktop/lruler-blog/be/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
