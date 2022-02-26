@@ -1,0 +1,666 @@
+2022-02-25 19:28:47,612 INFO 33010 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 19:28:47,624 INFO 33010 [egg-multipart] file mode enable
+2022-02-25 19:28:47,624 INFO 33010 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 19:28:47,666 INFO 33010 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 19:28:47,845 INFO 33010 [egg:core] dump config after load, 4ms
+2022-02-25 19:28:47,856 INFO 33010 [egg-watcher:application] watcher start success
+2022-02-25 19:28:47,871 INFO 33010 [egg:core] dump config after ready, 14ms
+2022-02-25 19:42:23,556 INFO 33341 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 19:42:23,566 INFO 33341 [egg-multipart] file mode enable
+2022-02-25 19:42:23,566 INFO 33341 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 19:42:23,628 INFO 33341 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 19:42:23,754 INFO 33341 [egg:core] dump config after load, 3ms
+2022-02-25 19:42:23,782 INFO 33341 [egg-watcher:application] watcher start success
+2022-02-25 19:42:23,784 INFO 33341 [egg:core] dump config after ready, 1ms
+2022-02-25 19:42:35,106 INFO 33347 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 19:42:35,117 INFO 33347 [egg-multipart] file mode enable
+2022-02-25 19:42:35,117 INFO 33347 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 19:42:35,156 INFO 33347 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 19:42:35,278 INFO 33347 [egg:core] dump config after load, 1ms
+2022-02-25 19:42:35,286 INFO 33347 [egg-watcher:application] watcher start success
+2022-02-25 19:42:35,288 INFO 33347 [egg:core] dump config after ready, 2ms
+2022-02-25 19:42:37,508 INFO 33352 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 19:42:37,518 INFO 33352 [egg-multipart] file mode enable
+2022-02-25 19:42:37,518 INFO 33352 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 19:42:37,585 INFO 33352 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 19:42:37,717 INFO 33352 [egg:core] dump config after load, 2ms
+2022-02-25 19:42:37,725 INFO 33352 [egg-watcher:application] watcher start success
+2022-02-25 19:42:37,728 INFO 33352 [egg:core] dump config after ready, 2ms
+2022-02-25 19:44:38,540 INFO 33424 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 19:44:38,551 INFO 33424 [egg-multipart] file mode enable
+2022-02-25 19:44:38,551 INFO 33424 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 19:44:38,592 INFO 33424 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 19:44:38,724 INFO 33424 [egg:core] dump config after load, 2ms
+2022-02-25 19:44:38,732 INFO 33424 [egg-watcher:application] watcher start success
+2022-02-25 19:44:38,736 INFO 33424 [egg:core] dump config after ready, 3ms
+2022-02-25 19:44:41,712 INFO 33431 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 19:44:41,722 INFO 33431 [egg-multipart] file mode enable
+2022-02-25 19:44:41,722 INFO 33431 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 19:44:41,751 INFO 33431 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 19:44:41,875 INFO 33431 [egg:core] dump config after load, 2ms
+2022-02-25 19:44:41,883 INFO 33431 [egg-watcher:application] watcher start success
+2022-02-25 19:44:41,885 INFO 33431 [egg:core] dump config after ready, 2ms
+2022-02-25 19:44:46,286 INFO 33434 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 19:44:46,296 INFO 33434 [egg-multipart] file mode enable
+2022-02-25 19:44:46,296 INFO 33434 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 19:44:46,325 INFO 33434 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 19:44:46,473 INFO 33434 [egg:core] dump config after load, 2ms
+2022-02-25 19:44:46,488 INFO 33434 [egg-watcher:application] watcher start success
+2022-02-25 19:44:46,492 INFO 33434 [egg:core] dump config after ready, 3ms
+2022-02-25 19:45:44,375 INFO 33449 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 19:45:44,386 INFO 33449 [egg-multipart] file mode enable
+2022-02-25 19:45:44,386 INFO 33449 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 19:45:44,423 INFO 33449 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 19:45:44,549 INFO 33449 [egg:core] dump config after load, 2ms
+2022-02-25 19:45:44,557 INFO 33449 [egg-watcher:application] watcher start success
+2022-02-25 19:45:44,560 INFO 33449 [egg:core] dump config after ready, 2ms
+2022-02-25 19:46:10,437 INFO 33460 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 19:46:10,449 INFO 33460 [egg-multipart] file mode enable
+2022-02-25 19:46:10,449 INFO 33460 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 19:46:10,499 INFO 33460 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 19:46:10,626 INFO 33460 [egg:core] dump config after load, 2ms
+2022-02-25 19:46:10,635 INFO 33460 [egg-watcher:application] watcher start success
+2022-02-25 19:46:10,638 INFO 33460 [egg:core] dump config after ready, 2ms
+2022-02-25 19:46:59,939 INFO 33476 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 19:46:59,954 INFO 33476 [egg-multipart] file mode enable
+2022-02-25 19:46:59,954 INFO 33476 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 19:47:00,036 INFO 33476 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 19:47:00,187 INFO 33476 [egg:core] dump config after load, 3ms
+2022-02-25 19:47:00,200 INFO 33476 [egg-watcher:application] watcher start success
+2022-02-25 19:47:00,204 INFO 33476 [egg:core] dump config after ready, 3ms
+2022-02-25 19:47:48,768 INFO 33491 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 19:47:48,780 INFO 33491 [egg-multipart] file mode enable
+2022-02-25 19:47:48,780 INFO 33491 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 19:47:48,835 INFO 33491 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 19:47:48,974 INFO 33491 [egg:core] dump config after load, 4ms
+2022-02-25 19:47:48,986 INFO 33491 [egg-watcher:application] watcher start success
+2022-02-25 19:47:48,988 INFO 33491 [egg:core] dump config after ready, 2ms
+2022-02-25 20:40:50,859 INFO 34612 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:40:50,878 INFO 34612 [egg-multipart] file mode enable
+2022-02-25 20:40:50,878 INFO 34612 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:40:50,917 INFO 34612 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:40:51,051 INFO 34612 [egg:core] dump config after load, 4ms
+2022-02-25 20:40:51,083 INFO 34612 [egg-watcher:application] watcher start success
+2022-02-25 20:40:51,086 INFO 34612 [egg:core] dump config after ready, 2ms
+2022-02-25 20:41:11,205 INFO 34623 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:41:11,217 INFO 34623 [egg-multipart] file mode enable
+2022-02-25 20:41:11,217 INFO 34623 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:41:11,268 INFO 34623 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:41:11,397 INFO 34623 [egg:core] dump config after load, 2ms
+2022-02-25 20:41:11,404 INFO 34623 [egg-watcher:application] watcher start success
+2022-02-25 20:41:11,407 INFO 34623 [egg:core] dump config after ready, 2ms
+2022-02-25 20:42:26,084 INFO 34659 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:42:26,095 INFO 34659 [egg-multipart] file mode enable
+2022-02-25 20:42:26,095 INFO 34659 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:42:26,133 INFO 34659 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:42:26,268 INFO 34659 [egg:core] dump config after load, 4ms
+2022-02-25 20:42:26,277 INFO 34659 [egg-watcher:application] watcher start success
+2022-02-25 20:42:26,280 INFO 34659 [egg:core] dump config after ready, 2ms
+2022-02-25 20:43:15,312 INFO 34708 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:43:15,322 INFO 34708 [egg-multipart] file mode enable
+2022-02-25 20:43:15,322 INFO 34708 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:43:15,363 INFO 34708 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:43:15,495 INFO 34708 [egg:core] dump config after load, 2ms
+2022-02-25 20:43:15,506 INFO 34708 [egg-watcher:application] watcher start success
+2022-02-25 20:43:15,510 INFO 34708 [egg:core] dump config after ready, 3ms
+2022-02-25 20:43:42,957 INFO 34719 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:43:42,968 INFO 34719 [egg-multipart] file mode enable
+2022-02-25 20:43:42,968 INFO 34719 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:43:43,005 INFO 34719 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:43:43,133 INFO 34719 [egg:core] dump config after load, 2ms
+2022-02-25 20:43:43,141 INFO 34719 [egg-watcher:application] watcher start success
+2022-02-25 20:43:43,143 INFO 34719 [egg:core] dump config after ready, 2ms
+2022-02-25 20:44:32,187 INFO 34732 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:44:32,198 INFO 34732 [egg-multipart] file mode enable
+2022-02-25 20:44:32,198 INFO 34732 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:44:32,235 INFO 34732 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:44:32,367 INFO 34732 [egg:core] dump config after load, 2ms
+2022-02-25 20:44:32,375 INFO 34732 [egg-watcher:application] watcher start success
+2022-02-25 20:44:32,377 INFO 34732 [egg:core] dump config after ready, 2ms
+2022-02-25 20:45:34,632 INFO 34758 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:45:34,645 INFO 34758 [egg-multipart] file mode enable
+2022-02-25 20:45:34,645 INFO 34758 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:45:34,695 INFO 34758 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:45:34,825 INFO 34758 [egg:core] dump config after load, 2ms
+2022-02-25 20:45:34,856 INFO 34758 [egg-watcher:application] watcher start success
+2022-02-25 20:45:34,858 INFO 34758 [egg:core] dump config after ready, 2ms
+2022-02-25 20:45:55,488 INFO 34766 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:45:55,500 INFO 34766 [egg-multipart] file mode enable
+2022-02-25 20:45:55,500 INFO 34766 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:45:55,539 INFO 34766 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:45:55,674 INFO 34766 [egg:core] dump config after load, 2ms
+2022-02-25 20:45:55,681 INFO 34766 [egg-watcher:application] watcher start success
+2022-02-25 20:45:55,686 INFO 34766 [egg:core] dump config after ready, 4ms
+2022-02-25 20:48:00,855 INFO 34795 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:48:00,866 INFO 34795 [egg-multipart] file mode enable
+2022-02-25 20:48:00,866 INFO 34795 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:48:00,905 INFO 34795 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:48:01,045 INFO 34795 [egg:core] dump config after load, 2ms
+2022-02-25 20:48:01,056 INFO 34795 [egg-watcher:application] watcher start success
+2022-02-25 20:48:01,061 INFO 34795 [egg:core] dump config after ready, 3ms
+2022-02-25 20:48:40,315 INFO 34808 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:48:40,326 INFO 34808 [egg-multipart] file mode enable
+2022-02-25 20:48:40,326 INFO 34808 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:48:40,355 INFO 34808 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:48:40,497 INFO 34808 [egg:core] dump config after load, 2ms
+2022-02-25 20:48:40,505 INFO 34808 [egg-watcher:application] watcher start success
+2022-02-25 20:48:40,507 INFO 34808 [egg:core] dump config after ready, 2ms
+2022-02-25 20:55:29,760 INFO 34917 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:55:29,779 INFO 34917 [egg-multipart] file mode enable
+2022-02-25 20:55:29,779 INFO 34917 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:55:29,822 INFO 34917 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:55:29,961 INFO 34917 [egg:core] dump config after load, 4ms
+2022-02-25 20:55:29,968 INFO 34917 [egg-watcher:application] watcher start success
+2022-02-25 20:55:29,971 INFO 34917 [egg:core] dump config after ready, 2ms
+2022-02-25 20:55:36,270 INFO 34924 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:55:36,284 INFO 34924 [egg-multipart] file mode enable
+2022-02-25 20:55:36,284 INFO 34924 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:55:36,327 INFO 34924 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:55:36,492 INFO 34924 [egg:core] dump config after load, 1ms
+2022-02-25 20:55:36,500 INFO 34924 [egg-watcher:application] watcher start success
+2022-02-25 20:55:36,503 INFO 34924 [egg:core] dump config after ready, 2ms
+2022-02-25 20:56:39,907 INFO 34957 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:56:39,919 INFO 34957 [egg-multipart] file mode enable
+2022-02-25 20:56:39,919 INFO 34957 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:56:39,959 INFO 34957 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:56:40,097 INFO 34957 [egg:core] dump config after load, 2ms
+2022-02-25 20:56:40,111 INFO 34957 [egg-watcher:application] watcher start success
+2022-02-25 20:56:40,115 INFO 34957 [egg:core] dump config after ready, 2ms
+2022-02-25 20:59:44,452 INFO 35045 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 20:59:44,471 INFO 35045 [egg-multipart] file mode enable
+2022-02-25 20:59:44,471 INFO 35045 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 20:59:44,513 INFO 35045 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 20:59:44,643 INFO 35045 [egg:core] dump config after load, 1ms
+2022-02-25 20:59:44,651 INFO 35045 [egg-watcher:application] watcher start success
+2022-02-25 20:59:44,653 INFO 35045 [egg:core] dump config after ready, 1ms
+2022-02-25 21:12:39,925 INFO 35442 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:12:39,941 INFO 35442 [egg-multipart] file mode enable
+2022-02-25 21:12:39,941 INFO 35442 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:12:39,989 INFO 35442 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:12:40,119 INFO 35442 [egg:core] dump config after load, 1ms
+2022-02-25 21:12:40,153 INFO 35442 [egg-watcher:application] watcher start success
+2022-02-25 21:12:40,156 INFO 35442 [egg:core] dump config after ready, 2ms
+2022-02-25 21:13:24,754 INFO 35459 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:13:24,765 INFO 35459 [egg-multipart] file mode enable
+2022-02-25 21:13:24,765 INFO 35459 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:13:24,821 INFO 35459 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:13:24,956 INFO 35459 [egg:core] dump config after load, 2ms
+2022-02-25 21:13:24,963 INFO 35459 [egg-watcher:application] watcher start success
+2022-02-25 21:13:24,966 INFO 35459 [egg:core] dump config after ready, 2ms
+2022-02-25 21:13:40,913 INFO 35468 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:13:40,924 INFO 35468 [egg-multipart] file mode enable
+2022-02-25 21:13:40,924 INFO 35468 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:13:40,972 INFO 35468 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:13:41,097 INFO 35468 [egg:core] dump config after load, 4ms
+2022-02-25 21:13:41,105 INFO 35468 [egg-watcher:application] watcher start success
+2022-02-25 21:13:41,107 INFO 35468 [egg:core] dump config after ready, 2ms
+2022-02-25 21:15:03,034 INFO 35487 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:15:03,045 INFO 35487 [egg-multipart] file mode enable
+2022-02-25 21:15:03,045 INFO 35487 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:15:03,098 INFO 35487 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:15:03,229 INFO 35487 [egg:core] dump config after load, 2ms
+2022-02-25 21:15:03,237 INFO 35487 [egg-watcher:application] watcher start success
+2022-02-25 21:15:03,239 INFO 35487 [egg:core] dump config after ready, 2ms
+2022-02-25 21:17:35,940 INFO 35542 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:17:35,950 INFO 35542 [egg-multipart] file mode enable
+2022-02-25 21:17:35,950 INFO 35542 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:17:35,984 INFO 35542 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:17:36,114 INFO 35542 [egg:core] dump config after load, 3ms
+2022-02-25 21:17:36,146 INFO 35542 [egg-watcher:application] watcher start success
+2022-02-25 21:17:36,149 INFO 35542 [egg:core] dump config after ready, 2ms
+2022-02-25 21:18:07,179 INFO 35551 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:18:07,190 INFO 35551 [egg-multipart] file mode enable
+2022-02-25 21:18:07,190 INFO 35551 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:18:07,227 INFO 35551 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:18:07,359 INFO 35551 [egg:core] dump config after load, 2ms
+2022-02-25 21:18:07,367 INFO 35551 [egg-watcher:application] watcher start success
+2022-02-25 21:18:07,369 INFO 35551 [egg:core] dump config after ready, 2ms
+2022-02-25 21:19:52,974 INFO 35580 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:19:52,985 INFO 35580 [egg-multipart] file mode enable
+2022-02-25 21:19:52,985 INFO 35580 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:19:53,026 INFO 35580 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:19:53,169 INFO 35580 [egg:core] dump config after load, 3ms
+2022-02-25 21:19:53,180 INFO 35580 [egg-watcher:application] watcher start success
+2022-02-25 21:19:53,183 INFO 35580 [egg:core] dump config after ready, 2ms
+2022-02-25 21:21:49,942 INFO 35614 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:21:49,953 INFO 35614 [egg-multipart] file mode enable
+2022-02-25 21:21:49,953 INFO 35614 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:21:49,995 INFO 35614 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:21:50,133 INFO 35614 [egg:core] dump config after load, 3ms
+2022-02-25 21:21:50,141 INFO 35614 [egg-watcher:application] watcher start success
+2022-02-25 21:21:50,143 INFO 35614 [egg:core] dump config after ready, 1ms
+2022-02-25 21:27:24,952 INFO 35721 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:27:24,963 INFO 35721 [egg-multipart] file mode enable
+2022-02-25 21:27:24,963 INFO 35721 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:27:25,002 INFO 35721 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:27:25,137 INFO 35721 [egg:core] dump config after load, 3ms
+2022-02-25 21:27:25,150 INFO 35721 [egg-watcher:application] watcher start success
+2022-02-25 21:27:25,153 INFO 35721 [egg:core] dump config after ready, 2ms
+2022-02-25 21:28:10,509 INFO 35742 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:28:10,521 INFO 35742 [egg-multipart] file mode enable
+2022-02-25 21:28:10,521 INFO 35742 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:28:10,560 INFO 35742 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:28:10,694 INFO 35742 [egg:core] dump config after load, 3ms
+2022-02-25 21:28:10,701 INFO 35742 [egg-watcher:application] watcher start success
+2022-02-25 21:28:10,704 INFO 35742 [egg:core] dump config after ready, 2ms
+2022-02-25 21:28:26,726 INFO 35755 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:28:26,737 INFO 35755 [egg-multipart] file mode enable
+2022-02-25 21:28:26,737 INFO 35755 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:28:26,784 INFO 35755 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:28:26,914 INFO 35755 [egg:core] dump config after load, 1ms
+2022-02-25 21:28:26,922 INFO 35755 [egg-watcher:application] watcher start success
+2022-02-25 21:28:26,924 INFO 35755 [egg:core] dump config after ready, 1ms
+2022-02-25 21:30:33,427 INFO 35814 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:30:33,437 INFO 35814 [egg-multipart] file mode enable
+2022-02-25 21:30:33,437 INFO 35814 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:30:33,466 INFO 35814 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:30:33,599 INFO 35814 [egg:core] dump config after load, 2ms
+2022-02-25 21:30:33,606 INFO 35814 [egg-watcher:application] watcher start success
+2022-02-25 21:30:33,609 INFO 35814 [egg:core] dump config after ready, 2ms
+2022-02-25 21:30:35,064 INFO 35819 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:30:35,074 INFO 35819 [egg-multipart] file mode enable
+2022-02-25 21:30:35,074 INFO 35819 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:30:35,106 INFO 35819 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:30:35,237 INFO 35819 [egg:core] dump config after load, 6ms
+2022-02-25 21:30:35,246 INFO 35819 [egg-watcher:application] watcher start success
+2022-02-25 21:30:35,249 INFO 35819 [egg:core] dump config after ready, 2ms
+2022-02-25 21:31:08,748 INFO 35827 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:31:08,759 INFO 35827 [egg-multipart] file mode enable
+2022-02-25 21:31:08,759 INFO 35827 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:31:08,799 INFO 35827 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:31:08,933 INFO 35827 [egg:core] dump config after load, 2ms
+2022-02-25 21:31:08,941 INFO 35827 [egg-watcher:application] watcher start success
+2022-02-25 21:31:08,945 INFO 35827 [egg:core] dump config after ready, 3ms
+2022-02-25 21:35:04,627 INFO 35909 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:35:04,640 INFO 35909 [egg-multipart] file mode enable
+2022-02-25 21:35:04,640 INFO 35909 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:35:04,693 INFO 35909 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:35:04,828 INFO 35909 [egg:core] dump config after load, 2ms
+2022-02-25 21:35:04,836 INFO 35909 [egg-watcher:application] watcher start success
+2022-02-25 21:35:04,838 INFO 35909 [egg:core] dump config after ready, 2ms
+2022-02-25 21:43:38,465 INFO 36152 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:43:38,476 INFO 36152 [egg-multipart] file mode enable
+2022-02-25 21:43:38,476 INFO 36152 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:43:38,518 INFO 36152 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:43:38,661 INFO 36152 [egg:core] dump config after load, 2ms
+2022-02-25 21:43:38,669 INFO 36152 [egg-watcher:application] watcher start success
+2022-02-25 21:43:38,671 INFO 36152 [egg:core] dump config after ready, 2ms
+2022-02-25 21:44:34,611 INFO 36190 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:44:34,622 INFO 36190 [egg-multipart] file mode enable
+2022-02-25 21:44:34,622 INFO 36190 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:44:34,671 INFO 36190 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:44:34,803 INFO 36190 [egg:core] dump config after load, 3ms
+2022-02-25 21:44:34,811 INFO 36190 [egg-watcher:application] watcher start success
+2022-02-25 21:44:34,814 INFO 36190 [egg:core] dump config after ready, 2ms
+2022-02-25 21:45:05,710 INFO 36201 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:45:05,721 INFO 36201 [egg-multipart] file mode enable
+2022-02-25 21:45:05,721 INFO 36201 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:45:05,761 INFO 36201 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:45:05,888 INFO 36201 [egg:core] dump config after load, 2ms
+2022-02-25 21:45:05,895 INFO 36201 [egg-watcher:application] watcher start success
+2022-02-25 21:45:05,898 INFO 36201 [egg:core] dump config after ready, 2ms
+2022-02-25 21:55:47,141 INFO 36422 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:55:47,152 INFO 36422 [egg-multipart] file mode enable
+2022-02-25 21:55:47,152 INFO 36422 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:55:47,195 INFO 36422 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:55:47,331 INFO 36422 [egg:core] dump config after load, 2ms
+2022-02-25 21:55:47,364 INFO 36422 [egg-watcher:application] watcher start success
+2022-02-25 21:55:47,366 INFO 36422 [egg:core] dump config after ready, 2ms
+2022-02-25 21:56:03,375 INFO 36430 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:56:03,386 INFO 36430 [egg-multipart] file mode enable
+2022-02-25 21:56:03,386 INFO 36430 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:56:03,433 INFO 36430 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:56:03,565 INFO 36430 [egg:core] dump config after load, 2ms
+2022-02-25 21:56:03,573 INFO 36430 [egg-watcher:application] watcher start success
+2022-02-25 21:56:03,576 INFO 36430 [egg:core] dump config after ready, 2ms
+2022-02-25 21:57:31,915 INFO 36467 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:57:31,925 INFO 36467 [egg-multipart] file mode enable
+2022-02-25 21:57:31,925 INFO 36467 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:57:31,954 INFO 36467 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:57:32,091 INFO 36467 [egg:core] dump config after load, 2ms
+2022-02-25 21:57:32,100 INFO 36467 [egg-watcher:application] watcher start success
+2022-02-25 21:57:32,103 INFO 36467 [egg:core] dump config after ready, 2ms
+2022-02-25 21:57:42,671 INFO 36475 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 21:57:42,683 INFO 36475 [egg-multipart] file mode enable
+2022-02-25 21:57:42,683 INFO 36475 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 21:57:42,727 INFO 36475 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 21:57:42,877 INFO 36475 [egg:core] dump config after load, 2ms
+2022-02-25 21:57:42,886 INFO 36475 [egg-watcher:application] watcher start success
+2022-02-25 21:57:42,888 INFO 36475 [egg:core] dump config after ready, 2ms
+2022-02-25 22:02:21,262 INFO 36557 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:02:21,274 INFO 36557 [egg-multipart] file mode enable
+2022-02-25 22:02:21,274 INFO 36557 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:02:21,319 INFO 36557 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:02:21,452 INFO 36557 [egg:core] dump config after load, 2ms
+2022-02-25 22:02:21,460 INFO 36557 [egg-watcher:application] watcher start success
+2022-02-25 22:02:21,462 INFO 36557 [egg:core] dump config after ready, 2ms
+2022-02-25 22:04:05,490 INFO 36614 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:04:05,501 INFO 36614 [egg-multipart] file mode enable
+2022-02-25 22:04:05,501 INFO 36614 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:04:05,540 INFO 36614 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:04:05,678 INFO 36614 [egg:core] dump config after load, 4ms
+2022-02-25 22:04:05,689 INFO 36614 [egg-watcher:application] watcher start success
+2022-02-25 22:04:05,692 INFO 36614 [egg:core] dump config after ready, 2ms
+2022-02-25 22:05:19,932 INFO 36635 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:05:19,944 INFO 36635 [egg-multipart] file mode enable
+2022-02-25 22:05:19,944 INFO 36635 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:05:19,984 INFO 36635 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:05:20,125 INFO 36635 [egg:core] dump config after load, 3ms
+2022-02-25 22:05:20,133 INFO 36635 [egg-watcher:application] watcher start success
+2022-02-25 22:05:20,135 INFO 36635 [egg:core] dump config after ready, 2ms
+2022-02-25 22:06:02,039 INFO 36654 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:06:02,050 INFO 36654 [egg-multipart] file mode enable
+2022-02-25 22:06:02,050 INFO 36654 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:06:02,092 INFO 36654 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:06:02,231 INFO 36654 [egg:core] dump config after load, 3ms
+2022-02-25 22:06:02,244 INFO 36654 [egg-watcher:application] watcher start success
+2022-02-25 22:06:02,247 INFO 36654 [egg:core] dump config after ready, 2ms
+2022-02-25 22:06:20,720 INFO 36664 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:06:20,731 INFO 36664 [egg-multipart] file mode enable
+2022-02-25 22:06:20,731 INFO 36664 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:06:20,768 INFO 36664 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:06:20,902 INFO 36664 [egg:core] dump config after load, 1ms
+2022-02-25 22:06:20,913 INFO 36664 [egg-watcher:application] watcher start success
+2022-02-25 22:06:20,916 INFO 36664 [egg:core] dump config after ready, 2ms
+2022-02-25 22:07:44,171 INFO 36721 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:07:44,182 INFO 36721 [egg-multipart] file mode enable
+2022-02-25 22:07:44,182 INFO 36721 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:07:44,227 INFO 36721 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:07:44,369 INFO 36721 [egg:core] dump config after load, 3ms
+2022-02-25 22:07:44,377 INFO 36721 [egg-watcher:application] watcher start success
+2022-02-25 22:07:44,381 INFO 36721 [egg:core] dump config after ready, 3ms
+2022-02-25 22:08:49,472 INFO 36743 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:08:49,486 INFO 36743 [egg-multipart] file mode enable
+2022-02-25 22:08:49,486 INFO 36743 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:08:49,533 INFO 36743 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:08:49,681 INFO 36743 [egg:core] dump config after load, 2ms
+2022-02-25 22:08:49,692 INFO 36743 [egg-watcher:application] watcher start success
+2022-02-25 22:08:49,695 INFO 36743 [egg:core] dump config after ready, 2ms
+2022-02-25 22:10:29,664 INFO 36773 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:10:29,676 INFO 36773 [egg-multipart] file mode enable
+2022-02-25 22:10:29,676 INFO 36773 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:10:29,721 INFO 36773 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:10:29,860 INFO 36773 [egg:core] dump config after load, 3ms
+2022-02-25 22:10:29,868 INFO 36773 [egg-watcher:application] watcher start success
+2022-02-25 22:10:29,870 INFO 36773 [egg:core] dump config after ready, 2ms
+2022-02-25 22:13:49,537 INFO 36865 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:13:49,547 INFO 36865 [egg-multipart] file mode enable
+2022-02-25 22:13:49,548 INFO 36865 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:13:49,587 INFO 36865 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:13:49,743 INFO 36865 [egg:core] dump config after load, 2ms
+2022-02-25 22:13:49,778 INFO 36865 [egg-watcher:application] watcher start success
+2022-02-25 22:13:49,781 INFO 36865 [egg:core] dump config after ready, 2ms
+2022-02-25 22:13:57,352 INFO 36871 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:13:57,363 INFO 36871 [egg-multipart] file mode enable
+2022-02-25 22:13:57,363 INFO 36871 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:13:57,405 INFO 36871 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:13:57,540 INFO 36871 [egg:core] dump config after load, 2ms
+2022-02-25 22:13:57,548 INFO 36871 [egg-watcher:application] watcher start success
+2022-02-25 22:13:57,550 INFO 36871 [egg:core] dump config after ready, 2ms
+2022-02-25 22:16:07,712 INFO 36912 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:16:07,723 INFO 36912 [egg-multipart] file mode enable
+2022-02-25 22:16:07,723 INFO 36912 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:16:07,764 INFO 36912 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:16:07,903 INFO 36912 [egg:core] dump config after load, 1ms
+2022-02-25 22:16:07,926 INFO 36912 [egg-watcher:application] watcher start success
+2022-02-25 22:16:07,929 INFO 36912 [egg:core] dump config after ready, 2ms
+2022-02-25 22:18:20,969 INFO 37089 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:18:20,979 INFO 37089 [egg-multipart] file mode enable
+2022-02-25 22:18:20,979 INFO 37089 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:18:21,008 INFO 37089 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:18:21,159 INFO 37089 [egg:core] dump config after load, 8ms
+2022-02-25 22:18:21,182 INFO 37089 [egg-watcher:application] watcher start success
+2022-02-25 22:18:21,185 INFO 37089 [egg:core] dump config after ready, 2ms
+2022-02-25 22:19:36,059 INFO 37112 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:19:36,070 INFO 37112 [egg-multipart] file mode enable
+2022-02-25 22:19:36,070 INFO 37112 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:19:36,108 INFO 37112 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:19:36,255 INFO 37112 [egg:core] dump config after load, 3ms
+2022-02-25 22:19:36,265 INFO 37112 [egg-watcher:application] watcher start success
+2022-02-25 22:19:36,268 INFO 37112 [egg:core] dump config after ready, 2ms
+2022-02-25 22:19:41,027 INFO 37118 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:19:41,037 INFO 37118 [egg-multipart] file mode enable
+2022-02-25 22:19:41,037 INFO 37118 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:19:41,077 INFO 37118 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:19:41,220 INFO 37118 [egg:core] dump config after load, 2ms
+2022-02-25 22:19:41,229 INFO 37118 [egg-watcher:application] watcher start success
+2022-02-25 22:19:41,232 INFO 37118 [egg:core] dump config after ready, 3ms
+2022-02-25 22:20:44,830 INFO 37164 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:20:44,840 INFO 37164 [egg-multipart] file mode enable
+2022-02-25 22:20:44,840 INFO 37164 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:20:44,881 INFO 37164 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:20:45,023 INFO 37164 [egg:core] dump config after load, 2ms
+2022-02-25 22:20:45,033 INFO 37164 [egg-watcher:application] watcher start success
+2022-02-25 22:20:45,036 INFO 37164 [egg:core] dump config after ready, 2ms
+2022-02-25 22:21:13,917 INFO 37171 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:21:13,928 INFO 37171 [egg-multipart] file mode enable
+2022-02-25 22:21:13,928 INFO 37171 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:21:13,979 INFO 37171 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:21:14,122 INFO 37171 [egg:core] dump config after load, 2ms
+2022-02-25 22:21:14,130 INFO 37171 [egg-watcher:application] watcher start success
+2022-02-25 22:21:14,132 INFO 37171 [egg:core] dump config after ready, 2ms
+2022-02-25 22:21:41,475 INFO 37178 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-25 22:21:41,485 INFO 37178 [egg-multipart] file mode enable
+2022-02-25 22:21:41,485 INFO 37178 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-25 22:21:41,525 INFO 37178 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-25 22:21:41,676 INFO 37178 [egg:core] dump config after load, 2ms
+2022-02-25 22:21:41,684 INFO 37178 [egg-watcher:application] watcher start success
+2022-02-25 22:21:41,686 INFO 37178 [egg:core] dump config after ready, 2ms
+2022-02-26 09:50:55,064 INFO 46782 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 09:50:55,074 INFO 46782 [egg-multipart] file mode enable
+2022-02-26 09:50:55,074 INFO 46782 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 09:50:55,119 INFO 46782 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 09:50:55,265 INFO 46782 [egg:core] dump config after load, 2ms
+2022-02-26 09:50:55,295 INFO 46782 [egg-watcher:application] watcher start success
+2022-02-26 09:50:55,298 INFO 46782 [egg:core] dump config after ready, 2ms
+2022-02-26 10:41:30,061 WARN 46782 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-02-26 10:41:30,065 WARN 46782 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-02-26 12:37:37,587 WARN 46782 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-02-26 12:37:37,595 WARN 46782 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-02-26 13:12:06,777 WARN 46782 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-02-26 13:12:06,778 WARN 46782 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-02-26 13:29:34,478 WARN 46782 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-02-26 13:29:34,575 WARN 46782 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-02-26 13:46:40,045 WARN 46782 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-02-26 13:46:40,048 WARN 46782 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-02-26 14:02:29,735 WARN 46782 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-02-26 14:02:29,735 WARN 46782 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-02-26 14:35:02,502 WARN 46782 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-02-26 14:35:02,504 WARN 46782 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-02-26 14:52:15,077 WARN 46782 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-02-26 14:52:15,077 WARN 46782 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-02-26 15:07:57,437 WARN 46782 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-02-26 15:07:57,448 WARN 46782 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-02-26 15:12:46,545 WARN 46782 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-02-26 15:12:46,552 WARN 46782 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-02-26 15:14:16,603 INFO 50349 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 15:14:16,614 INFO 50349 [egg-multipart] file mode enable
+2022-02-26 15:14:16,614 INFO 50349 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 15:14:16,659 INFO 50349 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 15:14:16,806 INFO 50349 [egg:core] dump config after load, 3ms
+2022-02-26 15:14:16,836 INFO 50349 [egg-watcher:application] watcher start success
+2022-02-26 15:14:16,839 INFO 50349 [egg:core] dump config after ready, 2ms
+2022-02-26 15:29:48,033 INFO 50575 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 15:29:48,047 INFO 50575 [egg-multipart] file mode enable
+2022-02-26 15:29:48,047 INFO 50575 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 15:29:48,112 INFO 50575 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 15:29:48,263 INFO 50575 [egg:core] dump config after load, 2ms
+2022-02-26 15:29:48,293 INFO 50575 [egg-watcher:application] watcher start success
+2022-02-26 15:29:48,296 INFO 50575 [egg:core] dump config after ready, 2ms
+2022-02-26 15:30:33,653 INFO 50598 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 15:30:33,664 INFO 50598 [egg-multipart] file mode enable
+2022-02-26 15:30:33,664 INFO 50598 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 15:30:33,709 INFO 50598 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 15:30:33,858 INFO 50598 [egg:core] dump config after load, 2ms
+2022-02-26 15:30:33,867 INFO 50598 [egg-watcher:application] watcher start success
+2022-02-26 15:30:33,870 INFO 50598 [egg:core] dump config after ready, 2ms
+2022-02-26 15:30:54,110 INFO 50609 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 15:30:54,121 INFO 50609 [egg-multipart] file mode enable
+2022-02-26 15:30:54,121 INFO 50609 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 15:30:54,169 INFO 50609 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 15:30:54,312 INFO 50609 [egg:core] dump config after load, 2ms
+2022-02-26 15:30:54,321 INFO 50609 [egg-watcher:application] watcher start success
+2022-02-26 15:30:54,325 INFO 50609 [egg:core] dump config after ready, 4ms
+2022-02-26 16:08:37,268 INFO 51697 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:08:37,279 INFO 51697 [egg-multipart] file mode enable
+2022-02-26 16:08:37,279 INFO 51697 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:08:37,324 INFO 51697 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:08:37,478 INFO 51697 [egg:core] dump config after load, 3ms
+2022-02-26 16:08:37,510 INFO 51697 [egg-watcher:application] watcher start success
+2022-02-26 16:08:37,514 INFO 51697 [egg:core] dump config after ready, 3ms
+2022-02-26 16:13:28,158 INFO 51773 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:13:28,170 INFO 51773 [egg-multipart] file mode enable
+2022-02-26 16:13:28,170 INFO 51773 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:13:28,213 INFO 51773 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:13:28,373 INFO 51773 [egg:core] dump config after load, 3ms
+2022-02-26 16:13:28,387 INFO 51773 [egg-watcher:application] watcher start success
+2022-02-26 16:13:28,391 INFO 51773 [egg:core] dump config after ready, 3ms
+2022-02-26 16:16:48,557 INFO 51827 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:16:48,568 INFO 51827 [egg-multipart] file mode enable
+2022-02-26 16:16:48,568 INFO 51827 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:16:48,609 INFO 51827 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:16:48,767 INFO 51827 [egg:core] dump config after load, 2ms
+2022-02-26 16:16:48,788 INFO 51827 [egg-watcher:application] watcher start success
+2022-02-26 16:16:48,796 INFO 51827 [egg:core] dump config after ready, 7ms
+2022-02-26 16:18:01,579 INFO 51848 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:18:01,591 INFO 51848 [egg-multipart] file mode enable
+2022-02-26 16:18:01,591 INFO 51848 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:18:01,632 INFO 51848 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:18:01,783 INFO 51848 [egg:core] dump config after load, 2ms
+2022-02-26 16:18:01,796 INFO 51848 [egg-watcher:application] watcher start success
+2022-02-26 16:18:01,799 INFO 51848 [egg:core] dump config after ready, 2ms
+2022-02-26 16:19:04,999 INFO 51865 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:19:05,015 INFO 51865 [egg-multipart] file mode enable
+2022-02-26 16:19:05,015 INFO 51865 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:19:05,060 INFO 51865 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:19:05,212 INFO 51865 [egg:core] dump config after load, 3ms
+2022-02-26 16:19:05,223 INFO 51865 [egg-watcher:application] watcher start success
+2022-02-26 16:19:05,226 INFO 51865 [egg:core] dump config after ready, 2ms
+2022-02-26 16:20:01,427 INFO 51883 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:20:01,439 INFO 51883 [egg-multipart] file mode enable
+2022-02-26 16:20:01,439 INFO 51883 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:20:01,482 INFO 51883 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:20:01,633 INFO 51883 [egg:core] dump config after load, 2ms
+2022-02-26 16:20:01,644 INFO 51883 [egg-watcher:application] watcher start success
+2022-02-26 16:20:01,649 INFO 51883 [egg:core] dump config after ready, 4ms
+2022-02-26 16:20:42,138 INFO 51908 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:20:42,150 INFO 51908 [egg-multipart] file mode enable
+2022-02-26 16:20:42,150 INFO 51908 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:20:42,197 INFO 51908 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:20:42,356 INFO 51908 [egg:core] dump config after load, 2ms
+2022-02-26 16:20:42,366 INFO 51908 [egg-watcher:application] watcher start success
+2022-02-26 16:20:42,370 INFO 51908 [egg:core] dump config after ready, 3ms
+2022-02-26 16:21:12,319 INFO 51920 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:21:12,333 INFO 51920 [egg-multipart] file mode enable
+2022-02-26 16:21:12,333 INFO 51920 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:21:12,370 INFO 51920 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:21:12,526 INFO 51920 [egg:core] dump config after load, 1ms
+2022-02-26 16:21:12,534 INFO 51920 [egg-watcher:application] watcher start success
+2022-02-26 16:21:12,537 INFO 51920 [egg:core] dump config after ready, 2ms
+2022-02-26 16:22:29,334 INFO 51940 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:22:29,346 INFO 51940 [egg-multipart] file mode enable
+2022-02-26 16:22:29,346 INFO 51940 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:22:29,385 INFO 51940 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:22:29,541 INFO 51940 [egg:core] dump config after load, 3ms
+2022-02-26 16:22:29,550 INFO 51940 [egg-watcher:application] watcher start success
+2022-02-26 16:22:29,553 INFO 51940 [egg:core] dump config after ready, 2ms
+2022-02-26 16:32:38,591 INFO 52179 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:32:38,604 INFO 52179 [egg-multipart] file mode enable
+2022-02-26 16:32:38,604 INFO 52179 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:32:38,642 INFO 52179 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:32:38,796 INFO 52179 [egg:core] dump config after load, 3ms
+2022-02-26 16:32:38,826 INFO 52179 [egg-watcher:application] watcher start success
+2022-02-26 16:32:38,829 INFO 52179 [egg:core] dump config after ready, 2ms
+2022-02-26 16:37:02,615 INFO 52273 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:37:02,629 INFO 52273 [egg-multipart] file mode enable
+2022-02-26 16:37:02,629 INFO 52273 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:37:02,676 INFO 52273 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:37:02,838 INFO 52273 [egg:core] dump config after load, 2ms
+2022-02-26 16:37:02,873 INFO 52273 [egg-watcher:application] watcher start success
+2022-02-26 16:37:02,876 INFO 52273 [egg:core] dump config after ready, 2ms
+2022-02-26 16:42:56,180 INFO 52354 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:42:56,191 INFO 52354 [egg-multipart] file mode enable
+2022-02-26 16:42:56,191 INFO 52354 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:42:56,248 INFO 52354 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:42:56,410 INFO 52354 [egg:core] dump config after load, 3ms
+2022-02-26 16:42:56,418 INFO 52354 [egg-watcher:application] watcher start success
+2022-02-26 16:42:56,421 INFO 52354 [egg:core] dump config after ready, 2ms
+2022-02-26 16:43:44,462 INFO 52394 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:43:44,477 INFO 52394 [egg-multipart] file mode enable
+2022-02-26 16:43:44,477 INFO 52394 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:43:44,515 INFO 52394 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:43:44,666 INFO 52394 [egg:core] dump config after load, 1ms
+2022-02-26 16:43:44,676 INFO 52394 [egg-watcher:application] watcher start success
+2022-02-26 16:43:44,681 INFO 52394 [egg:core] dump config after ready, 4ms
+2022-02-26 16:44:04,842 INFO 52410 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:44:04,859 INFO 52410 [egg-multipart] file mode enable
+2022-02-26 16:44:04,859 INFO 52410 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:44:04,901 INFO 52410 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:44:05,055 INFO 52410 [egg:core] dump config after load, 2ms
+2022-02-26 16:44:05,067 INFO 52410 [egg-watcher:application] watcher start success
+2022-02-26 16:44:05,070 INFO 52410 [egg:core] dump config after ready, 2ms
+2022-02-26 16:44:51,520 INFO 52439 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 16:44:51,535 INFO 52439 [egg-multipart] file mode enable
+2022-02-26 16:44:51,535 INFO 52439 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 16:44:51,574 INFO 52439 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 16:44:51,724 INFO 52439 [egg:core] dump config after load, 2ms
+2022-02-26 16:44:51,734 INFO 52439 [egg-watcher:application] watcher start success
+2022-02-26 16:44:51,742 INFO 52439 [egg:core] dump config after ready, 8ms
+2022-02-26 16:58:48,666 WARN 52439 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-02-26 17:04:13,158 INFO 52648 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 17:04:13,169 INFO 52648 [egg-multipart] file mode enable
+2022-02-26 17:04:13,169 INFO 52648 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 17:04:13,212 INFO 52648 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 17:04:13,366 INFO 52648 [egg:core] dump config after load, 3ms
+2022-02-26 17:04:13,398 INFO 52648 [egg-watcher:application] watcher start success
+2022-02-26 17:04:13,401 INFO 52648 [egg:core] dump config after ready, 2ms
+2022-02-26 17:04:42,002 INFO 52662 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 17:04:42,016 INFO 52662 [egg-multipart] file mode enable
+2022-02-26 17:04:42,016 INFO 52662 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 17:04:42,062 INFO 52662 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 17:04:42,215 INFO 52662 [egg:core] dump config after load, 2ms
+2022-02-26 17:04:42,223 INFO 52662 [egg-watcher:application] watcher start success
+2022-02-26 17:04:42,226 INFO 52662 [egg:core] dump config after ready, 2ms
+2022-02-26 17:05:41,552 INFO 52708 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 17:05:41,564 INFO 52708 [egg-multipart] file mode enable
+2022-02-26 17:05:41,564 INFO 52708 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 17:05:41,606 INFO 52708 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 17:05:41,816 INFO 52708 [egg:core] dump config after load, 3ms
+2022-02-26 17:05:41,830 INFO 52708 [egg-watcher:application] watcher start success
+2022-02-26 17:05:41,834 INFO 52708 [egg:core] dump config after ready, 3ms
+2022-02-26 17:07:35,666 INFO 52749 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 17:07:35,684 INFO 52749 [egg-multipart] file mode enable
+2022-02-26 17:07:35,684 INFO 52749 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 17:07:35,722 INFO 52749 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 17:07:35,874 INFO 52749 [egg:core] dump config after load, 2ms
+2022-02-26 17:07:35,887 INFO 52749 [egg-watcher:application] watcher start success
+2022-02-26 17:07:35,891 INFO 52749 [egg:core] dump config after ready, 3ms
+2022-02-26 17:24:52,630 WARN 52749 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-02-26 17:26:14,045 INFO 52950 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 17:26:14,056 INFO 52950 [egg-multipart] file mode enable
+2022-02-26 17:26:14,056 INFO 52950 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 17:26:14,099 INFO 52950 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 17:26:14,262 INFO 52950 [egg:core] dump config after load, 2ms
+2022-02-26 17:26:14,271 INFO 52950 [egg-watcher:application] watcher start success
+2022-02-26 17:26:14,276 INFO 52950 [egg:core] dump config after ready, 3ms
+2022-02-26 17:26:51,509 INFO 52962 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 17:26:51,520 INFO 52962 [egg-multipart] file mode enable
+2022-02-26 17:26:51,520 INFO 52962 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 17:26:51,567 INFO 52962 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 17:26:51,737 INFO 52962 [egg:core] dump config after load, 3ms
+2022-02-26 17:26:51,749 INFO 52962 [egg-watcher:application] watcher start success
+2022-02-26 17:26:51,751 INFO 52962 [egg:core] dump config after ready, 2ms
+2022-02-26 17:27:45,639 INFO 52977 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 17:27:45,650 INFO 52977 [egg-multipart] file mode enable
+2022-02-26 17:27:45,650 INFO 52977 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 17:27:45,694 INFO 52977 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 17:27:45,851 INFO 52977 [egg:core] dump config after load, 2ms
+2022-02-26 17:27:45,862 INFO 52977 [egg-watcher:application] watcher start success
+2022-02-26 17:27:45,867 INFO 52977 [egg:core] dump config after ready, 4ms
+2022-02-26 17:27:59,914 INFO 52985 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-02-26 17:27:59,925 INFO 52985 [egg-multipart] file mode enable
+2022-02-26 17:27:59,925 INFO 52985 [egg-multipart] will save temporary files to "/var/folders/3p/lqx2b9_x5gnfzym8cx90yjxh0000gn/T/egg-multipart-tmp/222", cleanup job cron: "0 30 4 * * *"
+2022-02-26 17:27:59,973 INFO 52985 [egg-static] starting static serve /public/ -> /Users/lruler/Desktop/egg/app/public
+2022-02-26 17:28:00,125 INFO 52985 [egg:core] dump config after load, 1ms
+2022-02-26 17:28:00,133 INFO 52985 [egg-watcher:application] watcher start success
+2022-02-26 17:28:00,136 INFO 52985 [egg:core] dump config after ready, 2ms

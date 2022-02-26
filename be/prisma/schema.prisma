@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// 文章列表
+model Articles {
+  id        Int      @id @default(autoincrement()) @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  content   String   @db.Text
+  title     String
+  tags      Tag[]
+}
+
+// 标签总表
+model Tags {
+  id    Int    @id @default(autoincrement())
+  tag   String @unique
+  count Int    @default(1)
+}
+
+// 标签文章关联表
+model Tag {
+  id  Int    @id @default(autoincrement())
+  tag String
+  Articles   Articles? @relation(fields: [articlesId], references: [id])
+  articlesId Int
+}
+
+model User {
+  id       Int    @id @default(autoincrement())
+  username String
+  password String
+}

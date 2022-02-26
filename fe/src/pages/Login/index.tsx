@@ -8,12 +8,12 @@ const Login: React.FC = () => {
   const handleLogin = () => {
     setIsLogin(!isLogin);
   };
+
   return (
     <div className="login-wrapper">
       {isLogin ? <Input /> : null}
       <div className="login-image">
-        <div className="login-image-a"></div>
-        <div className="login-image-b"></div>
+        <div className="login-image n-image-b"></div>
         <div className="login-image-c"></div>
         <div className="login-image-d"></div>
         <p className="login-image-text">LRULER HOME</p>

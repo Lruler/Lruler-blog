@@ -1,5 +1,6 @@
 fe/node_modules
 be/node_modules
+koabe/node_modules
 .DS_Store
 dist
 dist-ssr

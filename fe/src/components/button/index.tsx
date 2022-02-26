@@ -2,7 +2,7 @@ import React from "react";
 import "./index.less";
 
 interface ButtonProp {
-  onClick: () => void
+  onClick?: () => void
   color?: string;
 }
 

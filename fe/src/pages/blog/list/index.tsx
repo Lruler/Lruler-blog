@@ -75,7 +75,8 @@ const BlogList: React.FC = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await useFetch('getList', { page: page + 1 })
+      const res = await useFetch('getList', { page })
+      console.log(res)
       setBlogList(res.data.rows)
     })();
   }, [page]);

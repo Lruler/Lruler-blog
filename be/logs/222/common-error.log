@@ -1,0 +1,645 @@
+2022-02-25 19:42:38,399 ERROR 33352 [-/127.0.0.1/-/17ms POST /blog/add] nodejs.TypeError: Cannot create property 'create' on string 'css, js'
+    at BlogController.addBlog (/Users/lruler/Desktop/egg/app/controller/blog.ts:24:21)
+    at Object.callFn (/Users/lruler/Desktop/egg/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/lruler/Desktop/egg/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/router.js:186:18
+    at dispatch (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+
+pid: 33352
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-25 19:43:48,532 ERROR 33352 [-/127.0.0.1/-/7ms POST /blog/add] nodejs.TypeError: Cannot create property 'create' on string 'css, js'
+    at BlogController.addBlog (/Users/lruler/Desktop/egg/app/controller/blog.ts:24:21)
+    at Object.callFn (/Users/lruler/Desktop/egg/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/lruler/Desktop/egg/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/router.js:186:18
+    at dispatch (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+
+pid: 33352
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-25 19:45:49,255 ERROR 33449 [-/127.0.0.1/-/17ms POST /blog/add] nodejs.TypeError: Cannot create property 'create' on string 'css, js'
+    at BlogController.addBlog (/Users/lruler/Desktop/egg/app/controller/blog.ts:24:21)
+    at Object.callFn (/Users/lruler/Desktop/egg/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/lruler/Desktop/egg/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/router.js:186:18
+    at dispatch (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+
+pid: 33449
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-25 19:47:02,548 ERROR 33476 [-/127.0.0.1/-/46ms POST /blog/add] nodejs.Error: 
+Invalid `prisma.articles.create()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:25:27
+
+  22 const blog = ctx.request.body;
+  23 // [{tag:Js}, {tag:css}]     [Js, Css]
+  24 blog.tags = (ctx.request.body.tags as string).split(',').map(tag => ({ tag }));
+→ 25 await prisma.articles.create({
+       data: {
+         content: '测试测试',
+         title: 'Egg with Prisma',
+         tags: [
+           {
+             tag: 'css'
+           },
+           {
+             tag: ' js'
+           }
+         ]
+         ~~~~~~~~~~~~~~
+       }
+     })
+
+Argument tags: Got invalid value 
+[
+  {
+    tag: 'css'
+  },
+  {
+    tag: ' js'
+  }
+]
+on prisma.createOneArticles. Provided List<Json>, expected TagsCreateNestedManyWithoutArticlesInput:
+type TagsCreateNestedManyWithoutArticlesInput {
+  create?: TagsCreateWithoutArticlesInput | List<TagsCreateWithoutArticlesInput> | TagsUncheckedCreateWithoutArticlesInput | List<TagsUncheckedCreateWithoutArticlesInput>
+  connectOrCreate?: TagsCreateOrConnectWithoutArticlesInput | List<TagsCreateOrConnectWithoutArticlesInput>
+  createMany?: TagsCreateManyArticlesInputEnvelope
+  connect?: TagsWhereUniqueInput | List<TagsWhereUniqueInput>
+}
+
+
+Invalid `prisma.articles.create()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:25:27
+
+  22 const blog = ctx.request.body;
+  23 // [{tag:Js}, {tag:css}]     [Js, Css]
+  24 blog.tags = (ctx.request.body.tags as string).split(',').map(tag => ({ tag }));
+→ 25 await prisma.articles.create({
+       data: {
+         content: '测试测试',
+         title: 'Egg with Prisma',
+         tags: [
+           {
+             tag: 'css'
+           },
+           {
+             tag: ' js'
+           }
+         ]
+         ~~~~~~~~~~~~~~
+       }
+     })
+
+Argument tags: Got invalid value 
+[
+  {
+    tag: 'css'
+  },
+  {
+    tag: ' js'
+  }
+]
+on prisma.createOneArticles. Provided List<Json>, expected TagsCreateNestedManyWithoutArticlesInput:
+type TagsCreateNestedManyWithoutArticlesInput {
+  create?: TagsCreateWithoutArticlesInput | List<TagsCreateWithoutArticlesInput> | TagsUncheckedCreateWithoutArticlesInput | List<TagsUncheckedCreateWithoutArticlesInput>
+  connectOrCreate?: TagsCreateOrConnectWithoutArticlesInput | List<TagsCreateOrConnectWithoutArticlesInput>
+  createMany?: TagsCreateManyArticlesInputEnvelope
+  connect?: TagsWhereUniqueInput | List<TagsWhereUniqueInput>
+}
+
+
+    at Object.validate (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:38605:20)
+    at PrismaClient._executeRequest (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40690:17)
+    at consumer (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40634:23)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40638:76
+    at runInChildSpan (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:39882:12)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40638:20
+    at AsyncResource.runInAsyncScope (node:async_hooks:201:9)
+    at PrismaClient._request (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40637:86)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:37268:25
+    at _callback (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:37032:52)
+clientVersion: "3.10.0"
+pid: 33476
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-25 20:55:41,349 ERROR 34924 [-/127.0.0.1/-/79ms POST /blog/add] nodejs.P2002Error: 
+Invalid `prisma.articles.create()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:33:27
+
+  30   if (o) return { tag: o.tag, count: ++o.count };
+  31   return { tag: t.tag, count: 1 };
+  32 }));
+→ 33 await prisma.articles.create(
+  Unique constraint failed on the constraint: `Tags_tag_key`
+Invalid `prisma.articles.create()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:33:27
+
+  30   if (o) return { tag: o.tag, count: ++o.count };
+  31   return { tag: t.tag, count: 1 };
+  32 }));
+→ 33 await prisma.articles.create(
+  Unique constraint failed on the constraint: `Tags_tag_key`
+    at Object.request (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:39809:15)
+    at async PrismaClient._request (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40637:18)
+    at async BlogController.addBlog (/Users/lruler/Desktop/egg/app/controller/blog.ts:33:5)
+    at async /Users/lruler/Desktop/egg/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async session (/Users/lruler/Desktop/egg/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/lruler/Desktop/egg/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/lruler/Desktop/egg/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/lruler/Desktop/egg/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/lruler/Desktop/egg/node_modules/egg/app/middleware/meta.js:18:5)
+code: "P2002"
+clientVersion: "3.10.0"
+meta: {"target":"Tags_tag_key"}
+name: "P2002Error"
+pid: 34924
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-25 21:28:16,359 ERROR 35742 [-/127.0.0.1/-/36ms POST /blog/add] nodejs.Error: 
+Invalid `prisma.articles.create()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:25:27
+
+  22 const blog = ctx.request.body;
+  23 const oTag = (ctx.request.body.tags as string);
+  24 blog.tags = oTag.split(',').map(tag => ({ tag }));
+→ 25 await prisma.articles.create({
+       data: {
+         title: 'Egg with Prisma',
+         content: '测试测试',
+         tags: [
+           {
+             tag: 'css'
+           },
+           {
+             tag: ' html'
+           },
+           {
+             tag: ' react'
+           }
+         ]
+         ~~~~~~~~~~~~~~~~~
+       }
+     })
+
+Argument tags: Got invalid value 
+[
+  {
+    tag: 'css'
+  },
+  {
+    tag: ' html'
+  },
+  {
+    tag: ' react'
+  }
+]
+on prisma.createOneArticles. Provided List<Json>, expected TagsCreateNestedManyWithoutArticlesInput:
+type TagsCreateNestedManyWithoutArticlesInput {
+  create?: TagsCreateWithoutArticlesInput | List<TagsCreateWithoutArticlesInput> | TagsUncheckedCreateWithoutArticlesInput | List<TagsUncheckedCreateWithoutArticlesInput>
+  connectOrCreate?: TagsCreateOrConnectWithoutArticlesInput | List<TagsCreateOrConnectWithoutArticlesInput>
+  createMany?: TagsCreateManyArticlesInputEnvelope
+  connect?: TagsWhereUniqueInput | List<TagsWhereUniqueInput>
+}
+
+
+Invalid `prisma.articles.create()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:25:27
+
+  22 const blog = ctx.request.body;
+  23 const oTag = (ctx.request.body.tags as string);
+  24 blog.tags = oTag.split(',').map(tag => ({ tag }));
+→ 25 await prisma.articles.create({
+       data: {
+         title: 'Egg with Prisma',
+         content: '测试测试',
+         tags: [
+           {
+             tag: 'css'
+           },
+           {
+             tag: ' html'
+           },
+           {
+             tag: ' react'
+           }
+         ]
+         ~~~~~~~~~~~~~~~~~
+       }
+     })
+
+Argument tags: Got invalid value 
+[
+  {
+    tag: 'css'
+  },
+  {
+    tag: ' html'
+  },
+  {
+    tag: ' react'
+  }
+]
+on prisma.createOneArticles. Provided List<Json>, expected TagsCreateNestedManyWithoutArticlesInput:
+type TagsCreateNestedManyWithoutArticlesInput {
+  create?: TagsCreateWithoutArticlesInput | List<TagsCreateWithoutArticlesInput> | TagsUncheckedCreateWithoutArticlesInput | List<TagsUncheckedCreateWithoutArticlesInput>
+  connectOrCreate?: TagsCreateOrConnectWithoutArticlesInput | List<TagsCreateOrConnectWithoutArticlesInput>
+  createMany?: TagsCreateManyArticlesInputEnvelope
+  connect?: TagsWhereUniqueInput | List<TagsWhereUniqueInput>
+}
+
+
+    at Object.validate (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:38605:20)
+    at PrismaClient._executeRequest (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40690:17)
+    at consumer (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40634:23)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40638:76
+    at runInChildSpan (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:39882:12)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40638:20
+    at AsyncResource.runInAsyncScope (node:async_hooks:201:9)
+    at PrismaClient._request (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40637:86)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:37268:25
+    at _callback (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:37032:52)
+clientVersion: "3.10.0"
+pid: 35742
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-25 21:57:57,047 ERROR 36475 [-/127.0.0.1/-/42ms POST /blog/add] nodejs.Error: 
+Invalid `prisma.tags.findUnique()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:25:35
+
+  22 const blog = ctx.request.body;
+  23 const blogTgs = blog.tags.split(',').map(tag => ({ tag }));
+  24 await Promise.all(blogTgs.map(async t => {
+→ 25   const o = await prisma.tags.findUnique({
+         where: {
+       ?   tag?: String,
+       ?   id?: Int
+         }
+       })
+
+Argument where of type TagsWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+Invalid `prisma.tags.findUnique()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:25:35
+
+  22 const blog = ctx.request.body;
+  23 const blogTgs = blog.tags.split(',').map(tag => ({ tag }));
+  24 await Promise.all(blogTgs.map(async t => {
+→ 25   const o = await prisma.tags.findUnique({
+         where: {
+       ?   tag?: String,
+       ?   id?: Int
+         }
+       })
+
+Argument where of type TagsWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+    at Object.validate (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:38605:20)
+    at PrismaClient._executeRequest (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40690:17)
+    at consumer (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40634:23)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40638:76
+    at runInChildSpan (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:39882:12)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40638:20
+    at AsyncResource.runInAsyncScope (node:async_hooks:201:9)
+    at PrismaClient._request (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40637:86)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:37268:25
+    at _callback (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:37032:52)
+clientVersion: "3.10.0"
+pid: 36475
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-25 22:01:49,574 ERROR 36475 [-/127.0.0.1/-/23ms POST /blog/add] nodejs.Error: 
+Invalid `prisma.tags.findUnique()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:25:35
+
+  22 const blog = ctx.request.body;
+  23 const blogTgs = blog.tags.split(',').map(tag => ({ tag }));
+  24 await Promise.all(blogTgs.map(async t => {
+→ 25   const o = await prisma.tags.findUnique({
+         where: {
+       ?   tag?: String,
+       ?   id?: Int
+         }
+       })
+
+Argument where of type TagsWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+Invalid `prisma.tags.findUnique()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:25:35
+
+  22 const blog = ctx.request.body;
+  23 const blogTgs = blog.tags.split(',').map(tag => ({ tag }));
+  24 await Promise.all(blogTgs.map(async t => {
+→ 25   const o = await prisma.tags.findUnique({
+         where: {
+       ?   tag?: String,
+       ?   id?: Int
+         }
+       })
+
+Argument where of type TagsWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+    at Object.validate (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:38605:20)
+    at PrismaClient._executeRequest (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40690:17)
+    at consumer (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40634:23)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40638:76
+    at runInChildSpan (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:39882:12)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40638:20
+    at AsyncResource.runInAsyncScope (node:async_hooks:201:9)
+    at PrismaClient._request (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40637:86)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:37268:25
+    at _callback (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:37032:52)
+clientVersion: "3.10.0"
+pid: 36475
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-25 22:02:33,520 ERROR 36557 [-/127.0.0.1/-/92ms POST /blog/add] nodejs.Error: 
+Invalid `prisma.articles.create()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:29:27
+
+  26   if (o) await prisma.tags.update({ where: { tag: o.tag }, data: { count: ++o.count } });
+  27   else await prisma.tags.create({ data: t });
+  28 }));
+→ 29 await prisma.articles.create({
+       data: {
+         content: '测试测试',
+         title: 'Egg with Prisma',
+         tags: 'css, html, react'
+         ~~~~
+       }
+     })
+
+Unknown arg `tags` in data.tags for type ArticlesCreateInput. Did you mean `title`? Available args:
+type ArticlesCreateInput {
+  createdAt?: DateTime
+  updatedAt?: DateTime
+  content: String
+  title: String
+}
+
+
+Invalid `prisma.articles.create()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:29:27
+
+  26   if (o) await prisma.tags.update({ where: { tag: o.tag }, data: { count: ++o.count } });
+  27   else await prisma.tags.create({ data: t });
+  28 }));
+→ 29 await prisma.articles.create({
+       data: {
+         content: '测试测试',
+         title: 'Egg with Prisma',
+         tags: 'css, html, react'
+         ~~~~
+       }
+     })
+
+Unknown arg `tags` in data.tags for type ArticlesCreateInput. Did you mean `title`? Available args:
+type ArticlesCreateInput {
+  createdAt?: DateTime
+  updatedAt?: DateTime
+  content: String
+  title: String
+}
+
+
+    at Object.validate (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:38605:20)
+    at PrismaClient._executeRequest (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40690:17)
+    at consumer (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40634:23)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40638:76
+    at runInChildSpan (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:39882:12)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40638:20
+    at AsyncResource.runInAsyncScope (node:async_hooks:201:9)
+    at PrismaClient._request (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40637:86)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:37268:25
+    at _callback (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:37032:52)
+clientVersion: "3.10.0"
+pid: 36557
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-25 22:03:07,506 ERROR 36557 [-/127.0.0.1/-/34ms POST /blog/add] nodejs.Error: 
+Invalid `prisma.articles.create()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:29:27
+
+  26   if (o) await prisma.tags.update({ where: { tag: o.tag }, data: { count: ++o.count } });
+  27   else await prisma.tags.create({ data: t });
+  28 }));
+→ 29 await prisma.articles.create({
+       data: {
+         content: '测试测试',
+         title: 'Egg with Prisma',
+         tags: 'css, html, react'
+         ~~~~
+       }
+     })
+
+Unknown arg `tags` in data.tags for type ArticlesCreateInput. Did you mean `title`? Available args:
+type ArticlesCreateInput {
+  createdAt?: DateTime
+  updatedAt?: DateTime
+  content: String
+  title: String
+}
+
+
+Invalid `prisma.articles.create()` invocation in
+/Users/lruler/Desktop/egg/app/controller/blog.ts:29:27
+
+  26   if (o) await prisma.tags.update({ where: { tag: o.tag }, data: { count: ++o.count } });
+  27   else await prisma.tags.create({ data: t });
+  28 }));
+→ 29 await prisma.articles.create({
+       data: {
+         content: '测试测试',
+         title: 'Egg with Prisma',
+         tags: 'css, html, react'
+         ~~~~
+       }
+     })
+
+Unknown arg `tags` in data.tags for type ArticlesCreateInput. Did you mean `title`? Available args:
+type ArticlesCreateInput {
+  createdAt?: DateTime
+  updatedAt?: DateTime
+  content: String
+  title: String
+}
+
+
+    at Object.validate (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:38605:20)
+    at PrismaClient._executeRequest (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40690:17)
+    at consumer (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40634:23)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40638:76
+    at runInChildSpan (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:39882:12)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40638:20
+    at AsyncResource.runInAsyncScope (node:async_hooks:201:9)
+    at PrismaClient._request (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:40637:86)
+    at /Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:37268:25
+    at _callback (/Users/lruler/Desktop/egg/node_modules/@prisma/client/runtime/index.js:37032:52)
+clientVersion: "3.10.0"
+pid: 36557
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 10:41:30,062 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 930974ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 46776
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 10:45:25,387 ERROR 46782 [-/127.0.0.1/-/48ms POST /blog/add] nodejs.TypeError: Cannot read properties of undefined (reading 'split')
+    at BlogController.addBlog (/Users/lruler/Desktop/egg/app/controller/blog.ts:23:44)
+    at Object.callFn (/Users/lruler/Desktop/egg/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/lruler/Desktop/egg/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/router.js:186:18
+    at dispatch (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+
+pid: 46782
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 10:45:27,750 ERROR 46782 [-/127.0.0.1/-/13ms POST /blog/add] nodejs.TypeError: Cannot read properties of undefined (reading 'split')
+    at BlogController.addBlog (/Users/lruler/Desktop/egg/app/controller/blog.ts:23:44)
+    at Object.callFn (/Users/lruler/Desktop/egg/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/lruler/Desktop/egg/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/router.js:186:18
+    at dispatch (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+
+pid: 46782
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 10:45:29,741 ERROR 46782 [-/127.0.0.1/-/1ms POST /blog/add] nodejs.TypeError: Cannot read properties of undefined (reading 'split')
+    at BlogController.addBlog (/Users/lruler/Desktop/egg/app/controller/blog.ts:23:44)
+    at Object.callFn (/Users/lruler/Desktop/egg/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/lruler/Desktop/egg/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/lruler/Desktop/egg/node_modules/@eggjs/router/lib/router.js:186:18
+    at dispatch (/Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/lruler/Desktop/egg/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+
+pid: 46782
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 12:37:37,569 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 1016822ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 46776
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 13:12:06,777 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 1062656ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 46776
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 13:29:34,574 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 1047692ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 46776
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 13:46:40,044 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 1025447ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 46776
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 14:02:29,735 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 949678ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 46776
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 14:35:02,501 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 912868ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 46776
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 14:52:15,077 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 1032565ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 46776
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 15:07:57,437 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 942311ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 46776
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 15:12:46,543 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 129066ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 46776
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 16:58:48,671 ERROR 50571 nodejs.ClusterClientNoResponseError: client no response in 596802ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 50571
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-26 17:24:52,733 ERROR 50571 nodejs.ClusterClientNoResponseError: client no response in 676716ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 50571
+hostname: liuyuledeMacBook-Pro.local
+
