@@ -4,7 +4,7 @@ interface Blog {
   updatedAt: Date;
   content: string;
   title: string;
-  tags: TagRes[];
+  tags: string;
 }
 
 interface getListReq {

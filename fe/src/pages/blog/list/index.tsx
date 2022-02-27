@@ -26,7 +26,6 @@ export const List: React.FC = () => {
   const mdRender = new MarkdownIt();
   const ctx = useContext(BlogCtx);
   const { blogList, nextPage } = ctx;
-
   const getBlog = (id: number) => {
     nav(`${id}`);
   };
@@ -36,7 +35,7 @@ export const List: React.FC = () => {
         {blogList.map((list, i) => {
           return (
             <Card key={i} onClick={() => getBlog(list.id)}>
-              <BlogItem key={list.id} id={i}>
+              <BlogItem key={list.id} title={list.title}>
                 {mdRender.render(list.content)}
               </BlogItem>
             </Card>
@@ -75,9 +74,8 @@ const BlogList: React.FC = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await useFetch('getList', { page })
-      console.log(res)
-      setBlogList(res.data.rows)
+      const res = await useFetch("getList", { page });
+      setBlogList(res.data.rows);
     })();
   }, [page]);
 

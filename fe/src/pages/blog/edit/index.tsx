@@ -15,8 +15,7 @@ interface editPro {
 
 interface BlogPro {
   title: string;
-  tag: string;
-  category: string;
+  tags: string;
 }
 
 const mdRender = new MarkdownIt();
@@ -26,8 +25,7 @@ export default function Edit() {
   const [content, setContent] = useState("");
   const [blogMsg, setBlogMsg] = useState<BlogPro>({
     title: "",
-    tag: "",
-    category: "",
+    tags: "",
   });
 
   const handleContent = ({ html, text }: editPro) => {
@@ -35,9 +33,9 @@ export default function Edit() {
   };
 
   const post = async () => {
-    if (blogMsg.category && blogMsg.tag && blogMsg.title && content) {
+    if (blogMsg.tags && blogMsg.title && content) {
       const blog = { ...blogMsg, content };
-      const data = await useFetch('postBlog', blog, 'POST');
+      const data = await useFetch("postBlog", blog, "POST");
       Message.success(data.msg);
     } else {
       Message.error("请填写完整!");
@@ -49,7 +47,7 @@ export default function Edit() {
       const imgFile = e.currentTarget.files[0];
       const imgData = new FormData();
       imgData.append("file", imgFile);
-      const res = await useFetch('fileUpload', imgData, 'POST');
+      const res = await useFetch("fileUpload", imgData, "POST");
       if (FileUpload.success) FileUpload.success(res.data.url);
     }
   };
@@ -60,7 +58,6 @@ export default function Edit() {
       FileUpload.useUpload(uploadImg);
     });
   }, []);
-
 
   return (
     <>
@@ -78,14 +75,7 @@ export default function Edit() {
           <input
             type="text"
             onChange={(e) =>
-              setBlogMsg((pre) => ({ ...pre, tag: e.target.value }))
-            }
-          />
-          category:
-          <input
-            type="text"
-            onChange={(e) =>
-              setBlogMsg((pre) => ({ ...pre, category: e.target.value }))
+              setBlogMsg((pre) => ({ ...pre, tags: e.target.value }))
             }
           />
         </form>
