@@ -16,7 +16,6 @@ export default class TagController extends Controller {
     const { ctx } = this;
     const { id } = ctx.request.query;
     const tags = await prisma.tag.findMany({ where: { articlesId: +id } });
-    console.log(tags);
     this.success(tags);
   }
 
