@@ -66,7 +66,7 @@
       "directory": []
     },
     "multipart": {
-      "mode": "file",
+      "mode": "stream",
       "autoFields": false,
       "defaultCharset": "utf8",
       "fieldNameSize": 100,
@@ -273,7 +273,6 @@
       "overrideMethod",
       "session",
       "i18n",
-      "multipart",
       "eggLoaderTrace"
     ],
     "workerStartTimeout": 600000,

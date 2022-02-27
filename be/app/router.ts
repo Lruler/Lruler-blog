@@ -6,6 +6,7 @@ export default (app: Application) => {
   router.get('/login', controller.login.login);
 
   router.get('/blog/list', controller.blog.getList);
+  router.get('/blog/get', controller.blog.lookBlog);
   router.post('/blog/add', controller.blog.addBlog);
   router.post('/blog/upload', controller.blog.uploadImg);
   router.get('/blog/tags', controller.tag.getBlogTag);

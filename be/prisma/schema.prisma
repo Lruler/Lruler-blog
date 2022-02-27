@@ -12,11 +12,12 @@ datasource db {
 
 // 文章列表
 model Articles {
-  id        Int      @id @default(autoincrement()) @unique
+  id        Int      @id @unique @default(autoincrement())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   content   String   @db.Text
   title     String
+  intro     String
   tags      Tag[]
 }
 
@@ -29,8 +30,8 @@ model Tags {
 
 // 标签文章关联表
 model Tag {
-  id  Int    @id @default(autoincrement())
-  tag String
+  id         Int       @id @default(autoincrement())
+  tag        String
   Articles   Articles? @relation(fields: [articlesId], references: [id])
   articlesId Int
 }

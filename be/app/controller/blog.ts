@@ -24,12 +24,13 @@ export default class BlogController extends Controller {
     await Promise.all(blogTags.map(async t => {
       const o = await prisma.tags.findUnique({ where: { tag: t.tag } });
       if (o) await prisma.tags.update({ where: { tag: o.tag }, data: { count: ++o.count } });
-      else await prisma.tags.create({ data: t });
+      else await prisma.tags.create({ data: { tag: t.tag, count: 1 } });
     }));
     await prisma.articles.create({
       data: {
         content: blog.content,
         title: blog.title,
+        intro: blog.intro,
         tags: {
           create: blogTags,
         },
@@ -47,14 +48,15 @@ export default class BlogController extends Controller {
   async lookBlog() {
     const { ctx } = this;
     const { id } = ctx.request.query;
-    const blog = prisma.articles.findFirst({ where: { id: +id } });
-    this.success(blog);
+    const blog = await prisma.articles.findFirst({ where: { id: +id } });
+    this.success({ ...blog });
   }
 
   async updateBlog() {
     const { ctx } = this;
     const { id, content } = ctx.request.body;
     await prisma.articles.update({ where: { id }, data: { content } });
+    this.success();
   }
 
   async uploadImg() {
@@ -81,7 +83,7 @@ export default class BlogController extends Controller {
       };
       throw err;
     }
-    this.success(url, '上传成功');
+    this.success({ url }, '上传成功');
   }
 
   async searchBlog() {

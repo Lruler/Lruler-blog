@@ -1,391 +1,525 @@
-2022-02-25 20:43:14,552 INFO 34707 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
-2022-02-25 20:43:14,555 INFO 34707 [egg:core] dump config after load, 2ms
-2022-02-25 20:43:14,571 INFO 34707 [egg-watcher] Start watching: ["/Users/lruler/Desktop/egg/app","/Users/lruler/Desktop/egg/config","/Users/lruler/Desktop/egg/mocks","/Users/lruler/Desktop/egg/mocks_proxy","/Users/lruler/Desktop/egg/app.js"]
-2022-02-25 20:43:14,572 INFO 34707 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/app"
-2022-02-25 20:43:14,572 INFO 34707 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/config"
-2022-02-25 20:43:14,572 INFO 34707 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/mocks"
-2022-02-25 20:43:14,572 INFO 34707 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/mocks_proxy"
-2022-02-25 20:43:14,572 INFO 34707 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/app.js"
-2022-02-25 20:43:14,572 INFO 34707 [egg-watcher:agent] watcher start success
-2022-02-25 20:43:14,588 INFO 34707 [egg:core] dump config after ready, 4ms
-2022-02-25 20:43:42,035 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 20:43:41,828 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2101,"blocks":8,"atimeMs":1645792984720.0396,"mtimeMs":1645793021763.1838,"ctimeMs":1645793021763.1838,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:43:04.720Z","mtime":"2022-02-25T12:43:41.763Z","ctime":"2022-02-25T12:43:41.763Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:44:31,254 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 20:44:31,051 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2132,"blocks":8,"atimeMs":1645793022164.5227,"mtimeMs":1645793070987.8047,"ctimeMs":1645793070987.8047,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:43:42.165Z","mtime":"2022-02-25T12:44:30.988Z","ctime":"2022-02-25T12:44:30.988Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:45:12,112 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 20:45:11,909 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2403,"blocks":8,"atimeMs":1645793071408.6462,"mtimeMs":1645793111845.019,"ctimeMs":1645793111845.019,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:44:31.409Z","mtime":"2022-02-25T12:45:11.845Z","ctime":"2022-02-25T12:45:11.845Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:45:33,698 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 20:45:33,496 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2132,"blocks":8,"atimeMs":1645793112261.5688,"mtimeMs":1645793133434.6948,"ctimeMs":1645793133434.6948,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:45:12.262Z","mtime":"2022-02-25T12:45:33.435Z","ctime":"2022-02-25T12:45:33.435Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:45:54,483 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 20:45:54,279 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2155,"blocks":8,"atimeMs":1645793133845.4578,"mtimeMs":1645793154216.6875,"ctimeMs":1645793154216.6875,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:45:33.845Z","mtime":"2022-02-25T12:45:54.217Z","ctime":"2022-02-25T12:45:54.217Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:47:59,884 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 20:47:59,681 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2150,"blocks":8,"atimeMs":1645793154624.5505,"mtimeMs":1645793279618.76,"ctimeMs":1645793279618.76,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:45:54.625Z","mtime":"2022-02-25T12:47:59.619Z","ctime":"2022-02-25T12:47:59.619Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:48:36,732 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2099,"blocks":8,"atimeMs":1645793280024.403,"mtimeMs":1645793316669.59,"ctimeMs":1645793316669.59,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:48:00.024Z","mtime":"2022-02-25T12:48:36.670Z","ctime":"2022-02-25T12:48:36.670Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:48:36,935 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 20:48:39,564 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 20:48:39,312 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2079,"blocks":8,"atimeMs":1645793317076.559,"mtimeMs":1645793319301.0547,"ctimeMs":1645793319301.0547,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:48:37.077Z","mtime":"2022-02-25T12:48:39.301Z","ctime":"2022-02-25T12:48:39.301Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:48:39,363 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2079,"blocks":8,"atimeMs":1645793317076.559,"mtimeMs":1645793319301.0547,"ctimeMs":1645793319301.0547,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:48:37.077Z","mtime":"2022-02-25T12:48:39.301Z","ctime":"2022-02-25T12:48:39.301Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:55:28,770 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 20:55:28,567 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2254,"blocks":8,"atimeMs":1645793319701.0173,"mtimeMs":1645793728504.5576,"ctimeMs":1645793728504.5576,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:48:39.701Z","mtime":"2022-02-25T12:55:28.505Z","ctime":"2022-02-25T12:55:28.505Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:55:35,263 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 20:55:35,010 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2249,"blocks":8,"atimeMs":1645793728919.3655,"mtimeMs":1645793734997.7922,"ctimeMs":1645793734997.7922,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:55:28.919Z","mtime":"2022-02-25T12:55:34.998Z","ctime":"2022-02-25T12:55:34.998Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:55:35,061 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2249,"blocks":8,"atimeMs":1645793728919.3655,"mtimeMs":1645793734997.7922,"ctimeMs":1645793734997.7922,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:55:28.919Z","mtime":"2022-02-25T12:55:34.998Z","ctime":"2022-02-25T12:55:34.998Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:56:38,911 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 20:56:38,708 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2249,"blocks":8,"atimeMs":1645793735408.783,"mtimeMs":1645793798644.0366,"ctimeMs":1645793798644.0366,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:55:35.409Z","mtime":"2022-02-25T12:56:38.644Z","ctime":"2022-02-25T12:56:38.644Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:59:43,533 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 20:59:43,330 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2193,"blocks":8,"atimeMs":1645793799061.0693,"mtimeMs":1645793983266.9346,"ctimeMs":1645793983266.9346,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:56:39.061Z","mtime":"2022-02-25T12:59:43.267Z","ctime":"2022-02-25T12:59:43.267Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:59:57,465 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 20:59:57,212 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2208,"blocks":8,"atimeMs":1645793983671.156,"mtimeMs":1645793997201.8252,"ctimeMs":1645793997201.8252,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:59:43.671Z","mtime":"2022-02-25T12:59:57.202Z","ctime":"2022-02-25T12:59:57.202Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 20:59:57,264 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2208,"blocks":8,"atimeMs":1645793983671.156,"mtimeMs":1645793997201.8252,"ctimeMs":1645793997201.8252,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:59:43.671Z","mtime":"2022-02-25T12:59:57.202Z","ctime":"2022-02-25T12:59:57.202Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:00:26,271 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:00:26,069 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2213,"blocks":8,"atimeMs":1645793997609.8364,"mtimeMs":1645794026006.742,"ctimeMs":1645794026006.742,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T12:59:57.610Z","mtime":"2022-02-25T13:00:26.007Z","ctime":"2022-02-25T13:00:26.007Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:04:07,966 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:04:07,762 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2212,"blocks":8,"atimeMs":1645794026410.9976,"mtimeMs":1645794247697.0947,"ctimeMs":1645794247697.0947,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:00:26.411Z","mtime":"2022-02-25T13:04:07.697Z","ctime":"2022-02-25T13:04:07.697Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:07:35,620 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:07:35,417 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2268,"blocks":8,"atimeMs":1645794248101.5774,"mtimeMs":1645794455351.5671,"ctimeMs":1645794455351.5671,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:04:08.102Z","mtime":"2022-02-25T13:07:35.352Z","ctime":"2022-02-25T13:07:35.352Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:12:38,959 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:12:38,756 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2018,"blocks":8,"atimeMs":1645794455767.777,"mtimeMs":1645794758692.3015,"ctimeMs":1645794758692.3015,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:07:35.768Z","mtime":"2022-02-25T13:12:38.692Z","ctime":"2022-02-25T13:12:38.692Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:13:23,603 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2014,"blocks":8,"atimeMs":1645794759110.8784,"mtimeMs":1645794803539.306,"ctimeMs":1645794803539.306,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:12:39.111Z","mtime":"2022-02-25T13:13:23.539Z","ctime":"2022-02-25T13:13:23.539Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:13:23,806 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:13:40,017 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:13:39,816 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1877,"blocks":8,"atimeMs":1645794803957.129,"mtimeMs":1645794819752.7544,"ctimeMs":1645794819752.7544,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:13:23.957Z","mtime":"2022-02-25T13:13:39.753Z","ctime":"2022-02-25T13:13:39.753Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:15:02,127 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts rename
-2022-02-25 21:15:01,926 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":0,"blocks":0,"atimeMs":1645794901863.7534,"mtimeMs":1645794901863.7534,"ctimeMs":1645794901863.7534,"birthtimeMs":1645794901863.7534,"atime":"2022-02-25T13:15:01.864Z","mtime":"2022-02-25T13:15:01.864Z","ctime":"2022-02-25T13:15:01.864Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:15:24,391 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts rename
-2022-02-25 21:15:24,189 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":34,"blocks":8,"atimeMs":1645794901863.7534,"mtimeMs":1645794924126.1528,"ctimeMs":1645794924126.1528,"birthtimeMs":1645794901863.7534,"atime":"2022-02-25T13:15:01.864Z","mtime":"2022-02-25T13:15:24.126Z","ctime":"2022-02-25T13:15:24.126Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:15:36,772 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":97,"blocks":8,"atimeMs":1645794924527.4004,"mtimeMs":1645794936762.1755,"ctimeMs":1645794936762.1755,"birthtimeMs":1645794901863.7534,"atime":"2022-02-25T13:15:24.527Z","mtime":"2022-02-25T13:15:36.762Z","ctime":"2022-02-25T13:15:36.762Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:15:36,824 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":97,"blocks":8,"atimeMs":1645794924527.4004,"mtimeMs":1645794936762.1755,"ctimeMs":1645794936762.1755,"birthtimeMs":1645794901863.7534,"atime":"2022-02-25T13:15:24.527Z","mtime":"2022-02-25T13:15:36.762Z","ctime":"2022-02-25T13:15:36.762Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:15:37,026 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-25 21:17:30,297 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-25 21:17:30,092 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":263,"blocks":8,"atimeMs":1645794937163.705,"mtimeMs":1645795050028.0652,"ctimeMs":1645795050028.0652,"birthtimeMs":1645794901863.7534,"atime":"2022-02-25T13:15:37.164Z","mtime":"2022-02-25T13:17:30.028Z","ctime":"2022-02-25T13:17:30.028Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:17:34,965 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":286,"blocks":8,"atimeMs":1645795050425.1082,"mtimeMs":1645795054954.6104,"ctimeMs":1645795054954.6104,"birthtimeMs":1645794901863.7534,"atime":"2022-02-25T13:17:30.425Z","mtime":"2022-02-25T13:17:34.955Z","ctime":"2022-02-25T13:17:34.955Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:17:35,017 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":286,"blocks":8,"atimeMs":1645795050425.1082,"mtimeMs":1645795054954.6104,"ctimeMs":1645795054954.6104,"birthtimeMs":1645794901863.7534,"atime":"2022-02-25T13:17:30.425Z","mtime":"2022-02-25T13:17:34.955Z","ctime":"2022-02-25T13:17:34.955Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:17:35,218 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-25 21:18:06,055 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/router.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351149,"size":323,"blocks":8,"atimeMs":1645788165069.6687,"mtimeMs":1645795085992.218,"ctimeMs":1645795085992.218,"birthtimeMs":1645515800983.8496,"atime":"2022-02-25T11:22:45.070Z","mtime":"2022-02-25T13:18:05.992Z","ctime":"2022-02-25T13:18:05.992Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:18:06,258 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/router.ts change
-2022-02-25 21:19:51,970 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-25 21:19:51,766 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":286,"blocks":8,"atimeMs":1645795055354.357,"mtimeMs":1645795191703.134,"ctimeMs":1645795191703.134,"birthtimeMs":1645794901863.7534,"atime":"2022-02-25T13:17:35.354Z","mtime":"2022-02-25T13:19:51.703Z","ctime":"2022-02-25T13:19:51.703Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:21:48,952 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:21:48,749 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1877,"blocks":8,"atimeMs":1645794820145.0532,"mtimeMs":1645795308683.9666,"ctimeMs":1645795308683.9666,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:13:40.145Z","mtime":"2022-02-25T13:21:48.684Z","ctime":"2022-02-25T13:21:48.684Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:27:23,977 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/router.ts change
-2022-02-25 21:27:23,769 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/router.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351149,"size":376,"blocks":8,"atimeMs":1645795086395.9863,"mtimeMs":1645795643705.8345,"ctimeMs":1645795643705.8345,"birthtimeMs":1645515800983.8496,"atime":"2022-02-25T13:18:06.396Z","mtime":"2022-02-25T13:27:23.706Z","ctime":"2022-02-25T13:27:23.706Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:28:09,541 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:28:09,339 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1846,"blocks":8,"atimeMs":1645795309092.8477,"mtimeMs":1645795689278.1472,"ctimeMs":1645795689278.1472,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:21:49.093Z","mtime":"2022-02-25T13:28:09.278Z","ctime":"2022-02-25T13:28:09.278Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:28:25,621 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1877,"blocks":8,"atimeMs":1645795689685.244,"mtimeMs":1645795705554.6824,"ctimeMs":1645795705554.6824,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:28:09.685Z","mtime":"2022-02-25T13:28:25.555Z","ctime":"2022-02-25T13:28:25.555Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:28:25,825 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:30:31,135 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:30:30,934 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1895,"blocks":8,"atimeMs":1645795705969.2612,"mtimeMs":1645795830870.8813,"ctimeMs":1645795830870.8813,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:28:25.969Z","mtime":"2022-02-25T13:30:30.871Z","ctime":"2022-02-25T13:30:30.871Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:30:32,707 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:30:32,450 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1896,"blocks":8,"atimeMs":1645795831293.72,"mtimeMs":1645795832438.3843,"ctimeMs":1645795832438.3843,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:30:31.294Z","mtime":"2022-02-25T13:30:32.438Z","ctime":"2022-02-25T13:30:32.438Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:30:32,501 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1896,"blocks":8,"atimeMs":1645795831293.72,"mtimeMs":1645795832438.3843,"ctimeMs":1645795832438.3843,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:30:31.294Z","mtime":"2022-02-25T13:30:32.438Z","ctime":"2022-02-25T13:30:32.438Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:30:34,324 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:30:34,072 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1896,"blocks":8,"atimeMs":1645795833627.5537,"mtimeMs":1645795834060.0447,"ctimeMs":1645795834060.0447,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:30:33.628Z","mtime":"2022-02-25T13:30:34.060Z","ctime":"2022-02-25T13:30:34.060Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:30:34,122 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1896,"blocks":8,"atimeMs":1645795833627.5537,"mtimeMs":1645795834060.0447,"ctimeMs":1645795834060.0447,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:30:33.628Z","mtime":"2022-02-25T13:30:34.060Z","ctime":"2022-02-25T13:30:34.060Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:31:07,758 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1840,"blocks":8,"atimeMs":1645795835260.4978,"mtimeMs":1645795867695.8027,"ctimeMs":1645795867695.8027,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:30:35.260Z","mtime":"2022-02-25T13:31:07.696Z","ctime":"2022-02-25T13:31:07.696Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:31:07,960 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:35:03,684 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:35:03,482 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1877,"blocks":8,"atimeMs":1645795868106.4514,"mtimeMs":1645796103417.8843,"ctimeMs":1645796103417.8843,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:31:08.106Z","mtime":"2022-02-25T13:35:03.418Z","ctime":"2022-02-25T13:35:03.418Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:43:37,434 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:43:37,230 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1877,"blocks":8,"atimeMs":1645796103822.9824,"mtimeMs":1645796617165.8088,"ctimeMs":1645796617165.8088,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:35:03.823Z","mtime":"2022-02-25T13:43:37.166Z","ctime":"2022-02-25T13:43:37.166Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:44:33,667 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:44:33,464 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1841,"blocks":8,"atimeMs":1645796618112.0945,"mtimeMs":1645796673400.7402,"ctimeMs":1645796673400.7402,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:43:38.112Z","mtime":"2022-02-25T13:44:33.401Z","ctime":"2022-02-25T13:44:33.401Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:45:04,589 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1780,"blocks":8,"atimeMs":1645796674643.437,"mtimeMs":1645796704526.899,"ctimeMs":1645796704526.899,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:44:34.643Z","mtime":"2022-02-25T13:45:04.527Z","ctime":"2022-02-25T13:45:04.527Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:45:04,792 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:45:13,737 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:45:13,485 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1785,"blocks":8,"atimeMs":1645796705775.0898,"mtimeMs":1645796713473.5637,"ctimeMs":1645796713473.5637,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:45:05.775Z","mtime":"2022-02-25T13:45:13.474Z","ctime":"2022-02-25T13:45:13.474Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:45:13,536 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1785,"blocks":8,"atimeMs":1645796705775.0898,"mtimeMs":1645796713473.5637,"ctimeMs":1645796713473.5637,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:45:05.775Z","mtime":"2022-02-25T13:45:13.474Z","ctime":"2022-02-25T13:45:13.474Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:45:23,538 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1782,"blocks":8,"atimeMs":1645796714682.576,"mtimeMs":1645796723526.3818,"ctimeMs":1645796723526.3818,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:45:14.683Z","mtime":"2022-02-25T13:45:23.526Z","ctime":"2022-02-25T13:45:23.526Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:45:23,589 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1782,"blocks":8,"atimeMs":1645796714682.576,"mtimeMs":1645796723526.3818,"ctimeMs":1645796723526.3818,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:45:14.683Z","mtime":"2022-02-25T13:45:23.526Z","ctime":"2022-02-25T13:45:23.526Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:45:23,790 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:45:28,471 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:45:28,218 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1734,"blocks":8,"atimeMs":1645796724767.15,"mtimeMs":1645796728206.1997,"ctimeMs":1645796728206.1997,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:45:24.767Z","mtime":"2022-02-25T13:45:28.206Z","ctime":"2022-02-25T13:45:28.206Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:45:28,269 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1734,"blocks":8,"atimeMs":1645796724767.15,"mtimeMs":1645796728206.1997,"ctimeMs":1645796728206.1997,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:45:24.767Z","mtime":"2022-02-25T13:45:28.206Z","ctime":"2022-02-25T13:45:28.206Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:45:42,044 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:45:41,786 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1737,"blocks":8,"atimeMs":1645796729011.1345,"mtimeMs":1645796741775.7676,"ctimeMs":1645796741775.7676,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:45:29.011Z","mtime":"2022-02-25T13:45:41.776Z","ctime":"2022-02-25T13:45:41.776Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:45:41,837 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1737,"blocks":8,"atimeMs":1645796729011.1345,"mtimeMs":1645796741775.7676,"ctimeMs":1645796741775.7676,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:45:29.011Z","mtime":"2022-02-25T13:45:41.776Z","ctime":"2022-02-25T13:45:41.776Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:54:14,091 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:54:13,887 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1867,"blocks":8,"atimeMs":1645796764797.4216,"mtimeMs":1645797253822.8228,"ctimeMs":1645797253822.8228,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:46:04.797Z","mtime":"2022-02-25T13:54:13.823Z","ctime":"2022-02-25T13:54:13.823Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:55:46,163 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:55:45,961 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1933,"blocks":8,"atimeMs":1645797255057.4192,"mtimeMs":1645797345898.5586,"ctimeMs":1645797345898.5586,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:54:15.057Z","mtime":"2022-02-25T13:55:45.899Z","ctime":"2022-02-25T13:55:45.899Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:56:02,302 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":1961,"blocks":8,"atimeMs":1645797347139.6592,"mtimeMs":1645797362237.4966,"ctimeMs":1645797362237.4966,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:55:47.140Z","mtime":"2022-02-25T13:56:02.237Z","ctime":"2022-02-25T13:56:02.237Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:56:02,505 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:57:21,934 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:57:21,731 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2019,"blocks":8,"atimeMs":1645797363473.716,"mtimeMs":1645797441666.428,"ctimeMs":1645797441666.428,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:56:03.474Z","mtime":"2022-02-25T13:57:21.666Z","ctime":"2022-02-25T13:57:21.666Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:57:31,191 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 21:57:30,939 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2011,"blocks":8,"atimeMs":1645797442907.9587,"mtimeMs":1645797450927.5498,"ctimeMs":1645797450927.5498,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:57:22.908Z","mtime":"2022-02-25T13:57:30.928Z","ctime":"2022-02-25T13:57:30.928Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:57:30,990 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2011,"blocks":8,"atimeMs":1645797442907.9587,"mtimeMs":1645797450927.5498,"ctimeMs":1645797450927.5498,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:57:22.908Z","mtime":"2022-02-25T13:57:30.928Z","ctime":"2022-02-25T13:57:30.928Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:57:41,460 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":286,"blocks":8,"atimeMs":1645795192116.0852,"mtimeMs":1645797461452.2805,"ctimeMs":1645797461452.2805,"birthtimeMs":1645794901863.7534,"atime":"2022-02-25T13:19:52.116Z","mtime":"2022-02-25T13:57:41.452Z","ctime":"2022-02-25T13:57:41.452Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 21:57:41,712 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-25 21:57:41,511 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":286,"blocks":8,"atimeMs":1645795192116.0852,"mtimeMs":1645797461452.2805,"ctimeMs":1645797461452.2805,"birthtimeMs":1645794901863.7534,"atime":"2022-02-25T13:19:52.116Z","mtime":"2022-02-25T13:57:41.452Z","ctime":"2022-02-25T13:57:41.452Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:02:20,261 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:02:20,059 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2010,"blocks":8,"atimeMs":1645797452111.979,"mtimeMs":1645797739995.1118,"ctimeMs":1645797739995.1118,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T13:57:32.112Z","mtime":"2022-02-25T14:02:19.995Z","ctime":"2022-02-25T14:02:19.995Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:04:04,519 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:04:04,316 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2010,"blocks":8,"atimeMs":1645797740408.3145,"mtimeMs":1645797844252.7222,"ctimeMs":1645797844252.7222,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:02:20.408Z","mtime":"2022-02-25T14:04:04.253Z","ctime":"2022-02-25T14:04:04.253Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:05:18,777 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2039,"blocks":8,"atimeMs":1645797844658.7776,"mtimeMs":1645797918715.6162,"ctimeMs":1645797918715.6162,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:04:04.659Z","mtime":"2022-02-25T14:05:18.716Z","ctime":"2022-02-25T14:05:18.716Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:05:18,980 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:06:00,868 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2051,"blocks":8,"atimeMs":1645797919118.3425,"mtimeMs":1645797960804.2312,"ctimeMs":1645797960804.2312,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:05:19.118Z","mtime":"2022-02-25T14:06:00.804Z","ctime":"2022-02-25T14:06:00.804Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:06:01,070 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:06:19,804 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:06:19,602 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2058,"blocks":8,"atimeMs":1645797961214.949,"mtimeMs":1645797979540.1182,"ctimeMs":1645797979540.1182,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:06:01.215Z","mtime":"2022-02-25T14:06:19.540Z","ctime":"2022-02-25T14:06:19.540Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:07:42,982 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2063,"blocks":8,"atimeMs":1645797979944.3064,"mtimeMs":1645798062918.445,"ctimeMs":1645798062918.445,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:06:19.944Z","mtime":"2022-02-25T14:07:42.918Z","ctime":"2022-02-25T14:07:42.918Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:07:43,185 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:08:48,494 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-25 22:08:48,292 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":287,"blocks":8,"atimeMs":1645797461850.3845,"mtimeMs":1645798128229.3157,"ctimeMs":1645798128229.3157,"birthtimeMs":1645794901863.7534,"atime":"2022-02-25T13:57:41.850Z","mtime":"2022-02-25T14:08:48.229Z","ctime":"2022-02-25T14:08:48.229Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:10:28,682 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-25 22:10:28,475 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":287,"blocks":8,"atimeMs":1645798128630.1636,"mtimeMs":1645798228412.1328,"ctimeMs":1645798228412.1328,"birthtimeMs":1645794901863.7534,"atime":"2022-02-25T14:08:48.630Z","mtime":"2022-02-25T14:10:28.412Z","ctime":"2022-02-25T14:10:28.412Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:11:00,772 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:11:00,570 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2117,"blocks":8,"atimeMs":1645798063342.383,"mtimeMs":1645798260512.7427,"ctimeMs":1645798260512.7427,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:07:43.342Z","mtime":"2022-02-25T14:11:00.513Z","ctime":"2022-02-25T14:11:00.513Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:11:55,012 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:11:54,810 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2155,"blocks":8,"atimeMs":1645798260919.1838,"mtimeMs":1645798314747.429,"ctimeMs":1645798314747.429,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:11:00.919Z","mtime":"2022-02-25T14:11:54.747Z","ctime":"2022-02-25T14:11:54.747Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:13:40,774 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:13:40,572 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2208,"blocks":8,"atimeMs":1645798315159.2908,"mtimeMs":1645798420508.7236,"ctimeMs":1645798420508.7236,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:11:55.159Z","mtime":"2022-02-25T14:13:40.509Z","ctime":"2022-02-25T14:13:40.509Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:13:48,777 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:13:48,525 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2213,"blocks":8,"atimeMs":1645798420920.584,"mtimeMs":1645798428513.6614,"ctimeMs":1645798428513.6614,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:13:40.921Z","mtime":"2022-02-25T14:13:48.514Z","ctime":"2022-02-25T14:13:48.514Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:13:48,576 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2213,"blocks":8,"atimeMs":1645798420920.584,"mtimeMs":1645798428513.6614,"ctimeMs":1645798428513.6614,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:13:40.921Z","mtime":"2022-02-25T14:13:48.514Z","ctime":"2022-02-25T14:13:48.514Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:13:56,311 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2233,"blocks":8,"atimeMs":1645798428919.0308,"mtimeMs":1645798436299.8933,"ctimeMs":1645798436299.8933,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:13:48.919Z","mtime":"2022-02-25T14:13:56.300Z","ctime":"2022-02-25T14:13:56.300Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:13:56,362 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2233,"blocks":8,"atimeMs":1645798428919.0308,"mtimeMs":1645798436299.8933,"ctimeMs":1645798436299.8933,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:13:48.919Z","mtime":"2022-02-25T14:13:56.300Z","ctime":"2022-02-25T14:13:56.300Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:13:56,564 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:14:29,423 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:14:29,221 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2287,"blocks":8,"atimeMs":1645798436700.1104,"mtimeMs":1645798469158.248,"ctimeMs":1645798469158.248,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:13:56.700Z","mtime":"2022-02-25T14:14:29.158Z","ctime":"2022-02-25T14:14:29.158Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:15:02,314 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:15:02,112 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2333,"blocks":8,"atimeMs":1645798469645.7341,"mtimeMs":1645798502049.568,"ctimeMs":1645798502049.568,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:14:29.646Z","mtime":"2022-02-25T14:15:02.050Z","ctime":"2022-02-25T14:15:02.050Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:16:06,604 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2405,"blocks":8,"atimeMs":1645798502454.1267,"mtimeMs":1645798566541.5774,"ctimeMs":1645798566541.5774,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:15:02.454Z","mtime":"2022-02-25T14:16:06.542Z","ctime":"2022-02-25T14:16:06.542Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:16:06,805 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:17:14,626 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2457,"blocks":8,"atimeMs":1645798566944.9768,"mtimeMs":1645798634562.2725,"ctimeMs":1645798634562.2725,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:16:06.945Z","mtime":"2022-02-25T14:17:14.562Z","ctime":"2022-02-25T14:17:14.562Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:17:14,829 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:17:39,563 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:17:39,362 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2495,"blocks":8,"atimeMs":1645798634971.606,"mtimeMs":1645798659299.1482,"ctimeMs":1645798659299.1482,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:17:14.972Z","mtime":"2022-02-25T14:17:39.299Z","ctime":"2022-02-25T14:17:39.299Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:18:12,636 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:18:12,434 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2563,"blocks":8,"atimeMs":1645798659700.5938,"mtimeMs":1645798692371.6968,"ctimeMs":1645798692371.6968,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:17:39.701Z","mtime":"2022-02-25T14:18:12.372Z","ctime":"2022-02-25T14:18:12.372Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:18:20,248 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:18:19,995 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2587,"blocks":8,"atimeMs":1645798692768.153,"mtimeMs":1645798699986.3574,"ctimeMs":1645798699986.3574,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:18:12.768Z","mtime":"2022-02-25T14:18:19.986Z","ctime":"2022-02-25T14:18:19.986Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:18:20,046 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2587,"blocks":8,"atimeMs":1645798692768.153,"mtimeMs":1645798699986.3574,"ctimeMs":1645798699986.3574,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:18:12.768Z","mtime":"2022-02-25T14:18:19.986Z","ctime":"2022-02-25T14:18:19.986Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:19:35,140 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:19:34,938 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2562,"blocks":8,"atimeMs":1645798700392.1409,"mtimeMs":1645798774875.2002,"ctimeMs":1645798774875.2002,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:18:20.392Z","mtime":"2022-02-25T14:19:34.875Z","ctime":"2022-02-25T14:19:34.875Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:19:40,225 WARN 34707 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-25 22:19:39,973 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2535,"blocks":8,"atimeMs":1645798775288.1152,"mtimeMs":1645798779960.5525,"ctimeMs":1645798779960.5525,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:19:35.288Z","mtime":"2022-02-25T14:19:39.961Z","ctime":"2022-02-25T14:19:39.961Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:19:40,023 INFO 34707 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2535,"blocks":8,"atimeMs":1645798775288.1152,"mtimeMs":1645798779960.5525,"ctimeMs":1645798779960.5525,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:19:35.288Z","mtime":"2022-02-25T14:19:39.961Z","ctime":"2022-02-25T14:19:39.961Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:20:44,050 INFO 37158 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
-2022-02-25 22:20:44,053 INFO 37158 [egg:core] dump config after load, 2ms
-2022-02-25 22:20:44,070 INFO 37158 [egg-watcher] Start watching: ["/Users/lruler/Desktop/egg/app","/Users/lruler/Desktop/egg/config","/Users/lruler/Desktop/egg/mocks","/Users/lruler/Desktop/egg/mocks_proxy","/Users/lruler/Desktop/egg/app.js"]
-2022-02-25 22:20:44,070 INFO 37158 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/app"
-2022-02-25 22:20:44,070 INFO 37158 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/config"
-2022-02-25 22:20:44,070 INFO 37158 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/mocks"
-2022-02-25 22:20:44,070 INFO 37158 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/mocks_proxy"
-2022-02-25 22:20:44,070 INFO 37158 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/app.js"
-2022-02-25 22:20:44,070 INFO 37158 [egg-watcher:agent] watcher start success
-2022-02-25 22:20:44,095 INFO 37158 [egg:core] dump config after ready, 2ms
-2022-02-25 22:21:12,953 WARN 37158 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/router.ts change
-2022-02-25 22:21:12,746 INFO 37158 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/router.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351149,"size":382,"blocks":8,"atimeMs":1645795644106.6504,"mtimeMs":1645798872681.8462,"ctimeMs":1645798872681.8462,"birthtimeMs":1645515800983.8496,"atime":"2022-02-25T13:27:24.107Z","mtime":"2022-02-25T14:21:12.682Z","ctime":"2022-02-25T14:21:12.682Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-25 22:21:40,559 WARN 37158 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/router.ts change
-2022-02-25 22:21:40,356 INFO 37158 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/router.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351149,"size":376,"blocks":8,"atimeMs":1645798873097.0903,"mtimeMs":1645798900293.6533,"ctimeMs":1645798900293.6533,"birthtimeMs":1645515800983.8496,"atime":"2022-02-25T14:21:13.097Z","mtime":"2022-02-25T14:21:40.294Z","ctime":"2022-02-25T14:21:40.294Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 09:50:54,300 INFO 46776 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
-2022-02-26 09:50:54,303 INFO 46776 [egg:core] dump config after load, 1ms
-2022-02-26 09:50:54,320 INFO 46776 [egg-watcher] Start watching: ["/Users/lruler/Desktop/egg/app","/Users/lruler/Desktop/egg/config","/Users/lruler/Desktop/egg/mocks","/Users/lruler/Desktop/egg/mocks_proxy","/Users/lruler/Desktop/egg/app.js"]
-2022-02-26 09:50:54,320 INFO 46776 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/app"
-2022-02-26 09:50:54,320 INFO 46776 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/config"
-2022-02-26 09:50:54,320 INFO 46776 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/mocks"
-2022-02-26 09:50:54,320 INFO 46776 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/mocks_proxy"
-2022-02-26 09:50:54,321 INFO 46776 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/app.js"
-2022-02-26 09:50:54,321 INFO 46776 [egg-watcher:agent] watcher start success
-2022-02-26 09:50:54,330 INFO 46776 [egg:core] dump config after ready, 2ms
-2022-02-26 10:41:30,063 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 930974ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+2022-02-27 00:00:05,017 INFO 54792 [egg-logrotator] agent logger reload: got log-reload message
+2022-02-27 00:38:30,480 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1025615ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 name: "ClusterClientNoResponseError"
-pid: 46776
+pid: 54792
 hostname: liuyuledeMacBook-Pro.local
 
-2022-02-26 12:37:37,579 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 1016822ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+2022-02-27 00:53:41,014 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 910531ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 name: "ClusterClientNoResponseError"
-pid: 46776
+pid: 54792
 hostname: liuyuledeMacBook-Pro.local
 
-2022-02-26 13:12:06,779 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 1062656ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+2022-02-27 01:10:13,706 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 992684ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 name: "ClusterClientNoResponseError"
-pid: 46776
+pid: 54792
 hostname: liuyuledeMacBook-Pro.local
 
-2022-02-26 13:29:34,576 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 1047692ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+2022-02-27 01:27:04,477 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1010763ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 name: "ClusterClientNoResponseError"
-pid: 46776
+pid: 54792
 hostname: liuyuledeMacBook-Pro.local
 
-2022-02-26 13:46:40,044 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 1025447ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+2022-02-27 01:43:08,206 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 963726ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 name: "ClusterClientNoResponseError"
-pid: 46776
+pid: 54792
 hostname: liuyuledeMacBook-Pro.local
 
-2022-02-26 14:02:29,735 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 949678ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+2022-02-27 01:58:51,890 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 943677ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 name: "ClusterClientNoResponseError"
-pid: 46776
+pid: 54792
 hostname: liuyuledeMacBook-Pro.local
 
-2022-02-26 14:35:02,502 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 912868ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+2022-02-27 02:16:24,497 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1052601ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 name: "ClusterClientNoResponseError"
-pid: 46776
+pid: 54792
 hostname: liuyuledeMacBook-Pro.local
 
-2022-02-26 14:52:15,077 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 1032565ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+2022-02-27 02:32:20,107 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 955606ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 name: "ClusterClientNoResponseError"
-pid: 46776
+pid: 54792
 hostname: liuyuledeMacBook-Pro.local
 
-2022-02-26 15:07:57,459 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 942311ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+2022-02-27 02:49:48,818 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1048708ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 name: "ClusterClientNoResponseError"
-pid: 46776
+pid: 54792
 hostname: liuyuledeMacBook-Pro.local
 
-2022-02-26 15:12:46,543 ERROR 46776 nodejs.ClusterClientNoResponseError: client no response in 129066ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+2022-02-27 03:07:22,521 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1053698ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 name: "ClusterClientNoResponseError"
-pid: 46776
+pid: 54792
 hostname: liuyuledeMacBook-Pro.local
 
-2022-02-26 15:14:15,630 WARN 46776 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-26 15:14:15,409 INFO 46776 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2545,"blocks":8,"atimeMs":1645798780371.9475,"mtimeMs":1645859655327.7798,"ctimeMs":1645859655327.7798,"birthtimeMs":1645515800985.852,"atime":"2022-02-25T14:19:40.372Z","mtime":"2022-02-26T07:14:15.328Z","ctime":"2022-02-26T07:14:15.328Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 15:29:47,267 INFO 50571 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/egg/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
-2022-02-26 15:29:47,270 INFO 50571 [egg:core] dump config after load, 1ms
-2022-02-26 15:29:47,287 INFO 50571 [egg-watcher] Start watching: ["/Users/lruler/Desktop/egg/app","/Users/lruler/Desktop/egg/config","/Users/lruler/Desktop/egg/mocks","/Users/lruler/Desktop/egg/mocks_proxy","/Users/lruler/Desktop/egg/app.js"]
-2022-02-26 15:29:47,287 INFO 50571 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/app"
-2022-02-26 15:29:47,287 INFO 50571 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/config"
-2022-02-26 15:29:47,287 INFO 50571 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/mocks"
-2022-02-26 15:29:47,288 INFO 50571 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/mocks_proxy"
-2022-02-26 15:29:47,288 INFO 50571 [egg-watcher] Start watching: "/Users/lruler/Desktop/egg/app.js"
-2022-02-26 15:29:47,288 INFO 50571 [egg-watcher:agent] watcher start success
-2022-02-26 15:29:47,303 INFO 50571 [egg:core] dump config after ready, 3ms
-2022-02-26 15:30:32,678 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/core/base_controller.ts change
-2022-02-26 15:30:32,472 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/core/base_controller.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23512835,"size":452,"blocks":8,"atimeMs":1645788035056.5327,"mtimeMs":1645860632405.5017,"ctimeMs":1645860632405.5017,"birthtimeMs":1645711719988.5693,"atime":"2022-02-25T11:20:35.057Z","mtime":"2022-02-26T07:30:32.406Z","ctime":"2022-02-26T07:30:32.406Z","birthtime":"2022-02-24T14:08:39.989Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 15:30:53,034 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/core/base_controller.ts change
-2022-02-26 15:30:52,829 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/core/base_controller.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23512835,"size":429,"blocks":8,"atimeMs":1645860632801.1367,"mtimeMs":1645860652765.6975,"ctimeMs":1645860652765.6975,"birthtimeMs":1645711719988.5693,"atime":"2022-02-26T07:30:32.801Z","mtime":"2022-02-26T07:30:52.766Z","ctime":"2022-02-26T07:30:52.766Z","birthtime":"2022-02-24T14:08:39.989Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:08:36,237 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-26 16:08:36,031 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2636,"blocks":8,"atimeMs":1645859655745.9456,"mtimeMs":1645862915967.6382,"ctimeMs":1645862915967.6382,"birthtimeMs":1645515800985.852,"atime":"2022-02-26T07:14:15.746Z","mtime":"2022-02-26T08:08:35.968Z","ctime":"2022-02-26T08:08:35.968Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:13:26,955 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":359,"blocks":8,"atimeMs":1645798228833.1536,"mtimeMs":1645863206892.7288,"ctimeMs":1645863206892.7288,"birthtimeMs":1645794901863.7534,"atime":"2022-02-25T14:10:28.833Z","mtime":"2022-02-26T08:13:26.893Z","ctime":"2022-02-26T08:13:26.893Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:13:27,157 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:14:36,722 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:14:36,517 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":449,"blocks":8,"atimeMs":1645863207295.4841,"mtimeMs":1645863276455.0854,"ctimeMs":1645863276455.0854,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:13:27.295Z","mtime":"2022-02-26T08:14:36.455Z","ctime":"2022-02-26T08:14:36.455Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:16:27,144 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:16:26,942 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":521,"blocks":8,"atimeMs":1645863276876.9836,"mtimeMs":1645863386878.94,"ctimeMs":1645863386878.94,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:14:36.877Z","mtime":"2022-02-26T08:16:26.879Z","ctime":"2022-02-26T08:16:26.879Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:16:39,161 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":525,"blocks":8,"atimeMs":1645863387290.459,"mtimeMs":1645863399149.2966,"ctimeMs":1645863399149.2966,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:16:27.290Z","mtime":"2022-02-26T08:16:39.149Z","ctime":"2022-02-26T08:16:39.149Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:16:39,413 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:16:39,212 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":525,"blocks":8,"atimeMs":1645863387290.459,"mtimeMs":1645863399149.2966,"ctimeMs":1645863399149.2966,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:16:27.290Z","mtime":"2022-02-26T08:16:39.149Z","ctime":"2022-02-26T08:16:39.149Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:16:47,599 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:16:47,344 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":549,"blocks":8,"atimeMs":1645863399553.1843,"mtimeMs":1645863407333.4531,"ctimeMs":1645863407333.4531,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:16:39.553Z","mtime":"2022-02-26T08:16:47.333Z","ctime":"2022-02-26T08:16:47.333Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:16:47,397 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":549,"blocks":8,"atimeMs":1645863399553.1843,"mtimeMs":1645863407333.4531,"ctimeMs":1645863407333.4531,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:16:39.553Z","mtime":"2022-02-26T08:16:47.333Z","ctime":"2022-02-26T08:16:47.333Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:18:00,632 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/router.ts change
-2022-02-26 16:18:00,428 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/router.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351149,"size":431,"blocks":8,"atimeMs":1645798900702.854,"mtimeMs":1645863480365.5508,"ctimeMs":1645863480365.5508,"birthtimeMs":1645515800983.8496,"atime":"2022-02-25T14:21:40.703Z","mtime":"2022-02-26T08:18:00.366Z","ctime":"2022-02-26T08:18:00.366Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:19:03,929 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:19:03,724 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":572,"blocks":8,"atimeMs":1645863407731.4353,"mtimeMs":1645863543661.6,"ctimeMs":1645863543661.6,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:16:47.731Z","mtime":"2022-02-26T08:19:03.662Z","ctime":"2022-02-26T08:19:03.662Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:20:00,353 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:20:00,150 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":549,"blocks":8,"atimeMs":1645863544064.0293,"mtimeMs":1645863600087.1648,"ctimeMs":1645863600087.1648,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:19:04.064Z","mtime":"2022-02-26T08:20:00.087Z","ctime":"2022-02-26T08:20:00.087Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:20:41,137 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:20:40,931 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":572,"blocks":8,"atimeMs":1645863600497.0051,"mtimeMs":1645863640864.778,"ctimeMs":1645863640864.778,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:20:00.497Z","mtime":"2022-02-26T08:20:40.865Z","ctime":"2022-02-26T08:20:40.865Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:21:11,421 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:21:11,217 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":595,"blocks":8,"atimeMs":1645863641266.569,"mtimeMs":1645863671155.8357,"ctimeMs":1645863671155.8357,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:20:41.267Z","mtime":"2022-02-26T08:21:11.156Z","ctime":"2022-02-26T08:21:11.156Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:22:28,347 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:22:28,144 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":625,"blocks":8,"atimeMs":1645863671556.408,"mtimeMs":1645863748081.6628,"ctimeMs":1645863748081.6628,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:21:11.556Z","mtime":"2022-02-26T08:22:28.082Z","ctime":"2022-02-26T08:22:28.082Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:22:35,977 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:22:35,723 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":650,"blocks":8,"atimeMs":1645863748489.8376,"mtimeMs":1645863755711.5984,"ctimeMs":1645863755711.5984,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:22:28.490Z","mtime":"2022-02-26T08:22:35.712Z","ctime":"2022-02-26T08:22:35.712Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:22:35,774 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":650,"blocks":8,"atimeMs":1645863748489.8376,"mtimeMs":1645863755711.5984,"ctimeMs":1645863755711.5984,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:22:28.490Z","mtime":"2022-02-26T08:22:35.712Z","ctime":"2022-02-26T08:22:35.712Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:23:02,076 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:23:01,872 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":688,"blocks":8,"atimeMs":1645863756120.421,"mtimeMs":1645863781810.3328,"ctimeMs":1645863781810.3328,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:22:36.120Z","mtime":"2022-02-26T08:23:01.810Z","ctime":"2022-02-26T08:23:01.810Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:32:28,099 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":754,"blocks":8,"atimeMs":1645863782191.74,"mtimeMs":1645864348032.1125,"ctimeMs":1645864348032.1125,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:23:02.192Z","mtime":"2022-02-26T08:32:28.032Z","ctime":"2022-02-26T08:32:28.032Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:32:28,308 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:32:37,709 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:32:37,456 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":779,"blocks":8,"atimeMs":1645864348515.4177,"mtimeMs":1645864357444.7944,"ctimeMs":1645864357444.7944,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:32:28.515Z","mtime":"2022-02-26T08:32:37.445Z","ctime":"2022-02-26T08:32:37.445Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:32:37,507 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":779,"blocks":8,"atimeMs":1645864348515.4177,"mtimeMs":1645864357444.7944,"ctimeMs":1645864357444.7944,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:32:28.515Z","mtime":"2022-02-26T08:32:37.445Z","ctime":"2022-02-26T08:32:37.445Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:34:05,012 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/router.ts change
-2022-02-26 16:34:04,808 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/router.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351149,"size":449,"blocks":8,"atimeMs":1645863480763.7373,"mtimeMs":1645864444744.8792,"ctimeMs":1645864444744.8792,"birthtimeMs":1645515800983.8496,"atime":"2022-02-26T08:18:00.764Z","mtime":"2022-02-26T08:34:04.745Z","ctime":"2022-02-26T08:34:04.745Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:34:12,098 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/router.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351149,"size":451,"blocks":8,"atimeMs":1645864445153.9033,"mtimeMs":1645864452087.1626,"ctimeMs":1645864452087.1626,"birthtimeMs":1645515800983.8496,"atime":"2022-02-26T08:34:05.154Z","mtime":"2022-02-26T08:34:12.087Z","ctime":"2022-02-26T08:34:12.087Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:34:12,150 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/router.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351149,"size":451,"blocks":8,"atimeMs":1645864445153.9033,"mtimeMs":1645864452087.1626,"ctimeMs":1645864452087.1626,"birthtimeMs":1645515800983.8496,"atime":"2022-02-26T08:34:05.154Z","mtime":"2022-02-26T08:34:12.087Z","ctime":"2022-02-26T08:34:12.087Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:34:12,352 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/router.ts change
-2022-02-26 16:34:34,261 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/router.ts change
-2022-02-26 16:34:34,058 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/router.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351149,"size":464,"blocks":8,"atimeMs":1645864452493.934,"mtimeMs":1645864473995.901,"ctimeMs":1645864473995.901,"birthtimeMs":1645515800983.8496,"atime":"2022-02-26T08:34:12.494Z","mtime":"2022-02-26T08:34:33.996Z","ctime":"2022-02-26T08:34:33.996Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:37:01,351 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/router.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351149,"size":493,"blocks":8,"atimeMs":1645864474400.3005,"mtimeMs":1645864621287.7246,"ctimeMs":1645864621287.7246,"birthtimeMs":1645515800983.8496,"atime":"2022-02-26T08:34:34.400Z","mtime":"2022-02-26T08:37:01.288Z","ctime":"2022-02-26T08:37:01.288Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:37:01,553 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/router.ts change
-2022-02-26 16:42:55,010 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":898,"blocks":8,"atimeMs":1645864357841.1528,"mtimeMs":1645864974948.041,"ctimeMs":1645864974948.041,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:32:37.841Z","mtime":"2022-02-26T08:42:54.948Z","ctime":"2022-02-26T08:42:54.948Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:42:55,213 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:43:43,494 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:43:43,291 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":898,"blocks":8,"atimeMs":1645864975356.6482,"mtimeMs":1645865023227.4229,"ctimeMs":1645865023227.4229,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:42:55.357Z","mtime":"2022-02-26T08:43:43.227Z","ctime":"2022-02-26T08:43:43.227Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:43:56,631 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":884,"blocks":8,"atimeMs":1645865023699.963,"mtimeMs":1645865036619.1838,"ctimeMs":1645865036619.1838,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:43:43.700Z","mtime":"2022-02-26T08:43:56.619Z","ctime":"2022-02-26T08:43:56.619Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:43:56,682 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":884,"blocks":8,"atimeMs":1645865023699.963,"mtimeMs":1645865036619.1838,"ctimeMs":1645865036619.1838,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:43:43.700Z","mtime":"2022-02-26T08:43:56.619Z","ctime":"2022-02-26T08:43:56.619Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:43:56,884 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:44:03,669 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":898,"blocks":8,"atimeMs":1645865037022.1963,"mtimeMs":1645865043657.9617,"ctimeMs":1645865043657.9617,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:43:57.022Z","mtime":"2022-02-26T08:44:03.658Z","ctime":"2022-02-26T08:44:03.658Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:44:03,720 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":898,"blocks":8,"atimeMs":1645865037022.1963,"mtimeMs":1645865043657.9617,"ctimeMs":1645865043657.9617,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:43:57.022Z","mtime":"2022-02-26T08:44:03.658Z","ctime":"2022-02-26T08:44:03.658Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:44:03,925 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:44:50,571 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/tag.ts change
-2022-02-26 16:44:50,369 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/tag.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23616923,"size":897,"blocks":8,"atimeMs":1645865044039.8506,"mtimeMs":1645865090306.255,"ctimeMs":1645865090306.255,"birthtimeMs":1645794901863.7534,"atime":"2022-02-26T08:44:04.040Z","mtime":"2022-02-26T08:44:50.306Z","ctime":"2022-02-26T08:44:50.306Z","birthtime":"2022-02-25T13:15:01.864Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 16:58:48,671 ERROR 50571 nodejs.ClusterClientNoResponseError: client no response in 596802ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+2022-02-27 03:23:42,406 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 979879ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 name: "ClusterClientNoResponseError"
-pid: 50571
+pid: 54792
 hostname: liuyuledeMacBook-Pro.local
 
-2022-02-26 17:03:06,723 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2729,"blocks":8,"atimeMs":1645862916391.1084,"mtimeMs":1645866186656.8635,"ctimeMs":1645866186656.8635,"birthtimeMs":1645515800985.852,"atime":"2022-02-26T08:08:36.391Z","mtime":"2022-02-26T09:03:06.657Z","ctime":"2022-02-26T09:03:06.657Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 17:03:06,927 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-26 17:03:54,698 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2802,"blocks":8,"atimeMs":1645866187063.4395,"mtimeMs":1645866234634.3647,"ctimeMs":1645866234634.3647,"birthtimeMs":1645515800985.852,"atime":"2022-02-26T09:03:07.063Z","mtime":"2022-02-26T09:03:54.634Z","ctime":"2022-02-26T09:03:54.634Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 17:03:54,903 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-26 17:04:12,230 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-26 17:04:12,029 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2827,"blocks":8,"atimeMs":1645866235056.324,"mtimeMs":1645866251966.569,"ctimeMs":1645866251966.569,"birthtimeMs":1645515800985.852,"atime":"2022-02-26T09:03:55.056Z","mtime":"2022-02-26T09:04:11.967Z","ctime":"2022-02-26T09:04:11.967Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 17:04:40,848 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/router.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351149,"size":551,"blocks":8,"atimeMs":1645864621689.7917,"mtimeMs":1645866280784.806,"ctimeMs":1645866280784.806,"birthtimeMs":1645515800983.8496,"atime":"2022-02-26T08:37:01.690Z","mtime":"2022-02-26T09:04:40.785Z","ctime":"2022-02-26T09:04:40.785Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 17:04:41,056 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/router.ts change
-2022-02-26 17:05:40,543 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-26 17:05:40,340 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2833,"blocks":8,"atimeMs":1645866252376.218,"mtimeMs":1645866340276.6084,"ctimeMs":1645866340276.6084,"birthtimeMs":1645515800985.852,"atime":"2022-02-26T09:04:12.376Z","mtime":"2022-02-26T09:05:40.277Z","ctime":"2022-02-26T09:05:40.277Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 17:07:34,739 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-26 17:07:34,536 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2833,"blocks":8,"atimeMs":1645866340682.9604,"mtimeMs":1645866454472.2349,"ctimeMs":1645866454472.2349,"birthtimeMs":1645515800985.852,"atime":"2022-02-26T09:05:40.683Z","mtime":"2022-02-26T09:07:34.472Z","ctime":"2022-02-26T09:07:34.472Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 17:24:52,733 ERROR 50571 nodejs.ClusterClientNoResponseError: client no response in 676716ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout._onTimeout (/Users/lruler/Desktop/egg/node_modules/cluster-client/lib/leader.js:77:23)
+2022-02-27 03:40:43,175 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1020767ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 name: "ClusterClientNoResponseError"
-pid: 50571
+pid: 54792
 hostname: liuyuledeMacBook-Pro.local
 
-2022-02-26 17:26:13,005 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-26 17:26:12,803 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2841,"blocks":8,"atimeMs":1645866454878.4507,"mtimeMs":1645867572741.4138,"ctimeMs":1645867572741.4138,"birthtimeMs":1645515800985.852,"atime":"2022-02-26T09:07:34.878Z","mtime":"2022-02-26T09:26:12.741Z","ctime":"2022-02-26T09:26:12.741Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 17:26:50,555 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-26 17:26:50,352 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2865,"blocks":8,"atimeMs":1645867573156.6887,"mtimeMs":1645867610288.4602,"ctimeMs":1645867610288.4602,"birthtimeMs":1645515800985.852,"atime":"2022-02-26T09:26:13.157Z","mtime":"2022-02-26T09:26:50.288Z","ctime":"2022-02-26T09:26:50.288Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 17:27:44,576 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-26 17:27:44,373 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2871,"blocks":8,"atimeMs":1645867610691.3877,"mtimeMs":1645867664305.4187,"ctimeMs":1645867664305.4187,"birthtimeMs":1645515800985.852,"atime":"2022-02-26T09:26:50.691Z","mtime":"2022-02-26T09:27:44.305Z","ctime":"2022-02-26T09:27:44.305Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 17:27:58,737 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2847,"blocks":8,"atimeMs":1645867664729.281,"mtimeMs":1645867678726.1948,"ctimeMs":1645867678726.1948,"birthtimeMs":1645515800985.852,"atime":"2022-02-26T09:27:44.729Z","mtime":"2022-02-26T09:27:58.726Z","ctime":"2022-02-26T09:27:58.726Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 17:27:58,990 WARN 50571 [agent:development] reload worker because /Users/lruler/Desktop/egg/app/controller/blog.ts change
-2022-02-26 17:27:58,788 INFO 50571 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/egg/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2847,"blocks":8,"atimeMs":1645867664729.281,"mtimeMs":1645867678726.1948,"ctimeMs":1645867678726.1948,"birthtimeMs":1645515800985.852,"atime":"2022-02-26T09:27:44.729Z","mtime":"2022-02-26T09:27:58.726Z","ctime":"2022-02-26T09:27:58.726Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
-2022-02-26 21:46:18,670 INFO 54792 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/lruler-blog/be/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
-2022-02-26 21:46:18,673 INFO 54792 [egg:core] dump config after load, 1ms
-2022-02-26 21:46:18,690 INFO 54792 [egg-watcher] Start watching: ["/Users/lruler/Desktop/lruler-blog/be/app","/Users/lruler/Desktop/lruler-blog/be/config","/Users/lruler/Desktop/lruler-blog/be/mocks","/Users/lruler/Desktop/lruler-blog/be/mocks_proxy","/Users/lruler/Desktop/lruler-blog/be/app.js"]
-2022-02-26 21:46:18,690 INFO 54792 [egg-watcher] Start watching: "/Users/lruler/Desktop/lruler-blog/be/app"
-2022-02-26 21:46:18,690 INFO 54792 [egg-watcher] Start watching: "/Users/lruler/Desktop/lruler-blog/be/config"
-2022-02-26 21:46:18,690 INFO 54792 [egg-watcher] Start watching: "/Users/lruler/Desktop/lruler-blog/be/mocks"
-2022-02-26 21:46:18,690 INFO 54792 [egg-watcher] Start watching: "/Users/lruler/Desktop/lruler-blog/be/mocks_proxy"
-2022-02-26 21:46:18,691 INFO 54792 [egg-watcher] Start watching: "/Users/lruler/Desktop/lruler-blog/be/app.js"
-2022-02-26 21:46:18,691 INFO 54792 [egg-watcher:agent] watcher start success
-2022-02-26 21:46:18,711 INFO 54792 [egg:core] dump config after ready, 2ms
+2022-02-27 03:57:57,885 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1034706ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 04:12:28,582 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 870688ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 04:27:39,834 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 911241ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 04:44:06,542 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 986698ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 05:00:47,248 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1000698ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 05:16:08,958 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 921706ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 05:32:33,593 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 984629ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 05:47:42,428 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 908831ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 06:04:58,092 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1035661ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 06:22:35,460 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1057363ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 06:39:59,809 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1044345ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 06:55:30,478 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 930665ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 07:10:54,374 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 923893ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 07:26:32,063 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 937686ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 07:44:08,770 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1056697ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 08:00:21,568 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 972796ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 08:17:29,494 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1027920ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 08:35:00,213 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1050716ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 08:50:10,927 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 910710ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 09:06:21,639 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 970708ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 09:24:14,325 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1072682ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 09:36:16,361 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 722033ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 09:49:41,603 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 705237ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 09:51:21,748 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 60135ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 10:08:04,026 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1002268ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 10:25:01,757 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 1017728ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 10:37:10,073 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 728313ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 11:07:19,052 ERROR 54792 nodejs.ClusterClientNoResponseError: client no response in 471087ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 54792
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 11:20:33,008 INFO 57393 [egg:logger] init all loggers with options: {"dir":"/Users/lruler/Desktop/lruler-blog/be/logs/222","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"222-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-02-27 11:20:33,012 INFO 57393 [egg:core] dump config after load, 2ms
+2022-02-27 11:20:33,030 INFO 57393 [egg-watcher] Start watching: ["/Users/lruler/Desktop/lruler-blog/be/app","/Users/lruler/Desktop/lruler-blog/be/config","/Users/lruler/Desktop/lruler-blog/be/mocks","/Users/lruler/Desktop/lruler-blog/be/mocks_proxy","/Users/lruler/Desktop/lruler-blog/be/app.js"]
+2022-02-27 11:20:33,030 INFO 57393 [egg-watcher] Start watching: "/Users/lruler/Desktop/lruler-blog/be/app"
+2022-02-27 11:20:33,030 INFO 57393 [egg-watcher] Start watching: "/Users/lruler/Desktop/lruler-blog/be/config"
+2022-02-27 11:20:33,030 INFO 57393 [egg-watcher] Start watching: "/Users/lruler/Desktop/lruler-blog/be/mocks"
+2022-02-27 11:20:33,030 INFO 57393 [egg-watcher] Start watching: "/Users/lruler/Desktop/lruler-blog/be/mocks_proxy"
+2022-02-27 11:20:33,030 INFO 57393 [egg-watcher] Start watching: "/Users/lruler/Desktop/lruler-blog/be/app.js"
+2022-02-27 11:20:33,030 INFO 57393 [egg-watcher:agent] watcher start success
+2022-02-27 11:20:33,035 INFO 57393 [egg:core] dump config after ready, 2ms
+2022-02-27 11:24:11,185 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 11:24:10,977 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2873,"blocks":8,"atimeMs":1645867878143.7505,"mtimeMs":1645932250911.0642,"ctimeMs":1645932250911.0642,"birthtimeMs":1645515800985.852,"atime":"2022-02-26T09:31:18.144Z","mtime":"2022-02-27T03:24:10.911Z","ctime":"2022-02-27T03:24:10.911Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:24:15,641 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 11:24:15,387 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2874,"blocks":8,"atimeMs":1645932251329.8237,"mtimeMs":1645932255375.1687,"ctimeMs":1645932255375.1687,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T03:24:11.330Z","mtime":"2022-02-27T03:24:15.375Z","ctime":"2022-02-27T03:24:15.375Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:24:15,438 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2874,"blocks":8,"atimeMs":1645932251329.8237,"mtimeMs":1645932255375.1687,"ctimeMs":1645932255375.1687,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T03:24:11.330Z","mtime":"2022-02-27T03:24:15.375Z","ctime":"2022-02-27T03:24:15.375Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:25:54,246 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2896,"blocks":8,"atimeMs":1645932255858.891,"mtimeMs":1645932354178.9905,"ctimeMs":1645932354178.9905,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T03:24:15.859Z","mtime":"2022-02-27T03:25:54.179Z","ctime":"2022-02-27T03:25:54.179Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:25:54,449 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 11:26:02,056 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 11:26:01,804 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2869,"blocks":8,"atimeMs":1645932354581.9214,"mtimeMs":1645932361791.5652,"ctimeMs":1645932361791.5652,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T03:25:54.582Z","mtime":"2022-02-27T03:26:01.792Z","ctime":"2022-02-27T03:26:01.792Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:26:01,854 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2869,"blocks":8,"atimeMs":1645932354581.9214,"mtimeMs":1645932361791.5652,"ctimeMs":1645932361791.5652,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T03:25:54.582Z","mtime":"2022-02-27T03:26:01.792Z","ctime":"2022-02-27T03:26:01.792Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:27:53,396 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2869,"blocks":8,"atimeMs":1645932362198.884,"mtimeMs":1645932473331.8755,"ctimeMs":1645932473331.8755,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T03:26:02.199Z","mtime":"2022-02-27T03:27:53.332Z","ctime":"2022-02-27T03:27:53.332Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:27:53,598 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 11:28:32,362 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 11:28:32,160 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2892,"blocks":8,"atimeMs":1645932473820.7065,"mtimeMs":1645932512096.8896,"ctimeMs":1645932512096.8896,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T03:27:53.821Z","mtime":"2022-02-27T03:28:32.097Z","ctime":"2022-02-27T03:28:32.097Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:32:05,619 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 11:32:05,414 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2870,"blocks":8,"atimeMs":1645932512514.5327,"mtimeMs":1645932725349.073,"ctimeMs":1645932725349.073,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T03:28:32.515Z","mtime":"2022-02-27T03:32:05.349Z","ctime":"2022-02-27T03:32:05.349Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:48:16,751 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/router.ts change
+2022-02-27 11:48:16,547 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/router.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351149,"size":604,"blocks":8,"atimeMs":1645867878143.9358,"mtimeMs":1645933696483.7612,"ctimeMs":1645933696483.7612,"birthtimeMs":1645515800983.8496,"atime":"2022-02-26T09:31:18.144Z","mtime":"2022-02-27T03:48:16.484Z","ctime":"2022-02-27T03:48:16.484Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:48:38,663 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 11:48:38,461 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2876,"blocks":8,"atimeMs":1645932725754.9846,"mtimeMs":1645933718397.462,"ctimeMs":1645933718397.462,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T03:32:05.755Z","mtime":"2022-02-27T03:48:38.397Z","ctime":"2022-02-27T03:48:38.397Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:49:26,789 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 11:49:26,586 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2899,"blocks":8,"atimeMs":1645933718813.974,"mtimeMs":1645933766523.6394,"ctimeMs":1645933766523.6394,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T03:48:38.814Z","mtime":"2022-02-27T03:49:26.524Z","ctime":"2022-02-27T03:49:26.524Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:50:31,178 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/core/base_controller.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23512835,"size":436,"blocks":8,"atimeMs":1645867878143.83,"mtimeMs":1645933831113.251,"ctimeMs":1645933831113.251,"birthtimeMs":1645711719988.5693,"atime":"2022-02-26T09:31:18.144Z","mtime":"2022-02-27T03:50:31.113Z","ctime":"2022-02-27T03:50:31.113Z","birthtime":"2022-02-24T14:08:39.989Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:50:31,383 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/core/base_controller.ts change
+2022-02-27 11:50:34,199 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/core/base_controller.ts change
+2022-02-27 11:50:33,947 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/core/base_controller.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23512835,"size":437,"blocks":8,"atimeMs":1645933831532.334,"mtimeMs":1645933833935.7673,"ctimeMs":1645933833935.7673,"birthtimeMs":1645711719988.5693,"atime":"2022-02-27T03:50:31.532Z","mtime":"2022-02-27T03:50:33.936Z","ctime":"2022-02-27T03:50:33.936Z","birthtime":"2022-02-24T14:08:39.989Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:50:33,998 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/core/base_controller.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23512835,"size":437,"blocks":8,"atimeMs":1645933831532.334,"mtimeMs":1645933833935.7673,"ctimeMs":1645933833935.7673,"birthtimeMs":1645711719988.5693,"atime":"2022-02-27T03:50:31.532Z","mtime":"2022-02-27T03:50:33.936Z","ctime":"2022-02-27T03:50:33.936Z","birthtime":"2022-02-24T14:08:39.989Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:51:06,256 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/core/base_controller.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23512835,"size":429,"blocks":8,"atimeMs":1645933834339.2458,"mtimeMs":1645933866192.7527,"ctimeMs":1645933866192.7527,"birthtimeMs":1645711719988.5693,"atime":"2022-02-27T03:50:34.339Z","mtime":"2022-02-27T03:51:06.193Z","ctime":"2022-02-27T03:51:06.193Z","birthtime":"2022-02-24T14:08:39.989Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:51:06,459 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/core/base_controller.ts change
+2022-02-27 11:51:31,828 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 11:51:31,624 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2876,"blocks":8,"atimeMs":1645933766941.546,"mtimeMs":1645933891558.1167,"ctimeMs":1645933891558.1167,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T03:49:26.942Z","mtime":"2022-02-27T03:51:31.558Z","ctime":"2022-02-27T03:51:31.558Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:55:03,134 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/lruler/Desktop/lruler-blog/be/app/public/upload/jglzs7hal71645786612380.jpg","remove":true,"isDirectory":false,"isFile":false}
+2022-02-27 11:55:03,184 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/lruler/Desktop/lruler-blog/be/app/public/upload/1krut06q2091645787730808.jpg","remove":true,"isDirectory":false,"isFile":false}
+2022-02-27 11:55:03,234 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/lruler/Desktop/lruler-blog/be/app/public/upload/1su5rwopgo21645787778854.jpg","remove":true,"isDirectory":false,"isFile":false}
+2022-02-27 11:55:03,234 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/lruler/Desktop/lruler-blog/be/app/public/upload/9mjzyoneblp1645787709548.jpg","remove":true,"isDirectory":false,"isFile":false}
+2022-02-27 11:55:03,284 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/lruler/Desktop/lruler-blog/be/app/public/upload/dlf6jcaexzw1645786652223.jpg","remove":true,"isDirectory":false,"isFile":false}
+2022-02-27 11:59:31,093 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/config/config.default.ts change
+2022-02-27 11:59:30,888 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/config/config.default.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351151,"size":774,"blocks":8,"atimeMs":1645867878143.9956,"mtimeMs":1645934370826.01,"ctimeMs":1645934370826.01,"birthtimeMs":1645515800984.305,"atime":"2022-02-26T09:31:18.144Z","mtime":"2022-02-27T03:59:30.826Z","ctime":"2022-02-27T03:59:30.826Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:59:37,876 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/config/config.default.ts change
+2022-02-27 11:59:37,619 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/config/config.default.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351151,"size":774,"blocks":8,"atimeMs":1645934371246.5413,"mtimeMs":1645934377607.9827,"ctimeMs":1645934377607.9827,"birthtimeMs":1645515800984.305,"atime":"2022-02-27T03:59:31.247Z","mtime":"2022-02-27T03:59:37.608Z","ctime":"2022-02-27T03:59:37.608Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 11:59:37,670 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/config/config.default.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351151,"size":774,"blocks":8,"atimeMs":1645934371246.5413,"mtimeMs":1645934377607.9827,"ctimeMs":1645934377607.9827,"birthtimeMs":1645515800984.305,"atime":"2022-02-27T03:59:31.247Z","mtime":"2022-02-27T03:59:37.608Z","ctime":"2022-02-27T03:59:37.608Z","birthtime":"2022-02-22T07:43:20.984Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 12:00:20,644 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/lruler/Desktop/lruler-blog/be/app/public/upload/k9bxnk36w6l1645934420577.png","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23712206,"size":1281516,"blocks":2504,"atimeMs":1645934420580.6245,"mtimeMs":1645934420599.704,"ctimeMs":1645934420599.704,"birthtimeMs":1645934420580.6245,"atime":"2022-02-27T04:00:20.581Z","mtime":"2022-02-27T04:00:20.600Z","ctime":"2022-02-27T04:00:20.600Z","birthtime":"2022-02-27T04:00:20.581Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 12:01:47,706 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2880,"blocks":8,"atimeMs":1645933891975.0554,"mtimeMs":1645934507642.3955,"ctimeMs":1645934507642.3955,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T03:51:31.975Z","mtime":"2022-02-27T04:01:47.642Z","ctime":"2022-02-27T04:01:47.642Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 12:01:47,910 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 12:02:17,541 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 12:02:17,339 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2915,"blocks":8,"atimeMs":1645934508056.3262,"mtimeMs":1645934537276.223,"ctimeMs":1645934537276.223,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T04:01:48.056Z","mtime":"2022-02-27T04:02:17.276Z","ctime":"2022-02-27T04:02:17.276Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 12:02:24,473 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 12:02:24,216 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2902,"blocks":8,"atimeMs":1645934537681.3882,"mtimeMs":1645934544204.2344,"ctimeMs":1645934544204.2344,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T04:02:17.681Z","mtime":"2022-02-27T04:02:24.204Z","ctime":"2022-02-27T04:02:24.204Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 12:02:24,266 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2902,"blocks":8,"atimeMs":1645934537681.3882,"mtimeMs":1645934544204.2344,"ctimeMs":1645934544204.2344,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T04:02:17.681Z","mtime":"2022-02-27T04:02:24.204Z","ctime":"2022-02-27T04:02:24.204Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 12:02:27,036 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2900,"blocks":8,"atimeMs":1645934544601.4846,"mtimeMs":1645934547025.1208,"ctimeMs":1645934547025.1208,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T04:02:24.601Z","mtime":"2022-02-27T04:02:27.025Z","ctime":"2022-02-27T04:02:27.025Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 12:02:27,288 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 12:02:27,087 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2900,"blocks":8,"atimeMs":1645934544601.4846,"mtimeMs":1645934547025.1208,"ctimeMs":1645934547025.1208,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T04:02:24.601Z","mtime":"2022-02-27T04:02:27.025Z","ctime":"2022-02-27T04:02:27.025Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 12:02:38,355 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 12:02:38,103 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2905,"blocks":8,"atimeMs":1645934547445.3044,"mtimeMs":1645934558091.508,"ctimeMs":1645934558091.508,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T04:02:27.445Z","mtime":"2022-02-27T04:02:38.092Z","ctime":"2022-02-27T04:02:38.092Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 12:02:38,154 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2905,"blocks":8,"atimeMs":1645934547445.3044,"mtimeMs":1645934558091.508,"ctimeMs":1645934558091.508,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T04:02:27.445Z","mtime":"2022-02-27T04:02:38.092Z","ctime":"2022-02-27T04:02:38.092Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 12:02:40,039 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 12:02:39,787 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2904,"blocks":8,"atimeMs":1645934558998.711,"mtimeMs":1645934559775.4412,"ctimeMs":1645934559775.4412,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T04:02:38.999Z","mtime":"2022-02-27T04:02:39.775Z","ctime":"2022-02-27T04:02:39.775Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 12:02:39,838 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2904,"blocks":8,"atimeMs":1645934558998.711,"mtimeMs":1645934559775.4412,"ctimeMs":1645934559775.4412,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T04:02:38.999Z","mtime":"2022-02-27T04:02:39.775Z","ctime":"2022-02-27T04:02:39.775Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 12:03:18,675 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2907,"blocks":8,"atimeMs":1645934593769.4712,"mtimeMs":1645934598610.6033,"ctimeMs":1645934598610.6033,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T04:03:13.769Z","mtime":"2022-02-27T04:03:18.611Z","ctime":"2022-02-27T04:03:18.611Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 12:03:18,878 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 12:38:59,692 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 953478ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 13:11:23,728 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 911689ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 13:28:53,562 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 1049710ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 14:01:20,535 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 1025675ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 14:19:15,442 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 1074902ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 14:35:10,249 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 954802ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 14:52:14,979 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 1024724ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 15:07:26,709 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 911726ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 15:23:01,654 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 934815ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 15:40:59,229 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 1077569ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 15:57:24,923 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 985675ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 17:31:45,705 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 935444ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 18:05:25,285 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 981700ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 18:20:57,976 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 932687ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 18:30:34,763 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 576771ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 19:02:11,654 ERROR 57393 nodejs.ClusterClientNoResponseError: client no response in 1076756ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/lruler/Desktop/lruler-blog/be/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+name: "ClusterClientNoResponseError"
+pid: 57393
+hostname: liuyuledeMacBook-Pro.local
+
+2022-02-27 19:09:23,900 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/lruler/Desktop/lruler-blog/be/app/public/upload/k9bxnk36w6l1645934420577.png","remove":true,"isDirectory":false,"isFile":false}
+2022-02-27 19:11:55,275 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 19:11:55,071 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2933,"blocks":8,"atimeMs":1645934623760.3228,"mtimeMs":1645960315007.2903,"ctimeMs":1645960315007.2903,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T04:03:43.760Z","mtime":"2022-02-27T11:11:55.007Z","ctime":"2022-02-27T11:11:55.007Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 19:11:56,185 WARN 57393 [agent:development] reload worker because /Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts change
+2022-02-27 19:11:55,934 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2934,"blocks":8,"atimeMs":1645960315428.3352,"mtimeMs":1645960315922.747,"ctimeMs":1645960315922.747,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T11:11:55.428Z","mtime":"2022-02-27T11:11:55.923Z","ctime":"2022-02-27T11:11:55.923Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-02-27 19:11:55,984 INFO 57393 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/lruler/Desktop/lruler-blog/be/app/controller/blog.ts","stat":{"dev":16777233,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":23351157,"size":2934,"blocks":8,"atimeMs":1645960315428.3352,"mtimeMs":1645960315922.747,"ctimeMs":1645960315922.747,"birthtimeMs":1645515800985.852,"atime":"2022-02-27T11:11:55.428Z","mtime":"2022-02-27T11:11:55.923Z","ctime":"2022-02-27T11:11:55.923Z","birthtime":"2022-02-22T07:43:20.986Z"},"remove":false,"isDirectory":false,"isFile":true}
