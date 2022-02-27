@@ -7,6 +7,7 @@ import MarkdownIt from "markdown-it";
 import Message from "../../../components/message";
 import Header from "../components/header";
 import Card from "../components/card";
+import Tag from "../components/tag";
 import { SidebarL, SidebarR } from "../components/sidebar";
 import BlogItem from "../components/item";
 // http导入
@@ -35,8 +36,8 @@ export const List: React.FC = () => {
         {blogList.map((list, i) => {
           return (
             <Card key={i} onClick={() => getBlog(list.id)}>
-              <BlogItem key={list.id} title={list.title}>
-                {mdRender.render(list.content)}
+              <BlogItem tags={(list.tags as TagRes[])} title={list.title}>
+                {list.intro}
               </BlogItem>
             </Card>
           );

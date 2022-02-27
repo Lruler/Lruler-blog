@@ -27,6 +27,7 @@ export default function Edit() {
     title: "",
     tags: "",
   });
+  const [intro, setIntro] = useState("");
 
   const handleContent = ({ html, text }: editPro) => {
     setContent(text);
@@ -34,7 +35,7 @@ export default function Edit() {
 
   const post = async () => {
     if (blogMsg.tags && blogMsg.title && content) {
-      const blog = { ...blogMsg, content };
+      const blog = { ...blogMsg, content, intro };
       const data = await useFetch("postBlog", blog, "POST");
       Message.success(data.msg);
     } else {
@@ -79,6 +80,7 @@ export default function Edit() {
             }
           />
         </form>
+        <textarea value={intro} onChange={(e) => setIntro(e.target.value)} />
         <Editor
           value={content}
           onChange={handleContent}
