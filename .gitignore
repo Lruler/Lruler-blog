@@ -1,8 +1,8 @@
 fe/node_modules
 be/node_modules
 be/logs
-be/run
 be/prisma/migrations
+be/run
 koabe/node_modules
 .DS_Store
 dist
