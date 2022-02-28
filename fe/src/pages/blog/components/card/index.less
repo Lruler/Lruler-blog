@@ -1,11 +1,22 @@
 .card-wrapper {
     height: 15vh;
     width: 100%;
-    margin-bottom: 1.5em;
+    margin-bottom: .8em;
     background-color: var(--blog-bc);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(24, 24, 26);
+
+        .tag-wrapper {
+            color: #86cefd;
+            border: 1px solid #86cefd;
+        }
+    }
+
 }

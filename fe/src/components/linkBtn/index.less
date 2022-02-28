@@ -1,0 +1,88 @@
+@size: 50px;
+@linkC: rgb(248, 248, 248);
+
+.link-btn {
+    a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        position: relative;
+        width: fit-content;
+
+        .layer {
+            width: @size;
+            height: @size;
+            transition: 0.3s;
+
+            i {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 1px solid @linkC;
+                border-radius: 6px;
+                transition: 0.3s;
+            }
+
+            .fa {
+                font-size: (@size / 2);
+                text-align: center;
+                line-height: @size;
+                color: @linkC;
+            }
+        }
+
+        .link-text {
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            width: 100%;
+            text-align: center;
+            /*动画过渡*/
+            transition: 0.3s;
+            color: @linkC;
+        }
+
+        &:hover .link-text {
+            color: @linkC;
+            bottom: (@size / -2);
+            opacity: 1;
+        }
+
+        &:hover .layer {
+            /*鼠标移入，该元素旋转-35度并倾斜20度*/
+            transform: rotate(-35deg) skew(20deg);
+        }
+
+        /*鼠标移入设置每一层样式不透明并移动位置*/
+        &:hover .layer i:nth-child(1) {
+            opacity: 0.2;
+            transform: translate(0, 0);
+        }
+
+        &:hover .layer i:nth-child(2) {
+            opacity: 0.4;
+            transform: translate(5px, -5px);
+        }
+
+        &:hover .layer i:nth-child(3) {
+            opacity: 0.6;
+            transform: translate(10px, -10px);
+        }
+
+        &:hover .layer i:nth-child(4) {
+            opacity: 0.8;
+            transform: translate(15px, -15px);
+        }
+
+        &:hover .layer i:nth-child(5) {
+            opacity: 1.0;
+            transform: translate(20px, -20px);
+        }
+
+        &:hover .layer i {
+            box-shadow: -1px 1px 3px @linkC;
+        }
+    }
+}

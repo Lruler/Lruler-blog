@@ -1,7 +1,15 @@
 import Tag from "../tag";
+import LinkBtn from "../../../../components/linkBtn";
+import './index.less'
 
 export const SidebarR: React.FC = () => {
-  return <div className="blog-sidebar">侧边栏 展示分类</div>;
+  return (
+    <div className="blog-sidebar sidebar-R">
+      <div className="sidebar-link">
+        <LinkBtn link={"https://github.com/Lruler"} />
+      </div>
+    </div>
+  );
 };
 
 export const SidebarL: React.FC = () => {

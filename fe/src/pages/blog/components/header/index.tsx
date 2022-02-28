@@ -5,7 +5,7 @@ const Header: React.FC = () => {
   return (
     <header className="blog-header">
       <div className="blog-header-content">
-        <h2>Lruler</h2>
+        <div className="blog-header-icon">Lruler</div>
         <div className="blog-search">
           <input
             type="text"
