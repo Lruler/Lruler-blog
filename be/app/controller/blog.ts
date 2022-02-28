@@ -35,7 +35,7 @@ export default class BlogController extends Controller {
       .map(tag => ({ tag: tag.trim() }));
     await Promise.all(
       blogTags.map(async t => {
-        const o = await prisma.tags.findUnique({ where: { tag: t.tag } });
+        const o = await prisma.tags.findFirst({ where: { tag: t.tag } });
         if (o) {
           await prisma.tags.update({
             where: { tag: o.tag },
@@ -112,9 +112,40 @@ export default class BlogController extends Controller {
   async searchBlog() {
     const { ctx } = this;
     const { key } = ctx.request.query;
-    const blogs = await prisma.articles.findMany({
-      where: { content: { contains: key } },
+    let blogs = await prisma.articles.findMany({
+      where: {
+        OR: [
+          { title: { contains: key } },
+          { content: { contains: key } },
+          { intro: { contains: key } },
+        ],
+      },
+      select: {
+        title: true,
+        intro: true,
+        id: true,
+        createdAt: true,
+        tags: true,
+      },
     });
-    this.success(blogs);
+    const blogIds = blogs.map(b => b.id);
+    const tags = await prisma.tag.findMany({ where: { tag: { contains: key } }, select: { articlesId: true } });
+    for (const v in tags) {
+      if (blogIds.includes(tags[v].articlesId)) continue;
+      else {
+        const blog = await prisma.articles.findFirst({
+          where: { id: tags[v].articlesId },
+          select: {
+            title: true,
+            intro: true,
+            id: true,
+            createdAt: true,
+            tags: true,
+          },
+        });
+        blogs = blog ? [ ...blogs, blog ] : blogs;
+      }
+    }
+    this.success({ rows: blogs });
   }
 }

@@ -7,7 +7,6 @@ export default class TagController extends Controller {
   // 标签表
   async getTags() {
     const tags = await prisma.tags.findMany();
-    console.log(tags);
     this.success(tags);
   }
 
