@@ -45,7 +45,7 @@
       "directory": []
     },
     "multipart": {
-      "mode": "file",
+      "mode": "stream",
       "autoFields": false,
       "defaultCharset": "utf8",
       "fieldNameSize": 100,
