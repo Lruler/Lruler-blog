@@ -25,6 +25,13 @@
 
             .blog-list {
                 flex: 2;
+
+                .h1 {
+                    color: rgb(224, 224, 224);
+                    font-size: 2.5em;
+                    margin: .5em 0;
+                    font-weight: bold;
+                }
             }
         }
 
@@ -49,9 +56,13 @@
             align-items: center;
             justify-content: space-between;
             margin: 0 auto;
-            width: 60vw;
+            width: 50vw;
             height: 100%;
             font-size: 30px;
+
+            h2 {
+                margin-top: 1em;
+            }
         }
 
         .@{prefix}-search {
@@ -70,6 +81,8 @@
     &-sidebar {
         background-color: @bc;
         flex: 1;
+        margin-top: 5em;
+        padding-left: 1em ;
 
         // @media screen and (max-width: 768px) {
         //     display: none;

@@ -32,11 +32,12 @@ export const List: React.FC = () => {
   };
   return (
     <>
+      <div className="h1">ArticlesList</div>
       <ul>
         {blogList.map((list, i) => {
           return (
             <Card key={i} onClick={() => getBlog(list.id)}>
-              <BlogItem tags={(list.tags as TagRes[])} title={list.title}>
+              <BlogItem tags={list.tags as TagRes[]} title={list.title}>
                 {list.intro}
               </BlogItem>
             </Card>
