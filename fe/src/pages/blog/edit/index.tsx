@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import MarkdownIt from "markdown-it";
 import Editor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
-import Text from "../components/text";
+import Bor from "../components/tt";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import Message from "../../../components/message";
 import FileUpload from "../../../components/fileUpload";
@@ -63,6 +63,7 @@ export default function Edit() {
 
   return (
     <>
+      <Bor />
       <div className="edit-wrapper">
         <button onClick={post}>发表文章</button>
         <form>
