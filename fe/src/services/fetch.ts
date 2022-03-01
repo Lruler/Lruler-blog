@@ -1,5 +1,6 @@
 import blogUrlMap, { BlogAPI } from "./api/blog";
 import loginUrlMap, { LoginAPI } from "./api/login";
+import tagUrlMap, { TagsAPI } from "./api/tags";
 const BASE = "/api";
 
 /* 
@@ -76,13 +77,14 @@ export type HTTPAPI<T, K = any> = {
 
 type method = 'GET' | 'POST' | 'PUT' | 'HEAD' | 'DELETE' | 'CONNECT' | 'OPTIONS' | 'TRACE' | 'PATCH'
 
-interface API extends BlogAPI, LoginAPI  {}
+interface API extends BlogAPI, LoginAPI, TagsAPI  {}
 
 
 export let urlMap = new Map();
 
 blogUrlMap();
 loginUrlMap();
+tagUrlMap()
 
 
 const getUrl = (api: string, query?: any[]): string => {

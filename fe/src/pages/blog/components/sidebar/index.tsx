@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import useFetch from "../../../../services/fetch";
 import Tag from "../tag";
 import LinkBtn from "../../../../components/linkBtn";
 import "./index.less";
@@ -18,11 +20,19 @@ export const SidebarR: React.FC = () => {
 };
 
 export const SidebarL: React.FC = () => {
+  const [tags, setTags] = useState<TagRes[]>();
+  useEffect(() => {
+    (async () => {
+      const res = await useFetch("getTags");
+      setTags(res.data);
+    })();
+  }, []);
   return (
     <div className="blog-sidebar">
       <div className="sidebar-tags">
-        <Tag tag="React" count={3} />
-        <Tag tag="Js" count={24} />
+        {tags?.map((tag) => (
+          <Tag key={tag.id} tag={tag.tag} count={tag.count} />
+        ))}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 // 官方库导入
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext, SetStateAction } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { useNavigate } from "react-router";
 // 组件导入
@@ -12,11 +12,13 @@ import useFetch from "../../../services/fetch";
 // less导入
 import "./index.less";
 
-type BlogCtx = {
-  blogList: Blog[];
-  nextPage: () => void;
-  search: (key: string) => Promise<void>;
-};
+  type BlogCtx = {
+    blogList: Blog[];
+    nextPage: () => void;
+    search: (key: string) => Promise<void>;
+    setBlogList: React.Dispatch<SetStateAction<Blog[]>>;
+  };
+
 
 export let BlogCtx: React.Context<BlogCtx>;
 
@@ -74,7 +76,7 @@ const BlogList: React.FC = () => {
     setBlogList(res.data.rows);
   };
 
-  BlogCtx = React.createContext({ blogList, nextPage, search });
+  BlogCtx = React.createContext({ blogList, nextPage, search, setBlogList });
 
   useEffect(() => {
     (async () => {
@@ -84,7 +86,7 @@ const BlogList: React.FC = () => {
   }, [page]);
 
   return (
-    <BlogCtx.Provider value={{ blogList, nextPage, search }}>
+    <BlogCtx.Provider value={{ blogList, nextPage, search, setBlogList }}>
       <BlogLayout>
         <Outlet />
       </BlogLayout>

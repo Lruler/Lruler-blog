@@ -3,3 +3,7 @@ interface TagRes {
   tag: string;
   count?: number;
 }
+
+interface getBlogByTagReq {
+  tag: string
+}

@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
+import useFetch from "../../../../services/fetch";
+import { BlogCtx } from "../../list";
 import classNames from "classnames";
 import "./index.less";
 
 interface TagProps {
   tag: string;
-  size?: 'small' | 'normal' | 'big';
+  size?: "small" | "normal" | "big";
   count?: number;
 }
 
-const Tag: React.FC<TagProps> = ({ tag, count, size='normal' }) => {
+const Tag: React.FC<TagProps> = ({ tag, count, size = "normal" }) => {
   const classes = classNames("tag-wrapper", size);
+  const { setBlogList } = useContext(BlogCtx);
+  const getBlogs = async (e: React.MouseEvent) => {
+    e.stopPropagation()
+    const res = await useFetch("getBlogByTag", { tag });
+    setBlogList(res.data)
+  };
   return (
-    <div className={classes}>
+    <div className={classes} onClick={getBlogs}>
       {tag} {count}
     </div>
   );
