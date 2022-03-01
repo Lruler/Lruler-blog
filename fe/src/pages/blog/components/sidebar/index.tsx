@@ -1,12 +1,17 @@
 import Tag from "../tag";
 import LinkBtn from "../../../../components/linkBtn";
-import './index.less'
+import "./index.less";
 
 export const SidebarR: React.FC = () => {
   return (
     <div className="blog-sidebar sidebar-R">
       <div className="sidebar-link">
-        <LinkBtn link={"https://github.com/Lruler"} />
+        <LinkBtn
+          link={"https://github.com/Lruler"}
+          icon="github"
+          text="Github"
+        />
+        <LinkBtn link={"#"} icon="bed" text="简历" />
       </div>
     </div>
   );
