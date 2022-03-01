@@ -1,5 +1,6 @@
 import React from "react";
 import Tag from "../tag";
+import Text from "../text";
 import "./index.less";
 
 interface ItemProp {
@@ -10,13 +11,17 @@ interface ItemProp {
 const BlogItem: React.FC<ItemProp> = ({ children, title, tags }) => {
   return (
     <li className="blog-item">
-      <div className="blog-item-title">{title}</div>
+      <div className="blog-item-title">
+        <Text text={title}/>
+      </div>
       <div
         dangerouslySetInnerHTML={{ __html: children as string }}
         className="blog-item-content"
       ></div>
       <div className="blog-item-tags">
-        {tags.map( t => <Tag key={t.id} tag={t.tag} size='small' />)}
+        {tags.map((t) => (
+          <Tag key={t.id} tag={t.tag} size="small" />
+        ))}
       </div>
     </li>
   );

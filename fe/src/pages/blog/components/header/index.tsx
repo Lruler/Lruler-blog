@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useState, useContext, ChangeEvent } from "react";
+import { BlogCtx } from "../../list";
 
 const Header: React.FC = () => {
-  const [search, setSearch] = useState("");
+  const [key, setKey] = useState("");
+  const { search } = useContext(BlogCtx);
+  const toSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.keyCode === 13) search(key);
+  };
   return (
     <header className="blog-header">
       <div className="blog-header-content">
@@ -9,8 +14,9 @@ const Header: React.FC = () => {
         <div className="blog-search">
           <input
             type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            value={key}
+            onChange={(e) => setKey(e.target.value)}
+            onKeyDown={toSearch}
           />
         </div>
       </div>

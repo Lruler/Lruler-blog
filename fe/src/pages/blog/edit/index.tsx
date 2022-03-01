@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import MarkdownIt from "markdown-it";
 import Editor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
+import Text from "../components/text";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import Message from "../../../components/message";
 import FileUpload from "../../../components/fileUpload";

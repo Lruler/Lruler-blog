@@ -2,12 +2,9 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { useNavigate } from "react-router";
-import MarkdownIt from "markdown-it";
 // 组件导入
-import Message from "../../../components/message";
 import Header from "../components/header";
 import Card from "../components/card";
-import Tag from "../components/tag";
 import { SidebarL, SidebarR } from "../components/sidebar";
 import BlogItem from "../components/item";
 // http导入
@@ -18,13 +15,13 @@ import "./index.less";
 type BlogCtx = {
   blogList: Blog[];
   nextPage: () => void;
+  search: (key: string) => Promise<void>;
 };
 
 export let BlogCtx: React.Context<BlogCtx>;
 
 export const List: React.FC = () => {
   const nav = useNavigate();
-  const mdRender = new MarkdownIt();
   const ctx = useContext(BlogCtx);
   const { blogList, nextPage } = ctx;
   const getBlog = (id: number) => {
@@ -72,7 +69,12 @@ const BlogList: React.FC = () => {
     setPage(page + 1);
   };
 
-  BlogCtx = React.createContext({ blogList, nextPage });
+  const search = async (key: string) => {
+    const res = await useFetch("searchBlog", { key, page });
+    setBlogList(res.data.rows);
+  };
+
+  BlogCtx = React.createContext({ blogList, nextPage, search });
 
   useEffect(() => {
     (async () => {
@@ -82,7 +84,7 @@ const BlogList: React.FC = () => {
   }, [page]);
 
   return (
-    <BlogCtx.Provider value={{ blogList, nextPage }}>
+    <BlogCtx.Provider value={{ blogList, nextPage, search }}>
       <BlogLayout>
         <Outlet />
       </BlogLayout>

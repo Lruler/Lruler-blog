@@ -31,3 +31,11 @@ interface fileUploadReq extends FormData {}
 interface fileUploadRes {
   url: string;
 }
+
+interface searchBlogReq extends getListReq {
+  key: string;
+}
+
+interface searchBlogRes {
+  rows: Blog[];
+}

@@ -85,7 +85,7 @@ blogUrlMap();
 loginUrlMap();
 
 
-const getUrl = (api: string, query?: string[]): string => {
+const getUrl = (api: string, query?: any[]): string => {
   let url: string = urlMap.get(api)
   if (typeof query === 'object') {
     url = url.split('&').map((q, i) => `${q}=${query[i]}`).join('&')
@@ -109,7 +109,6 @@ const Fetch = async <T>(url: string, opt?: httpReq): Promise<T | any> => {
       else opt.body = JSON.stringify(opt.body)
         
     }
-
 
     const res = await fetch(url, opt);
     const data = await res.json();

@@ -7,6 +7,7 @@ const blogUrlMap = () => {
   urlMap.set("getBlog", useBase("/get?id"));
   urlMap.set("postBlog", useBase("/add"));
   urlMap.set("fileUpload", useBase("/upload"));
+  urlMap.set('searchBlog', useBase('/search?key&page'))
 };
 
 export interface BlogAPI {
@@ -14,6 +15,7 @@ export interface BlogAPI {
   getBlog: HTTPAPI<getBlogRes, getBlogReq>;
   postBlog: HTTPAPI<postBlogRes, postBlogReq>;
   fileUpload: HTTPAPI<fileUploadRes, fileUploadReq>;
+  searchBlog: HTTPAPI<searchBlogRes, searchBlogReq>;
 }
 
 export default blogUrlMap;
