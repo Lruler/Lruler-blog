@@ -5,10 +5,12 @@ import { BlogCtx } from "../../list";
 const Header: React.FC = () => {
   const [key, setKey] = useState("");
   const { search } = useContext(BlogCtx);
-  const nav = useNavigate()
+  const nav = useNavigate();
   const toSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.keyCode === 13) search(key);
-    nav('/blog/list')
+    if (e.keyCode === 13) {
+      search(key);
+      nav("/blog/list");
+    }
   };
   return (
     <header className="blog-header">
@@ -20,6 +22,7 @@ const Header: React.FC = () => {
             value={key}
             onChange={(e) => setKey(e.target.value)}
             onKeyDown={toSearch}
+            placeholder='搜索你想看的内容鸭:D'
           />
         </div>
       </div>

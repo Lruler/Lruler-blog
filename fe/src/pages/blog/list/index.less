@@ -38,13 +38,14 @@
                     font-weight: bold;
                 }
             }
-        }
 
-        .page-controller {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 2em;
-            width: 75%;
+            .page-controller {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 2em;
+                width: 100%;
+            }
+
         }
 
         footer {
@@ -92,8 +93,14 @@
         .@{prefix}-search {
 
             input {
-                border: none;
+                border: 3px solid rgb(175, 175, 175);
+                color: rgb(175, 175, 175);
+                padding: .3em;
+                border-radius: 999px;
                 outline: none;
+                height: 1.5em;
+                width: 15em;
+                background-color: @bc;
             }
         }
 

@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import MarkdownIt from "markdown-it";
+import useScrollToTop from "../../../hooks/useScrollToTop";
 import useFetch from "../../../services/fetch";
 import './index.less'
 
 const Detail: React.FC = () => {
   const { id } = useParams();
   const [content, setContent] = useState("");
+
+  useScrollToTop()
 
   const mRender = new MarkdownIt();
 
@@ -17,7 +20,9 @@ const Detail: React.FC = () => {
     })();
   }, []);
   return (
-    <div id="blog-detail" dangerouslySetInnerHTML={{ __html: content }}></div>
+    <>
+      <div id="blog-detail" dangerouslySetInnerHTML={{ __html: content }}></div>
+    </>
   );
 };
 

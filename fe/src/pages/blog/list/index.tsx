@@ -26,8 +26,7 @@ export let BlogCtx: React.Context<BlogCtx>;
 
 export const List: React.FC = () => {
   const nav = useNavigate();
-  const ctx = useContext(BlogCtx);
-  const { blogList } = ctx;
+  const { setPage, page, blogList } = useContext(BlogCtx);
   const getBlog = (id: number) => {
     nav(`${id}`);
   };
@@ -45,21 +44,6 @@ export const List: React.FC = () => {
           );
         })}
       </ul>
-    </>
-  );
-};
-
-const BlogLayout: React.FC = ({ children }) => {
-  const { setPage, page } = useContext(BlogCtx);
-  const time = useTime();
-  return (
-    <div className="blog-layout">
-      <Header />
-      <div className="blog-content">
-        <SidebarR />
-        <div className="blog-list">{children}</div>
-        <SidebarL />
-      </div>
       <div className="page-controller">
         <Button
           disabled={!page ? true : false}
@@ -68,6 +52,20 @@ const BlogLayout: React.FC = ({ children }) => {
           上一页
         </Button>
         <Button onClick={() => setPage((p) => p + 1)}>下一页</Button>
+      </div>
+    </>
+  );
+};
+
+const BlogLayout: React.FC = ({ children }) => {
+  const time = useTime();
+  return (
+    <div className="blog-layout">
+      <Header />
+      <div className="blog-content">
+        <SidebarR />
+        <div className="blog-list">{children}</div>
+        <SidebarL />
       </div>
       <footer>
         {time}
