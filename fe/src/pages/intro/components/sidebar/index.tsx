@@ -13,7 +13,7 @@ export const SidebarR: React.FC = () => {
           icon="github"
           text="Github"
         />
-        <LinkBtn link={"#"} icon="bed" text="简历" />
+        <LinkBtn link={"/resume"} icon="bed" text="简历" />
       </div>
     </div>
   );

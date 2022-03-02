@@ -6,15 +6,16 @@ interface LinkProps {
   link: string;
   icon: string;
   text: string;
+  isBlank?: boolean;
   color?: string
 }
 
-const LinkBtn: React.FC<LinkProps> = ({ link, icon, text, color='white' }) => {
+const LinkBtn: React.FC<LinkProps> = ({ link, icon, text, color='white', isBlank=true }) => {
   const classes = classNames("fa", `fa-${icon}`);
 
   return (
     <div className="link-btn" data-color={color}>
-      <a href={link} target="_blank">
+      <a href={link} target={isBlank ? "_blank" : "_parent"}>
         <div className="layer">
           <i></i>
           <i></i>
