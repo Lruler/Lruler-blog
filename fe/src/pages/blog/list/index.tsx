@@ -7,25 +7,27 @@ import Header from "../components/header";
 import Card from "../components/card";
 import { SidebarL, SidebarR } from "../components/sidebar";
 import BlogItem from "../components/item";
+import Button from "../../../components/button";
+import useTime from "../../../hooks/useTime";
 // http导入
 import useFetch from "../../../services/fetch";
 // less导入
 import "./index.less";
 
-  type BlogCtx = {
-    blogList: Blog[];
-    nextPage: () => void;
-    search: (key: string) => Promise<void>;
-    setBlogList: React.Dispatch<SetStateAction<Blog[]>>;
-  };
-
+type BlogCtx = {
+  blogList: Blog[];
+  page: number;
+  search: (key: string) => Promise<void>;
+  setBlogList: React.Dispatch<SetStateAction<Blog[]>>;
+  setPage: React.Dispatch<SetStateAction<number>>;
+};
 
 export let BlogCtx: React.Context<BlogCtx>;
 
 export const List: React.FC = () => {
   const nav = useNavigate();
   const ctx = useContext(BlogCtx);
-  const { blogList, nextPage } = ctx;
+  const { blogList } = ctx;
   const getBlog = (id: number) => {
     nav(`${id}`);
   };
@@ -42,15 +44,14 @@ export const List: React.FC = () => {
             </Card>
           );
         })}
-        <Link to="/blog/edit">去编辑界面</Link>
-        <button onClick={nextPage}>下一页</button>
-        <h1></h1>
       </ul>
     </>
   );
 };
 
 const BlogLayout: React.FC = ({ children }) => {
+  const { setPage, page } = useContext(BlogCtx);
+  const time = useTime();
   return (
     <div className="blog-layout">
       <Header />
@@ -59,6 +60,19 @@ const BlogLayout: React.FC = ({ children }) => {
         <div className="blog-list">{children}</div>
         <SidebarL />
       </div>
+      <div className="page-controller">
+        <Button
+          disabled={!page ? true : false}
+          onClick={() => setPage((p) => p - 1)}
+        >
+          上一页
+        </Button>
+        <Button onClick={() => setPage((p) => p + 1)}>下一页</Button>
+      </div>
+      <footer>
+        {time}
+        <i className="fa fa-heart" aria-hidden="true" />
+      </footer>
     </div>
   );
 };
@@ -67,16 +81,18 @@ const BlogList: React.FC = () => {
   const [blogList, setBlogList] = useState<Blog[]>([]);
   const [page, setPage] = useState(0);
 
-  const nextPage = () => {
-    setPage(page + 1);
-  };
-
   const search = async (key: string) => {
     const res = await useFetch("searchBlog", { key, page });
     setBlogList(res.data.rows);
   };
 
-  BlogCtx = React.createContext({ blogList, nextPage, search, setBlogList });
+  BlogCtx = React.createContext({
+    blogList,
+    page,
+    search,
+    setBlogList,
+    setPage,
+  });
 
   useEffect(() => {
     (async () => {
@@ -86,7 +102,7 @@ const BlogList: React.FC = () => {
   }, [page]);
 
   return (
-    <BlogCtx.Provider value={{ blogList, nextPage, search, setBlogList }}>
+    <BlogCtx.Provider value={{ blogList, page, search, setBlogList, setPage }}>
       <BlogLayout>
         <Outlet />
       </BlogLayout>

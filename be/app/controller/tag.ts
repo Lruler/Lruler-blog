@@ -23,7 +23,15 @@ export default class TagController extends Controller {
     const { ctx } = this;
     const { tag } = ctx.request.query;
     const b = await prisma.tag.findMany({ where: { tag } });
-    const blogs = await Promise.all(b.map(async t => await prisma.articles.findUnique({ where: { id: t.articlesId } })));
+    const blogs = await Promise.all(
+      b.map(
+        async t =>
+          await prisma.articles.findUnique({
+            where: { id: t.articlesId },
+            include: { tags: true },
+          }),
+      ),
+    );
     this.success(blogs);
   }
 }

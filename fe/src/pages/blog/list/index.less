@@ -13,10 +13,15 @@
     &-layout {
         display: flex;
         flex-direction: column;
+        align-items: center;
         height: fit-content;
         width: fit-content;
         background-color: @bc;
         min-height: 100vh;
+        // @media screen and (max-width: 768px) {
+        //     height: 100vh;
+        //     width: 100vw;
+        // }
 
         .blog-content {
             top: 10vh;
@@ -35,10 +40,27 @@
             }
         }
 
-        // @media screen and (max-width: 768px) {
-        //     height: 100vh;
-        //     width: 100vw;
-        // }
+        .page-controller {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2em;
+            width: 75%;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20vh;
+            font-size: .7em;
+            width: 100%;
+            color: rgb(179, 179, 179);
+
+            .fa-heart {
+                margin-left: 1em;
+                color: red;
+            }
+        }
     }
 
     &-header {
@@ -88,5 +110,4 @@
         //     display: none;
         // }
     }
-
 }
