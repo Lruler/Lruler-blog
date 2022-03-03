@@ -8,20 +8,35 @@ import Resume from "./pages/intro/resume";
 import { List } from "./pages/intro/list";
 
 const App: React.FC = () => {
-  const [skip, setSkip] = useState(false);
-  const location = useLocation();
+  // const [skip, setSkip] = useState(false);
+  // const location = useLocation();
+  // useEffect(() => {
+  //   setSkip(true);
+  //   setTimeout(() => {
+  //     setSkip(false);
+  //   }, 1000);
+  // }, [location.pathname]);
+
+  /*
+   
+   TODO: 
+   1. Detail页面
+   3. 路由跳转动画
+   4. 中午抄一份计组作业
+  
+  */
   useEffect(() => {
-    setSkip(true);
-    setTimeout(() => {
-      setSkip(false);
-    }, 1000);
-  }, [location.pathname]);
+    history.pushState(null, "", document.URL);
+    window.addEventListener("popstate", function () {
+      history.pushState(null, "", document.URL);
+    });
+  }, []);
   return (
-    <div className="router-change-animation" style={{ filter: skip ? `blur(5px)` : "none" }}>
+    <div className="router-change-animation">
       <Routes>
         <Route path="blog/list" element={<Blog />}>
-          <Route path="" element={<List />} />
-          <Route path=":id" element={<Detail />} />
+          <Route path=":key" element={<List />} />
+          <Route path="item/:id" element={<Detail />} />
         </Route>
         <Route path="blog/edit" element={<Edit />} />
         <Route path="*" element={<Home />} />

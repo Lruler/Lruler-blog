@@ -1,30 +1,21 @@
 Arguments: 
-  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.10/libexec/bin/yarn.js add @types/react-fullpage
+  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.10/libexec/bin/yarn.js add highlight.js
 
 PATH: 
-  /opt/homebrew/opt/mongodb-community@4.0/bin:/opt/homebrew/opt/mongodb-community@4.0/bin:/Users/lruler/.autojump/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin
+  /Users/lruler/opt/anaconda3/condabin:/opt/homebrew/opt/mongodb-community@4.0/bin:/opt/homebrew/opt/mongodb-community@4.0/bin:/Users/lruler/.autojump/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin
 
 Yarn version: 
   1.22.10
 
 Node version: 
-  14.17.0
+  16.14.0
 
 Platform: 
-  darwin x64
+  darwin arm64
 
 Trace: 
-  Error: https://registry.npm.taobao.org/@types%2freact-fullpage: Not found
-      at Request.params.callback [as _callback] (/opt/homebrew/Cellar/yarn/1.22.10/libexec/lib/cli.js:66988:18)
-      at Request.self.callback (/opt/homebrew/Cellar/yarn/1.22.10/libexec/lib/cli.js:140749:22)
-      at Request.emit (events.js:376:20)
-      at Request.<anonymous> (/opt/homebrew/Cellar/yarn/1.22.10/libexec/lib/cli.js:141721:10)
-      at Request.emit (events.js:376:20)
-      at IncomingMessage.<anonymous> (/opt/homebrew/Cellar/yarn/1.22.10/libexec/lib/cli.js:141643:12)
-      at Object.onceWrapper (events.js:482:28)
-      at IncomingMessage.emit (events.js:388:22)
-      at endReadableNT (internal/streams/readable.js:1336:12)
-      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+  Error: getaddrinfo ENOTFOUND registry.npmmirror.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)
 
 npm manifest: 
   {
@@ -36,16 +27,21 @@ npm manifest:
       "preview": "vite preview"
     },
     "dependencies": {
-      "@fullpage/react-fullpage": "^0.1.19",
+      "@types/markdown-it": "^12.2.3",
+      "classnames": "^2.3.1",
+      "markdown-it": "^12.3.2",
       "react": "^17.0.2",
       "react-dom": "^17.0.2",
+      "react-markdown-editor-lite": "^1.3.2",
       "react-router": "^6.2.1",
-      "react-router-dom": "^6.2.1"
+      "react-router-dom": "^6.2.1",
+      "react-syntax-highlighter": "^15.4.5"
     },
     "devDependencies": {
       "@types/react": "^17.0.33",
       "@types/react-dom": "^17.0.10",
       "@vitejs/plugin-react": "^1.0.7",
+      "less": "^4.1.2",
       "typescript": "^4.4.4",
       "vite": "^2.7.2"
     }
@@ -260,12 +256,18 @@ Lockfile:
       "@babel/plugin-syntax-jsx" "^7.16.5"
       "@babel/types" "^7.16.0"
   
-  "@babel/polyfill@^7.2.5":
-    version "7.12.1"
-    resolved "https://registry.npmmirror.com/@babel/polyfill/download/@babel/polyfill-7.12.1.tgz#1f2d6371d1261bbd961f3c5d5909150e12d0bd96"
-    integrity sha1-Hy1jcdEmG72WHzxdWQkVDhLQvZY=
+  "@babel/runtime@^7.3.1":
+    version "7.17.2"
+    resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.17.2.tgz#66f68591605e59da47523c631416b18508779941"
+    integrity sha512-hzeyJyMA1YGdJTuWU0e/j4wKXrU4OMFvY2MSlaI9B7VQb0r5cxTE3EAIS2Q7Tn2RIcDkRvTA/v2JsAEhxe99uw==
     dependencies:
-      core-js "^2.6.5"
+      regenerator-runtime "^0.13.4"
+  
+  "@babel/runtime@^7.6.2":
+    version "7.16.7"
+    resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.16.7.tgz#03ff99f64106588c9c403c6ecb8c3bafbbdff1fa"
+    integrity sha512-9E9FJowqAsytyOY6LG+1KuueckRL+aQW+mKvXRXnuFGyRAyepJPmEo9vgMfXUA6O9u3IeEdv9MAkppFcaQwogQ==
+    dependencies:
       regenerator-runtime "^0.13.4"
   
   "@babel/runtime@^7.7.6":
@@ -308,14 +310,6 @@ Lockfile:
       "@babel/helper-validator-identifier" "^7.15.7"
       to-fast-properties "^2.0.0"
   
-  "@fullpage/react-fullpage@^0.1.19":
-    version "0.1.19"
-    resolved "https://registry.nlark.com/@fullpage/react-fullpage/download/@fullpage/react-fullpage-0.1.19.tgz#770ecfc96475900007ce1c29376da7fa11fb26a8"
-    integrity sha1-dw7PyWR1kAAHzhwpN22n+hH7Jqg=
-    dependencies:
-      "@babel/polyfill" "^7.2.5"
-      fullpage.js "^3.1.0"
-  
   "@rollup/pluginutils@^4.1.1":
     version "4.1.2"
     resolved "https://registry.npmmirror.com/@rollup/pluginutils/download/@rollup/pluginutils-4.1.2.tgz#ed5821c15e5e05e32816f5fb9ec607cdf5a75751"
@@ -323,6 +317,31 @@ Lockfile:
     dependencies:
       estree-walker "^2.0.1"
       picomatch "^2.2.2"
+  
+  "@types/hast@^2.0.0":
+    version "2.3.4"
+    resolved "https://registry.npmmirror.com/@types/hast/-/hast-2.3.4.tgz#8aa5ef92c117d20d974a82bdfb6a648b08c0bafc"
+    integrity sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==
+    dependencies:
+      "@types/unist" "*"
+  
+  "@types/linkify-it@*":
+    version "3.0.2"
+    resolved "https://registry.npmmirror.com/@types/linkify-it/-/linkify-it-3.0.2.tgz#fd2cd2edbaa7eaac7e7f3c1748b52a19143846c9"
+    integrity sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==
+  
+  "@types/markdown-it@^12.2.3":
+    version "12.2.3"
+    resolved "https://registry.npmmirror.com/@types/markdown-it/-/markdown-it-12.2.3.tgz#0d6f6e5e413f8daaa26522904597be3d6cd93b51"
+    integrity sha512-GKMHFfv3458yYy+v/N8gjufHO6MSZKCOXpZc5GXIWWy8uldwfmPn98vp81gZ5f9SVw8YYBctgfJ22a2d7AOMeQ==
+    dependencies:
+      "@types/linkify-it" "*"
+      "@types/mdurl" "*"
+  
+  "@types/mdurl@*":
+    version "1.0.2"
+    resolved "https://registry.npmmirror.com/@types/mdurl/-/mdurl-1.0.2.tgz#e2ce9d83a613bacf284c7be7d491945e39e1f8e9"
+    integrity sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==
   
   "@types/prop-types@*":
     version "15.7.4"
@@ -350,6 +369,11 @@ Lockfile:
     resolved "https://registry.npmmirror.com/@types/scheduler/download/@types/scheduler-0.16.2.tgz?cache=0&sync_timestamp=1637269065452&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fscheduler%2Fdownload%2F%40types%2Fscheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
     integrity sha1-GmL4lSVyPd4kuhsBsJK/XfitTTk=
   
+  "@types/unist@*":
+    version "2.0.6"
+    resolved "https://registry.npmmirror.com/@types/unist/-/unist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
+    integrity sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==
+  
   "@vitejs/plugin-react@^1.0.7":
     version "1.1.3"
     resolved "https://registry.npmmirror.com/@vitejs/plugin-react/download/@vitejs/plugin-react-1.1.3.tgz#0a649db2ea4637fd188adb36502b59da05ff6303"
@@ -370,6 +394,11 @@ Lockfile:
     integrity sha1-QfuyAkPlCxK+DwS43tvwdSDOhB0=
     dependencies:
       color-convert "^1.9.0"
+  
+  argparse@^2.0.1:
+    version "2.0.1"
+    resolved "https://registry.npmmirror.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
+    integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
   
   browserslist@^4.17.5:
     version "4.19.1"
@@ -396,6 +425,26 @@ Lockfile:
       escape-string-regexp "^1.0.5"
       supports-color "^5.3.0"
   
+  character-entities-legacy@^1.0.0:
+    version "1.1.4"
+    resolved "https://registry.npmmirror.com/character-entities-legacy/-/character-entities-legacy-1.1.4.tgz#94bc1845dce70a5bb9d2ecc748725661293d8fc1"
+    integrity sha512-3Xnr+7ZFS1uxeiUDvV02wQ+QDbc55o97tIV5zHScSPJpcLm/r0DFPcoY3tYRp+VZukxuMeKgXYmsXQHO05zQeA==
+  
+  character-entities@^1.0.0:
+    version "1.2.4"
+    resolved "https://registry.npmmirror.com/character-entities/-/character-entities-1.2.4.tgz#e12c3939b7eaf4e5b15e7ad4c5e28e1d48c5b16b"
+    integrity sha512-iBMyeEHxfVnIakwOuDXpVkc54HijNgCyQB2w0VfGQThle6NXn50zU6V/u+LDhxHcDUPojn6Kpga3PTAD8W1bQw==
+  
+  character-reference-invalid@^1.0.0:
+    version "1.1.4"
+    resolved "https://registry.npmmirror.com/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
+    integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
+  
+  classnames@^2.2.6, classnames@^2.3.1:
+    version "2.3.1"
+    resolved "https://registry.npmmirror.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+    integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
+  
   color-convert@^1.9.0:
     version "1.9.3"
     resolved "https://registry.npmmirror.com/color-convert/download/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
@@ -408,6 +457,11 @@ Lockfile:
     resolved "https://registry.nlark.com/color-name/download/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
     integrity sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
   
+  comma-separated-tokens@^1.0.0:
+    version "1.0.8"
+    resolved "https://registry.npmmirror.com/comma-separated-tokens/-/comma-separated-tokens-1.0.8.tgz#632b80b6117867a158f1080ad498b2fbe7e3f5ea"
+    integrity sha512-GHuDRO12Sypu2cV70d1dkA2EUmXHgntrzbpvOB+Qy+49ypNfGgFQIC2fhhXbnyrJRynDCAARsT7Ou0M6hirpfw==
+  
   convert-source-map@^1.7.0:
     version "1.8.0"
     resolved "https://registry.nlark.com/convert-source-map/download/convert-source-map-1.8.0.tgz#f3373c32d21b4d780dd8004514684fb791ca4369"
@@ -415,15 +469,24 @@ Lockfile:
     dependencies:
       safe-buffer "~5.1.1"
   
-  core-js@^2.6.5:
-    version "2.6.12"
-    resolved "https://registry.npmmirror.com/core-js/download/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
-    integrity sha1-2TM9+nsGXjR8xWgiGdb2kIWcwuw=
+  copy-anything@^2.0.1:
+    version "2.0.3"
+    resolved "https://registry.nlark.com/copy-anything/download/copy-anything-2.0.3.tgz#842407ba02466b0df844819bbe3baebbe5d45d87"
+    integrity sha1-hCQHugJGaw34RIGbvjuuu+XUXYc=
+    dependencies:
+      is-what "^3.12.0"
   
   csstype@^3.0.2:
     version "3.0.10"
     resolved "https://registry.npmmirror.com/csstype/download/csstype-3.0.10.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcsstype%2Fdownload%2Fcsstype-3.0.10.tgz#2ad3a7bed70f35b965707c092e5f30b327c290e5"
     integrity sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==
+  
+  debug@^3.2.6:
+    version "3.2.7"
+    resolved "https://registry.npmmirror.com/debug/download/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
+    integrity sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==
+    dependencies:
+      ms "^2.1.1"
   
   debug@^4.1.0:
     version "4.3.3"
@@ -436,6 +499,18 @@ Lockfile:
     version "1.4.30"
     resolved "https://registry.npmmirror.com/electron-to-chromium/download/electron-to-chromium-1.4.30.tgz#0f75a1dce26dffbd5a0f7212e5b87fe0b61cbc76"
     integrity sha512-609z9sIMxDHg+TcR/VB3MXwH+uwtrYyeAwWc/orhnr90ixs6WVGSrt85CDLGUdNnLqCA7liv426V20EecjvflQ==
+  
+  entities@~2.1.0:
+    version "2.1.0"
+    resolved "https://registry.npmmirror.com/entities/-/entities-2.1.0.tgz#992d3129cf7df6870b96c57858c249a120f8b8b5"
+    integrity sha512-hCx1oky9PFrJ611mf0ifBLBRW8lUUVRlFolb5gWRfIELabBlbp9xZvrqZLZAs+NxFnbfQoeGd8wDkygjg7U85w==
+  
+  errno@^0.1.1:
+    version "0.1.8"
+    resolved "https://registry.nlark.com/errno/download/errno-0.1.8.tgz#8bb3e9c7d463be4976ff888f76b4809ebc2e811f"
+    integrity sha1-i7Ppx9Rjvkl2/4iPdrSAnrwugR8=
+    dependencies:
+      prr "~1.0.1"
   
   esbuild-android-arm64@0.13.15:
     version "0.13.15"
@@ -560,15 +635,27 @@ Lockfile:
     resolved "https://registry.npmmirror.com/estree-walker/download/estree-walker-2.0.2.tgz#52f010178c2a4c117a7757cfe942adb7d2da4cac"
     integrity sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=
   
+  eventemitter3@^4.0.0:
+    version "4.0.7"
+    resolved "https://registry.npmmirror.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
+    integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
+  
+  fault@^1.0.0:
+    version "1.0.4"
+    resolved "https://registry.npmmirror.com/fault/-/fault-1.0.4.tgz#eafcfc0a6d214fc94601e170df29954a4f842f13"
+    integrity sha512-CJ0HCB5tL5fYTEA7ToAq5+kTwd++Borf1/bifxd9iT70QcXr4MRrO3Llf8Ifs70q+SJcGHFtnIE/Nw6giCtECA==
+    dependencies:
+      format "^0.2.0"
+  
+  format@^0.2.0:
+    version "0.2.2"
+    resolved "https://registry.npmmirror.com/format/-/format-0.2.2.tgz#d6170107e9efdc4ed30c9dc39016df942b5cb58b"
+    integrity sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==
+  
   fsevents@~2.3.2:
     version "2.3.2"
     resolved "https://registry.npmmirror.com/fsevents/download/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
     integrity sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=
-  
-  fullpage.js@^3.1.0:
-    version "3.1.2"
-    resolved "https://registry.npmmirror.com/fullpage.js/download/fullpage.js-3.1.2.tgz#ee6289f52edb2a9f9c25d09c4022043b701d3cc0"
-    integrity sha1-7mKJ9S7bKp+cJdCcQCIEO3AdPMA=
   
   function-bind@^1.1.1:
     version "1.1.1"
@@ -585,6 +672,11 @@ Lockfile:
     resolved "https://registry.npmmirror.com/globals/download/globals-11.12.0.tgz?cache=0&sync_timestamp=1635390798667&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fglobals%2Fdownload%2Fglobals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
     integrity sha1-q4eVM4hooLq9hSV1gBjCp+uVxC4=
   
+  graceful-fs@^4.1.2:
+    version "4.2.9"
+    resolved "https://registry.npmmirror.com/graceful-fs/download/graceful-fs-4.2.9.tgz#041b05df45755e587a24942279b9d113146e1c96"
+    integrity sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==
+  
   has-flag@^3.0.0:
     version "3.0.0"
     resolved "https://registry.nlark.com/has-flag/download/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
@@ -597,6 +689,27 @@ Lockfile:
     dependencies:
       function-bind "^1.1.1"
   
+  hast-util-parse-selector@^2.0.0:
+    version "2.2.5"
+    resolved "https://registry.npmmirror.com/hast-util-parse-selector/-/hast-util-parse-selector-2.2.5.tgz#d57c23f4da16ae3c63b3b6ca4616683313499c3a"
+    integrity sha512-7j6mrk/qqkSehsM92wQjdIgWM2/BW61u/53G6xmC8i1OmEdKLHbk419QKQUjz6LglWsfqoiHmyMRkP1BGjecNQ==
+  
+  hastscript@^6.0.0:
+    version "6.0.0"
+    resolved "https://registry.npmmirror.com/hastscript/-/hastscript-6.0.0.tgz#e8768d7eac56c3fdeac8a92830d58e811e5bf640"
+    integrity sha512-nDM6bvd7lIqDUiYEiu5Sl/+6ReP0BMk/2f4U/Rooccxkj0P5nm+acM5PrGJ/t5I8qPGiqZSE6hVAwZEdZIvP4w==
+    dependencies:
+      "@types/hast" "^2.0.0"
+      comma-separated-tokens "^1.0.0"
+      hast-util-parse-selector "^2.0.0"
+      property-information "^5.0.0"
+      space-separated-tokens "^1.0.0"
+  
+  highlight.js@^10.4.1, highlight.js@~10.7.0:
+    version "10.7.3"
+    resolved "https://registry.npmmirror.com/highlight.js/-/highlight.js-10.7.3.tgz#697272e3991356e40c3cac566a74eef681756531"
+    integrity sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==
+  
   history@^5.2.0:
     version "5.2.0"
     resolved "https://registry.npmmirror.com/history/download/history-5.2.0.tgz#7cdd31cf9bac3c5d31f09c231c9928fad0007b7c"
@@ -604,12 +717,52 @@ Lockfile:
     dependencies:
       "@babel/runtime" "^7.7.6"
   
+  iconv-lite@^0.4.4:
+    version "0.4.24"
+    resolved "https://registry.nlark.com/iconv-lite/download/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
+    integrity sha1-ICK0sl+93CHS9SSXSkdKr+czkIs=
+    dependencies:
+      safer-buffer ">= 2.1.2 < 3"
+  
+  image-size@~0.5.0:
+    version "0.5.5"
+    resolved "https://registry.npmmirror.com/image-size/download/image-size-0.5.5.tgz#09dfd4ab9d20e29eb1c3e80b8990378df9e3cb9c"
+    integrity sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=
+  
+  is-alphabetical@^1.0.0:
+    version "1.0.4"
+    resolved "https://registry.npmmirror.com/is-alphabetical/-/is-alphabetical-1.0.4.tgz#9e7d6b94916be22153745d184c298cbf986a686d"
+    integrity sha512-DwzsA04LQ10FHTZuL0/grVDk4rFoVH1pjAToYwBrHSxcrBIGQuXrQMtD5U1b0U2XVgKZCTLLP8u2Qxqhy3l2Vg==
+  
+  is-alphanumerical@^1.0.0:
+    version "1.0.4"
+    resolved "https://registry.npmmirror.com/is-alphanumerical/-/is-alphanumerical-1.0.4.tgz#7eb9a2431f855f6b1ef1a78e326df515696c4dbf"
+    integrity sha512-UzoZUr+XfVz3t3v4KyGEniVL9BDRoQtY7tOyrRybkVNjDFWyo1yhXNGrrBTQxp3ib9BLAWs7k2YKBQsFRkZG9A==
+    dependencies:
+      is-alphabetical "^1.0.0"
+      is-decimal "^1.0.0"
+  
   is-core-module@^2.2.0:
     version "2.8.0"
     resolved "https://registry.npmmirror.com/is-core-module/download/is-core-module-2.8.0.tgz?cache=0&sync_timestamp=1634237302390&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fis-core-module%2Fdownload%2Fis-core-module-2.8.0.tgz#0321336c3d0925e497fd97f5d95cb114a5ccd548"
     integrity sha1-AyEzbD0JJeSX/Zf12VyxFKXM1Ug=
     dependencies:
       has "^1.0.3"
+  
+  is-decimal@^1.0.0:
+    version "1.0.4"
+    resolved "https://registry.npmmirror.com/is-decimal/-/is-decimal-1.0.4.tgz#65a3a5958a1c5b63a706e1b333d7cd9f630d3fa5"
+    integrity sha512-RGdriMmQQvZ2aqaQq3awNA6dCGtKpiDFcOzrTWrDAT2MiWrKQVPmxLGHl7Y2nNu6led0kEyoX0enY0qXYsv9zw==
+  
+  is-hexadecimal@^1.0.0:
+    version "1.0.4"
+    resolved "https://registry.npmmirror.com/is-hexadecimal/-/is-hexadecimal-1.0.4.tgz#cc35c97588da4bd49a8eedd6bc4082d44dcb23a7"
+    integrity sha512-gyPJuv83bHMpocVYoqof5VDiZveEoGoFL8m3BXNb2VW8Xs+rz9kqO8LOQ5DH6EsuvilT1ApazU0pyl+ytbPtlw==
+  
+  is-what@^3.12.0:
+    version "3.14.1"
+    resolved "https://registry.npmmirror.com/is-what/download/is-what-3.14.1.tgz#e1222f46ddda85dead0fd1c9df131760e77755c1"
+    integrity sha1-4SIvRt3ahd6tD9HJ3xMXYOd3VcE=
   
   "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
     version "4.0.0"
@@ -628,12 +781,73 @@ Lockfile:
     dependencies:
       minimist "^1.2.5"
   
+  less@^4.1.2:
+    version "4.1.2"
+    resolved "https://registry.npmmirror.com/less/download/less-4.1.2.tgz#6099ee584999750c2624b65f80145f8674e4b4b0"
+    integrity sha512-EoQp/Et7OSOVu0aJknJOtlXZsnr8XE8KwuzTHOLeVSEx8pVWUICc8Q0VYRHgzyjX78nMEyC/oztWFbgyhtNfDA==
+    dependencies:
+      copy-anything "^2.0.1"
+      parse-node-version "^1.0.1"
+      tslib "^2.3.0"
+    optionalDependencies:
+      errno "^0.1.1"
+      graceful-fs "^4.1.2"
+      image-size "~0.5.0"
+      make-dir "^2.1.0"
+      mime "^1.4.1"
+      needle "^2.5.2"
+      source-map "~0.6.0"
+  
+  linkify-it@^3.0.1:
+    version "3.0.3"
+    resolved "https://registry.npmmirror.com/linkify-it/-/linkify-it-3.0.3.tgz#a98baf44ce45a550efb4d49c769d07524cc2fa2e"
+    integrity sha512-ynTsyrFSdE5oZ/O9GEf00kPngmOfVwazR5GKDq6EYfhlpFug3J2zybX56a2PRRpc9P+FuSoGNAwjlbDs9jJBPQ==
+    dependencies:
+      uc.micro "^1.0.1"
+  
   loose-envify@^1.1.0:
     version "1.4.0"
     resolved "https://registry.nlark.com/loose-envify/download/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
     integrity sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=
     dependencies:
       js-tokens "^3.0.0 || ^4.0.0"
+  
+  lowlight@^1.17.0:
+    version "1.20.0"
+    resolved "https://registry.npmmirror.com/lowlight/-/lowlight-1.20.0.tgz#ddb197d33462ad0d93bf19d17b6c301aa3941888"
+    integrity sha512-8Ktj+prEb1RoCPkEOrPMYUN/nCggB7qAWe3a7OpMjWQkh3l2RD5wKRQ+o8Q8YuI9RG/xs95waaI/E6ym/7NsTw==
+    dependencies:
+      fault "^1.0.0"
+      highlight.js "~10.7.0"
+  
+  make-dir@^2.1.0:
+    version "2.1.0"
+    resolved "https://registry.nlark.com/make-dir/download/make-dir-2.1.0.tgz?cache=0&sync_timestamp=1622604552755&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fmake-dir%2Fdownload%2Fmake-dir-2.1.0.tgz#5f0310e18b8be898cc07009295a30ae41e91e6f5"
+    integrity sha1-XwMQ4YuL6JjMBwCSlaMK5B6R5vU=
+    dependencies:
+      pify "^4.0.1"
+      semver "^5.6.0"
+  
+  markdown-it@^12.3.2:
+    version "12.3.2"
+    resolved "https://registry.npmmirror.com/markdown-it/-/markdown-it-12.3.2.tgz#bf92ac92283fe983fe4de8ff8abfb5ad72cd0c90"
+    integrity sha512-TchMembfxfNVpHkbtriWltGWc+m3xszaRD0CZup7GFFhzIgQqxIfn3eGj1yZpfuflzPvfkt611B2Q/Bsk1YnGg==
+    dependencies:
+      argparse "^2.0.1"
+      entities "~2.1.0"
+      linkify-it "^3.0.1"
+      mdurl "^1.0.1"
+      uc.micro "^1.0.5"
+  
+  mdurl@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.npmmirror.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
+    integrity sha512-/sKlQJCBYVY9Ers9hqzKou4H6V5UWc/M59TH2dvkt+84itfnq7uFOMLpOiOS4ujvHP4etln18fmIxA5R5fll0g==
+  
+  mime@^1.4.1:
+    version "1.6.0"
+    resolved "https://registry.npmmirror.com/mime/download/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
+    integrity sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE=
   
   minimist@^1.2.5:
     version "1.2.5"
@@ -645,10 +859,24 @@ Lockfile:
     resolved "https://registry.npmmirror.com/ms/download/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
     integrity sha1-0J0fNXtEP0kzgqjrPM0YOHKuYAk=
   
+  ms@^2.1.1:
+    version "2.1.3"
+    resolved "https://registry.npmmirror.com/ms/download/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
+    integrity sha1-V0yBOM4dK1hh8LRFedut1gxmFbI=
+  
   nanoid@^3.1.30:
     version "3.1.30"
     resolved "https://registry.npmmirror.com/nanoid/download/nanoid-3.1.30.tgz#63f93cc548d2a113dc5dfbc63bfa09e2b9b64362"
     integrity sha512-zJpuPDwOv8D2zq2WRoMe1HsfZthVewpel9CAvTfc/2mBD1uUT/agc5f7GHGWXlYkFvi1mVxe4IjvP2HNrop7nQ==
+  
+  needle@^2.5.2:
+    version "2.9.1"
+    resolved "https://registry.nlark.com/needle/download/needle-2.9.1.tgz?cache=0&sync_timestamp=1630674995929&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fneedle%2Fdownload%2Fneedle-2.9.1.tgz#22d1dffbe3490c2b83e301f7709b6736cd8f2684"
+    integrity sha1-ItHf++NJDCuD4wH3cJtnNs2PJoQ=
+    dependencies:
+      debug "^3.2.6"
+      iconv-lite "^0.4.4"
+      sax "^1.2.4"
   
   node-releases@^2.0.1:
     version "2.0.1"
@@ -659,6 +887,23 @@ Lockfile:
     version "4.1.1"
     resolved "https://registry.nlark.com/object-assign/download/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
     integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
+  
+  parse-entities@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.npmmirror.com/parse-entities/-/parse-entities-2.0.0.tgz#53c6eb5b9314a1f4ec99fa0fdf7ce01ecda0cbe8"
+    integrity sha512-kkywGpCcRYhqQIchaWqZ875wzpS/bMKhz5HnN3p7wveJTkTtyAB/AlnS0f8DFSqYW1T82t6yEAkEcB+A1I3MbQ==
+    dependencies:
+      character-entities "^1.0.0"
+      character-entities-legacy "^1.0.0"
+      character-reference-invalid "^1.0.0"
+      is-alphanumerical "^1.0.0"
+      is-decimal "^1.0.0"
+      is-hexadecimal "^1.0.0"
+  
+  parse-node-version@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.npmmirror.com/parse-node-version/download/parse-node-version-1.0.1.tgz#e2b5dbede00e7fa9bc363607f53327e8b073189b"
+    integrity sha1-4rXb7eAOf6m8NjYH9TMn6LBzGJs=
   
   path-parse@^1.0.6:
     version "1.0.7"
@@ -675,6 +920,11 @@ Lockfile:
     resolved "https://registry.nlark.com/picomatch/download/picomatch-2.3.0.tgz#f1f061de8f6a4bf022892e2d128234fb98302972"
     integrity sha1-8fBh3o9qS/AiiS4tEoI0+5gwKXI=
   
+  pify@^4.0.1:
+    version "4.0.1"
+    resolved "https://registry.nlark.com/pify/download/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
+    integrity sha1-SyzSXFDVmHNcUCkiJP2MbfQeMjE=
+  
   postcss@^8.4.5:
     version "8.4.5"
     resolved "https://registry.npmmirror.com/postcss/download/postcss-8.4.5.tgz#bae665764dfd4c6fcc24dc0fdf7e7aa00cc77f95"
@@ -684,6 +934,23 @@ Lockfile:
       picocolors "^1.0.0"
       source-map-js "^1.0.1"
   
+  prismjs@^1.25.0, prismjs@~1.27.0:
+    version "1.27.0"
+    resolved "https://registry.npmmirror.com/prismjs/-/prismjs-1.27.0.tgz#bb6ee3138a0b438a3653dd4d6ce0cc6510a45057"
+    integrity sha512-t13BGPUlFDR7wRB5kQDG4jjl7XeuH6jbJGt11JHPL96qwsEHNX2+68tFXqc1/k+/jALsbSWJKUOT/hcYAZ5LkA==
+  
+  property-information@^5.0.0:
+    version "5.6.0"
+    resolved "https://registry.npmmirror.com/property-information/-/property-information-5.6.0.tgz#61675545fb23002f245c6540ec46077d4da3ed69"
+    integrity sha512-YUHSPk+A30YPv+0Qf8i9Mbfe/C0hdPXk1s1jPVToV8pk8BQtpw10ct89Eo7OWkutrwqvT0eicAxlOg3dOAu8JA==
+    dependencies:
+      xtend "^4.0.0"
+  
+  prr@~1.0.1:
+    version "1.0.1"
+    resolved "https://registry.nlark.com/prr/download/prr-1.0.1.tgz#d3fc114ba06995a45ec6893f484ceb1d78f5f476"
+    integrity sha1-0/wRS6BplaRexok/SEzrHXj19HY=
+  
   react-dom@^17.0.2:
     version "17.0.2"
     resolved "https://registry.npmmirror.com/react-dom/download/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
@@ -692,6 +959,16 @@ Lockfile:
       loose-envify "^1.1.0"
       object-assign "^4.1.1"
       scheduler "^0.20.2"
+  
+  react-markdown-editor-lite@^1.3.2:
+    version "1.3.2"
+    resolved "https://registry.npmmirror.com/react-markdown-editor-lite/-/react-markdown-editor-lite-1.3.2.tgz#734646ab619ac707fe9c366153cc0d323a376f59"
+    integrity sha512-pjtu+tpTjc2u4hauFozzbX7EQEnKCCfDCEAY4vnc0AXCPqdFwaoe7A/Fb3J8qwUIS1Ox5XVjeRWKt11FgrMdZA==
+    dependencies:
+      "@babel/runtime" "^7.6.2"
+      classnames "^2.2.6"
+      eventemitter3 "^4.0.0"
+      uuid "^8.3.2"
   
   react-refresh@^0.11.0:
     version "0.11.0"
@@ -713,6 +990,17 @@ Lockfile:
     dependencies:
       history "^5.2.0"
   
+  react-syntax-highlighter@^15.4.5:
+    version "15.4.5"
+    resolved "https://registry.npmmirror.com/react-syntax-highlighter/-/react-syntax-highlighter-15.4.5.tgz#db900d411d32a65c8e90c39cd64555bf463e712e"
+    integrity sha512-RC90KQTxZ/b7+9iE6s9nmiFLFjWswUcfULi4GwVzdFVKVMQySkJWBuOmJFfjwjMVCo0IUUuJrWebNKyviKpwLQ==
+    dependencies:
+      "@babel/runtime" "^7.3.1"
+      highlight.js "^10.4.1"
+      lowlight "^1.17.0"
+      prismjs "^1.25.0"
+      refractor "^3.2.0"
+  
   react@^17.0.2:
     version "17.0.2"
     resolved "https://registry.npmmirror.com/react/download/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
@@ -720,6 +1008,15 @@ Lockfile:
     dependencies:
       loose-envify "^1.1.0"
       object-assign "^4.1.1"
+  
+  refractor@^3.2.0:
+    version "3.6.0"
+    resolved "https://registry.npmmirror.com/refractor/-/refractor-3.6.0.tgz#ac318f5a0715ead790fcfb0c71f4dd83d977935a"
+    integrity sha512-MY9W41IOWxxk31o+YvFCNyNzdkc9M20NoZK5vq6jkv4I/uh2zkWcfudj0Q1fovjUQJrNewS9NMzeTtqPf+n5EA==
+    dependencies:
+      hastscript "^6.0.0"
+      parse-entities "^2.0.0"
+      prismjs "~1.27.0"
   
   regenerator-runtime@^0.13.4:
     version "0.13.9"
@@ -746,6 +1043,16 @@ Lockfile:
     resolved "https://registry.nlark.com/safe-buffer/download/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
     integrity sha1-mR7GnSluAxN0fVm9/St0XDX4go0=
   
+  "safer-buffer@>= 2.1.2 < 3":
+    version "2.1.2"
+    resolved "https://registry.nlark.com/safer-buffer/download/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
+    integrity sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo=
+  
+  sax@^1.2.4:
+    version "1.2.4"
+    resolved "https://registry.nlark.com/sax/download/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+    integrity sha1-KBYjTiN4vdxOU1T6tcqold9xANk=
+  
   scheduler@^0.20.2:
     version "0.20.2"
     resolved "https://registry.npmmirror.com/scheduler/download/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
@@ -753,6 +1060,11 @@ Lockfile:
     dependencies:
       loose-envify "^1.1.0"
       object-assign "^4.1.1"
+  
+  semver@^5.6.0:
+    version "5.7.1"
+    resolved "https://registry.nlark.com/semver/download/semver-5.7.1.tgz?cache=0&sync_timestamp=1622604551741&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fsemver%2Fdownload%2Fsemver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
+    integrity sha1-qVT5Ma66UI0we78Gnv8MAclhFvc=
   
   semver@^6.3.0:
     version "6.3.0"
@@ -769,6 +1081,16 @@ Lockfile:
     resolved "https://registry.nlark.com/source-map/download/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
     integrity sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=
   
+  source-map@~0.6.0:
+    version "0.6.1"
+    resolved "https://registry.nlark.com/source-map/download/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+    integrity sha1-dHIq8y6WFOnCh6jQu95IteLxomM=
+  
+  space-separated-tokens@^1.0.0:
+    version "1.1.5"
+    resolved "https://registry.npmmirror.com/space-separated-tokens/-/space-separated-tokens-1.1.5.tgz#85f32c3d10d9682007e917414ddc5c26d1aa6899"
+    integrity sha512-q/JSVd1Lptzhf5bkYm4ob4iWPjx0KiRe3sRFBNrVqbJkFaBm5vbbowy1mymoPNLRa52+oadOhJ+K49wsSeSjTA==
+  
   supports-color@^5.3.0:
     version "5.5.0"
     resolved "https://registry.npmmirror.com/supports-color/download/supports-color-5.5.0.tgz#e2e69a44ac8772f78a1ec0b35b689df6530efc8f"
@@ -781,10 +1103,25 @@ Lockfile:
     resolved "https://registry.nlark.com/to-fast-properties/download/to-fast-properties-2.0.0.tgz?cache=0&sync_timestamp=1628418893613&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fto-fast-properties%2Fdownload%2Fto-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
     integrity sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
   
+  tslib@^2.3.0:
+    version "2.3.1"
+    resolved "https://registry.npmmirror.com/tslib/download/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+    integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
+  
   typescript@^4.4.4:
     version "4.5.4"
     resolved "https://registry.npmmirror.com/typescript/download/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8"
     integrity sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==
+  
+  uc.micro@^1.0.1, uc.micro@^1.0.5:
+    version "1.0.6"
+    resolved "https://registry.npmmirror.com/uc.micro/-/uc.micro-1.0.6.tgz#9c411a802a409a91fc6cf74081baba34b24499ac"
+    integrity sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==
+  
+  uuid@^8.3.2:
+    version "8.3.2"
+    resolved "https://registry.npmmirror.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+    integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
   
   vite@^2.7.2:
     version "2.7.10"
@@ -797,3 +1134,8 @@ Lockfile:
       rollup "^2.59.0"
     optionalDependencies:
       fsevents "~2.3.2"
+  
+  xtend@^4.0.0:
+    version "4.0.2"
+    resolved "https://registry.npmmirror.com/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
+    integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import MarkdownIt from "markdown-it";
 import Editor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
+import { useNavigate } from "react-router";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import Message from "../../../components/message";
 import FileUpload from "../../../components/fileUpload";
@@ -21,6 +22,7 @@ interface BlogPro {
 const mdRender = new MarkdownIt();
 
 export default function Edit() {
+  const nav = useNavigate();
   useScrollToTop();
   const [content, setContent] = useState("");
   const [blogMsg, setBlogMsg] = useState<BlogPro>({
@@ -38,6 +40,7 @@ export default function Edit() {
       const blog = { ...blogMsg, content, intro };
       const data = await useFetch("postBlog", blog, "POST");
       Message.success(data.msg);
+      nav(`/blog/list/page=0`);
     } else {
       Message.error("请填写完整!");
     }

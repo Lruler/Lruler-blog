@@ -28,30 +28,45 @@ export const List: React.FC = () => {
   const nav = useNavigate();
   const { setPage, page, blogList } = useContext(BlogCtx);
   const getBlog = (id: number) => {
-    nav(`${id}`);
+    nav(`/blog/list/item/${id}`);
   };
+  const list =
+    blogList.length !== 0 ? (
+      blogList.map((list, i) => {
+        return (
+          <Card key={i} onClick={() => getBlog(list.id)}>
+            <BlogItem tags={list.tags as TagRes[]} title={list.title}>
+              {list.intro}
+            </BlogItem>
+          </Card>
+        );
+      })
+    ) : (
+      <div className="h1">作者江郎才尽，没有后续了QAQ</div>
+    );
   return (
     <>
       <div className="h1">ArticlesList</div>
-      <ul>
-        {blogList.map((list, i) => {
-          return (
-            <Card key={i} onClick={() => getBlog(list.id)}>
-              <BlogItem tags={list.tags as TagRes[]} title={list.title}>
-                {list.intro}
-              </BlogItem>
-            </Card>
-          );
-        })}
-      </ul>
+      <ul>{list}</ul>
       <div className="page-controller">
         <Button
-          disabled={!page ? true : false}
-          onClick={() => setPage((p) => p - 1)}
+          disabled={!page}
+          onClick={() => {
+            setPage((p) => p - 1);
+            nav(`/blog/list/page=${page - 1}`);
+          }}
         >
           上一页
         </Button>
-        <Button onClick={() => setPage((p) => p + 1)}>下一页</Button>
+        <Button
+          disabled={blogList.length === 0}
+          onClick={() => {
+            setPage((p) => p + 1);
+            nav(`/blog/list/page=${page + 1}`);
+          }}
+        >
+          下一页
+        </Button>
       </div>
     </>
   );
@@ -78,7 +93,6 @@ const BlogLayout: React.FC = ({ children }) => {
 const BlogList: React.FC = () => {
   const [blogList, setBlogList] = useState<Blog[]>([]);
   const [page, setPage] = useState(0);
-
   const search = async (key: string) => {
     const res = await useFetch("searchBlog", { key, page });
     setBlogList(res.data.rows);

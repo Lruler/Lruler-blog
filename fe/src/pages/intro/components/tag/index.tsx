@@ -13,13 +13,13 @@ interface TagProps {
 
 const Tag: React.FC<TagProps> = ({ tag, count, size = "normal" }) => {
   const classes = classNames("tag-wrapper", size);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { setBlogList } = useContext(BlogCtx);
   const getBlogs = async (e: React.MouseEvent) => {
-    e.stopPropagation()
+    e.stopPropagation();
     const res = await useFetch("getBlogByTag", { tag });
-    navigate('/blog/list')
-    setBlogList(res.data)
+    navigate(`/blog/list/key=${tag}`);
+    setBlogList(res.data);
   };
   return (
     <div className={classes} onClick={getBlogs}>

@@ -9,7 +9,11 @@ const Header: React.FC = () => {
   const toSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.keyCode === 13) {
       search(key);
-      nav("/blog/list");
+      if (key === "") {
+        nav(`/blog/list/page=0`)
+      } else {
+        nav(`/blog/list/key=${key}`);
+      }
     }
   };
   return (
@@ -22,7 +26,7 @@ const Header: React.FC = () => {
             value={key}
             onChange={(e) => setKey(e.target.value)}
             onKeyDown={toSearch}
-            placeholder='搜索你想看的内容鸭:D'
+            placeholder="搜索你想看的内容鸭:D"
           />
         </div>
       </div>

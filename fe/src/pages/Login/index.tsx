@@ -33,7 +33,12 @@ const Login: React.FC = () => {
             <LoginInput />
           </div>
           <div className="look" style={{ opacity: index ? 1 : 0 }}>
-            <LinkBtn link="/blog/list" text="goBlog" icon="book" isBlank={false} />
+            <LinkBtn
+              link="/blog/list/page=0"
+              text="goBlog"
+              icon="book"
+              isBlank={false}
+            />
           </div>
         </div>
       </div>
