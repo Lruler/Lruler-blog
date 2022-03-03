@@ -21,9 +21,7 @@ const App: React.FC = () => {
    
    TODO: 
    1. Detail页面
-   3. 路由跳转动画
-   4. 中午抄一份计组作业
-  
+   3. 路由跳转动画 
   */
 
   return (

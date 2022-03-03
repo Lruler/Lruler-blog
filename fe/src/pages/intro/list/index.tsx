@@ -34,7 +34,11 @@ export const List: React.FC = () => {
       blogList.map((list, i) => {
         return (
           <Card key={i} onClick={() => getBlog(list.id)}>
-            <BlogItem tags={list.tags as TagRes[]} title={list.title}>
+            <BlogItem
+              time={String(list.createdAt)}
+              tags={list.tags as TagRes[]}
+              title={list.title}
+            >
               {list.intro}
             </BlogItem>
           </Card>
@@ -83,7 +87,11 @@ export const ListByTag: React.FC = () => {
       blogList.map((list, i) => {
         return (
           <Card key={i} onClick={() => getBlog(list.id)}>
-            <BlogItem tags={list.tags as TagRes[]} title={list.title}>
+            <BlogItem
+              time={String(list.createdAt)}
+              tags={list.tags as TagRes[]}
+              title={list.title}
+            >
               {list.intro}
             </BlogItem>
           </Card>
@@ -132,7 +140,11 @@ export const ListBySearch: React.FC = () => {
       blogList.map((list, i) => {
         return (
           <Card key={i} onClick={() => getBlog(list.id)}>
-            <BlogItem tags={list.tags as TagRes[]} title={list.title}>
+            <BlogItem
+              time={String(list.createdAt)}
+              tags={list.tags as TagRes[]}
+              title={list.title}
+            >
               {list.intro}
             </BlogItem>
           </Card>

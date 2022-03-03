@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import MarkdownIt from "markdown-it";
 import hljs from "highlight.js";
+import Tag from "../components/tag";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import useFetch from "../../../services/fetch";
 // 引入默认样式
@@ -13,6 +14,7 @@ import "./index.less";
 const Detail: React.FC = () => {
   const { id } = useParams();
   const [content, setContent] = useState("");
+  const [blog, setBlog] = useState<Blog>();
 
   useScrollToTop();
 
@@ -67,15 +69,28 @@ const Detail: React.FC = () => {
     },
   });
 
+  const getTag = () => {
+    if (blog?.tags)
+      return (blog?.tags as TagRes[]).map((t) => (
+        <Tag tag={t.tag} size="small" />
+      ));
+  };
+
   useEffect(() => {
     (async () => {
       const res = await useFetch("getBlog", { id: id as string });
-      console.log(res);
       setContent(md.render(res.data.content));
+      setBlog(res.data);
     })();
   }, []);
   return (
     <>
+      <div className="blog-detail-title">{blog?.title}</div>
+      <div className="blog-detail-intro">
+        <div className="tags">{getTag()}</div>
+        <div className="time">{String(blog?.createdAt).slice(0,10)}</div>
+      </div>
+
       <div id="blog-detail" dangerouslySetInnerHTML={{ __html: content }}></div>
     </>
   );
