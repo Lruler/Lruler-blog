@@ -4,6 +4,8 @@ interface httpRes<T> {
   data: T;
 }
 
+type httpHeaders = { token: string | null};
+
 interface httpReq extends RequestInit {
-  body?: BodyInit | null | undefined | any
+  body?: BodyInit | null | undefined | any;
 }

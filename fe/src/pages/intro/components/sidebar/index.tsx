@@ -14,6 +14,8 @@ export const SidebarR: React.FC = () => {
           text="Github"
         />
         <LinkBtn link={"/resume"} icon="bed" text="简历" />
+        <LinkBtn link={"/"} icon="home" text="主页" isBlank={false} />
+        <LinkBtn link={"/blog/list/page=0"} icon="book" text="首页" isBlank={false} />
       </div>
     </div>
   );

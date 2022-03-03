@@ -39,11 +39,17 @@ export default function Edit() {
     if (blogMsg.tags && blogMsg.title && content) {
       const blog = { ...blogMsg, content, intro };
       const data = await useFetch("postBlog", blog, "POST");
-      Message.success(data.msg);
-      nav(`/blog/list/page=0`);
+      if (data.msg === "success") {
+        Message.success(data.msg);
+        nav(`/blog/list/page=0`);
+      }
     } else {
       Message.error("请填写完整!");
     }
+  };
+
+  const back = () => {
+    nav("/blog/list/page=0");
   };
 
   const uploadImg = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -67,6 +73,7 @@ export default function Edit() {
     <>
       <div className="edit-wrapper">
         <button onClick={post}>发表文章</button>
+        <button onClick={back}>返回主页</button>
         <form>
           title:
           <input

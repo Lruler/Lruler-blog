@@ -25,12 +25,7 @@ const App: React.FC = () => {
    4. 中午抄一份计组作业
   
   */
-  useEffect(() => {
-    history.pushState(null, "", document.URL);
-    window.addEventListener("popstate", function () {
-      history.pushState(null, "", document.URL);
-    });
-  }, []);
+
   return (
     <div className="router-change-animation">
       <Routes>

@@ -98,7 +98,7 @@ const getUrl = (api: string, query?: any[]): string => {
 
 type res = Promise<httpRes<API[keyof API]['res']>>
 
-const Fetch = async <T>(url: string, opt?: httpReq): Promise<T | any> => {
+const Fetch = async <T>(url: string, opt: httpReq = {}): Promise<T | any> => {
   try {
     url = BASE + url;
     if (opt) {
@@ -108,9 +108,13 @@ const Fetch = async <T>(url: string, opt?: httpReq): Promise<T | any> => {
       };
 
       if (opt.body && opt.body instanceof FormData) opt.headers = {}
-      else opt.body = JSON.stringify(opt.body)
+      else opt.body = JSON.stringify(opt.body);
+
+      (opt.headers as httpHeaders).token = localStorage.getItem('token');
         
     }
+
+    console.log(opt)
 
     const res = await fetch(url, opt);
     const data = await res.json();
