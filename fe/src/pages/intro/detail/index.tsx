@@ -72,7 +72,7 @@ const Detail: React.FC = () => {
   const getTag = () => {
     if (blog?.tags)
       return (blog?.tags as TagRes[]).map((t) => (
-        <Tag tag={t.tag} size="small" />
+        <Tag key={t.id} tag={t.tag} size="small" />
       ));
   };
 
