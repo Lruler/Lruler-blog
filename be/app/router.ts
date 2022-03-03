@@ -2,7 +2,6 @@ import { Application } from 'egg';
 
 export default (app: Application) => {
   const { controller, router, middleware } = app;
-  console.log(middleware);
   const jwt = middleware.jwtV(app.config.jwt);
 
   // 登陆

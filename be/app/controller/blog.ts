@@ -68,7 +68,9 @@ export default class BlogController extends Controller {
     const { ctx } = this;
     const { id } = ctx.request.query;
     const blog = await prisma.articles.findFirst({ where: { id: +id } });
-    if (blog?.content && blog.intro) { this.success({ ...blog, content: `${blog.intro}\n***\n${blog.content}` }); } else this.success({ ...blog });
+    if (blog?.content && blog.intro) {
+      this.success({ ...blog, content: `${blog.intro}\n***\n${blog.content}` });
+    } else this.success({ ...blog });
   }
 
   async updateBlog() {
@@ -111,7 +113,8 @@ export default class BlogController extends Controller {
 
   async searchBlog() {
     const { ctx } = this;
-    const { key } = ctx.request.query;
+    const { key, page } = ctx.request.query;
+    const take = 10;
     let blogs = await prisma.articles.findMany({
       where: {
         OR: [
@@ -120,32 +123,26 @@ export default class BlogController extends Controller {
           { intro: { contains: key } },
         ],
       },
-      select: {
-        title: true,
-        intro: true,
-        id: true,
-        createdAt: true,
-        tags: true,
-      },
+      include: { tags: true },
     });
     const blogIds = blogs.map(b => b.id);
-    const tags = await prisma.tag.findMany({ where: { tag: { contains: key } }, select: { articlesId: true } });
+    const tags = await prisma.tag.findMany({
+      where: { tag: { contains: key } },
+      select: { articlesId: true },
+    });
     for (const v in tags) {
       if (blogIds.includes(tags[v].articlesId)) continue;
       else {
         const blog = await prisma.articles.findFirst({
           where: { id: tags[v].articlesId },
-          select: {
-            title: true,
-            intro: true,
-            id: true,
-            createdAt: true,
+          include: {
             tags: true,
           },
         });
         blogs = blog ? [ ...blogs, blog ] : blogs;
       }
     }
+    blogs = blogs.filter((_, i) => (+page * take) <= i && i < (+page + 1) * take);
     this.success({ rows: blogs });
   }
 }

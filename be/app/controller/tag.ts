@@ -21,8 +21,10 @@ export default class TagController extends Controller {
   // 根据标签找文章
   async getBlogByTag() {
     const { ctx } = this;
-    const { tag } = ctx.request.query;
-    const b = await prisma.tag.findMany({ where: { tag } });
+    const { tag, page } = ctx.request.query;
+    const take = 10;
+    const skip = +page * 10;
+    const b = await prisma.tag.findMany({ where: { tag }, take, skip });
     const blogs = await Promise.all(
       b.map(
         async t =>

@@ -9,7 +9,6 @@ export default class LoginController extends Controller {
     const { ctx, app } = this;
     const { password } = ctx.request.body;
     const user = await prisma.user.findFirst({ where: { password } });
-    console.log(user);
     if (user) {
       // 通过jwt生产token
       const token = app.jwt.sign({
