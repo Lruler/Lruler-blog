@@ -114,7 +114,6 @@ const Fetch = async <T>(url: string, opt: httpReq = {}): Promise<T | any> => {
         
     }
 
-    console.log(opt)
 
     const res = await fetch(url, opt);
     const data = await res.json();

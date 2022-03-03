@@ -1,14 +1,20 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import useFetch from "../../services/fetch";
+import Message from "../message";
 import "./index.less";
 
 const LoginInput: React.FC = () => {
   const [pwd, setPwd] = useState("");
   const [isFocus, setIsFoces] = useState(false);
+  const nav = useNavigate();
   const login = async (e: React.KeyboardEvent) => {
     if (e.keyCode === 13) {
       const res = await useFetch("login", { password: pwd }, "POST");
-      localStorage.setItem('token', res.data.token)
+      if (res.code === 0) {
+        nav("/blog/list/page=0");
+        localStorage.setItem("token", res.data.token);
+      } else Message.error(res.msg);
     }
   };
   return (

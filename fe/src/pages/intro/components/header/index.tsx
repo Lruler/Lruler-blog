@@ -4,15 +4,15 @@ import { BlogCtx } from "../../list";
 
 const Header: React.FC = () => {
   const [key, setKey] = useState("");
-  const { search } = useContext(BlogCtx);
+  const { setPage } = useContext(BlogCtx);
   const nav = useNavigate();
   const toSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.keyCode === 13) {
-      search(key);
+      setPage(0);
       if (key === "") {
-        nav(`/blog/list/page=0`)
+        nav(`/blog/list/page=0`);
       } else {
-        nav(`/blog/list/key=${key}`);
+        nav(`/blog/list/search/${key}/0`);
       }
     }
   };

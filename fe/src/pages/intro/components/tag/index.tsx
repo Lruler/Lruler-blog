@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
-import useFetch from "../../../../services/fetch";
 import { useNavigate } from "react-router";
-import { BlogCtx } from "../../list";
 import classNames from "classnames";
 import "./index.less";
+import { BlogCtx } from "../../list";
 
 interface TagProps {
   tag: string;
@@ -12,14 +11,13 @@ interface TagProps {
 }
 
 const Tag: React.FC<TagProps> = ({ tag, count, size = "normal" }) => {
+  const { setPage } = useContext(BlogCtx);
   const classes = classNames("tag-wrapper", size);
   const navigate = useNavigate();
-  const { setBlogList } = useContext(BlogCtx);
   const getBlogs = async (e: React.MouseEvent) => {
     e.stopPropagation();
-    const res = await useFetch("getBlogByTag", { tag });
-    navigate(`/blog/list/key=${tag}`);
-    setBlogList(res.data);
+    setPage(0);
+    navigate(`/blog/list/tag/${tag}/0`);
   };
   return (
     <div className={classes} onClick={getBlogs}>

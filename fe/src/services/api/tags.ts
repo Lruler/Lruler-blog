@@ -4,7 +4,7 @@ const useBase = (url: string) => `/tags${url}`;
 
 const tagUrlMap = () => {
   urlMap.set("getTags", useBase(""));
-  urlMap.set("getBlogByTag", useBase("/getblog?tag"));
+  urlMap.set("getBlogByTag", useBase("/getblog?tag&page"));
 };
 
 export interface TagsAPI {

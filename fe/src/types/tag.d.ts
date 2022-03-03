@@ -5,5 +5,6 @@ interface TagRes {
 }
 
 interface getBlogByTagReq {
-  tag: string
+  tag: string;
+  page: number;
 }

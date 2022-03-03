@@ -5,7 +5,7 @@ import Blog from "./pages/intro/list";
 import Edit from "./pages/intro/edit";
 import Detail from "./pages/intro/detail";
 import Resume from "./pages/intro/resume";
-import { List } from "./pages/intro/list";
+import { List, ListByTag, ListBySearch } from "./pages/intro/list";
 
 const App: React.FC = () => {
   // const [skip, setSkip] = useState(false);
@@ -30,7 +30,9 @@ const App: React.FC = () => {
     <div className="router-change-animation">
       <Routes>
         <Route path="blog/list" element={<Blog />}>
-          <Route path=":key" element={<List />} />
+          <Route path=":page" element={<List />} />
+          <Route path="tag/:tag/:page" element={<ListByTag />} />
+          <Route path="search/:key/:page" element={<ListBySearch />} />
           <Route path="item/:id" element={<Detail />} />
         </Route>
         <Route path="blog/edit" element={<Edit />} />
