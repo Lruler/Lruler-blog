@@ -6,12 +6,21 @@ const prisma = new PrismaClient();
 
 export default class LoginController extends Controller {
   async login() {
-    const { ctx } = this;
-    const { username, password } = ctx.request.body;
-    const user = await prisma.user.findFirst({ where: { username } });
-    if (user && password === user?.password) this.success({}, '登录成功');
-    else if (user && password !== user?.password) this.error('密码错误！');
-    else this.error('用户不存在！');
+    const { ctx, app } = this;
+    const { password } = ctx.request.body;
+    const user = await prisma.user.findFirst({ where: { password } });
+    console.log(user);
+    if (user) {
+      // 通过jwt生产token
+      const token = app.jwt.sign({
+        userName: password, // 需要存储的Token数据
+      },
+      app.config.jwt.secret, { // app.config.jwt.secret是在配置里配置的密钥'123456'
+        expiresIn: 60 * 60 * 24, // expiresIn是token过期时间
+      });
+      // 返回token
+      this.success({ token }, '登录成功');
+    } else this.error('密码错误');
   }
 }
 

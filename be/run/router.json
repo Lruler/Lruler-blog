@@ -2,8 +2,7 @@
   {
     "name": null,
     "methods": [
-      "HEAD",
-      "GET"
+      "POST"
     ],
     "paramNames": [],
     "path": "/login",
@@ -34,30 +33,6 @@
     "paramNames": [],
     "path": "/blog/get",
     "regexp": "/^\\/blog\\/get(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "POST"
-    ],
-    "paramNames": [],
-    "path": "/blog/add",
-    "regexp": "/^\\/blog\\/add(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "POST"
-    ],
-    "paramNames": [],
-    "path": "/blog/upload",
-    "regexp": "/^\\/blog\\/upload(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -110,6 +85,55 @@
     "paramNames": [],
     "path": "/tags/getblog",
     "regexp": "/^\\/tags\\/getblog(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/blog/add",
+    "regexp": "/^\\/blog\\/add(?:\\/(?=$))?$/",
+    "stack": [
+      "jwtV",
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/blog/upload",
+    "regexp": "/^\\/blog\\/upload(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "DELETE"
+    ],
+    "paramNames": [],
+    "path": "/blog/delete",
+    "regexp": "/^\\/blog\\/delete(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/blog/update",
+    "regexp": "/^\\/blog\\/update(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

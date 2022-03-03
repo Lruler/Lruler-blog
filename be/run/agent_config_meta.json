@@ -19,6 +19,65 @@
       "disable": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-multipart/config/config.default.js"
     }
   },
+  "jwt": {
+    "secret": "/Users/lruler/Desktop/lruler-blog/be/config/config.default.ts",
+    "enable": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-jwt/config/config.default.js"
+  },
+  "security": {
+    "csrf": {
+      "enable": "/Users/lruler/Desktop/lruler-blog/be/config/config.default.ts",
+      "type": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "useSession": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "refererWhiteList": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js"
+    },
+    "domainWhiteList": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+    "protocolWhiteList": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+    "xframe": {
+      "enable": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.local.js",
+      "maxAge": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "policy": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "ipExceptionList": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js"
+    }
+  },
   "sourceUrl": "/Users/lruler/Desktop/lruler-blog/be/config/config.default.ts",
   "uploadDir": "/Users/lruler/Desktop/lruler-blog/be/config/config.default.ts",
   "session": {
@@ -27,6 +86,9 @@
     "httpOnly": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-session/config/config.default.js",
     "encrypt": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-session/config/config.default.js",
     "logValue": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-session/config/config.default.js"
+  },
+  "helper": {
+    "shtml": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-security/config/config.default.js"
   },
   "jsonp": {
     "limit": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-jsonp/config/config.default.js",
@@ -130,6 +192,7 @@
       "@prisma/client": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg/config/config.default.js",
       "await-stream-ready": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg/config/config.default.js",
       "egg": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg/config/config.default.js",
+      "egg-jwt": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg/config/config.default.js",
       "egg-scripts": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg/config/config.default.js",
       "stream-wormhole": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg/config/config.default.js"
     },

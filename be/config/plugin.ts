@@ -6,7 +6,15 @@ const plugin: EggPlugin = {
   //   enable: true,
   //   package: 'egg-view-nunjucks',
   // },
-  security: false,
+  jwt: {
+    enable: true,
+    package: 'egg-jwt',
+  },
+
+  cors: {
+    enable: true,
+    package: 'egg-cors',
+  },
 };
 
 export default plugin;
