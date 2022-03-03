@@ -67,7 +67,7 @@ export default class BlogController extends Controller {
   async lookBlog() {
     const { ctx } = this;
     const { id } = ctx.request.query;
-    const blog = await prisma.articles.findFirst({ where: { id: +id } });
+    const blog = await prisma.articles.findFirst({ where: { id: +id }, include: { tags: true } });
     if (blog?.content && blog.intro) {
       this.success({ ...blog, content: `${blog.intro}\n***\n${blog.content}` });
     } else this.success({ ...blog });
