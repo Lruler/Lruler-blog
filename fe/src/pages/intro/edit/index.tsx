@@ -83,7 +83,11 @@ export default function Edit() {
             }
           />
         </form>
-        <textarea value={intro} onChange={(e) => setIntro(e.target.value)} />
+        <textarea
+          placeholder="输入文章简介"
+          value={intro}
+          onChange={(e) => setIntro(e.target.value)}
+        />
         <Editor
           value={content}
           onChange={handleContent}
