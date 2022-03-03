@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router";
+import useDelayNav from "../../../../hooks/useDelayNac";
 import { BlogCtx } from "../../list";
 
 const Header: React.FC = () => {
@@ -10,9 +11,9 @@ const Header: React.FC = () => {
     if (e.keyCode === 13) {
       setPage(0);
       if (key === "") {
-        nav(`/blog/list/page=0`);
+        useDelayNav(nav, `/blog/list/page=0`);
       } else {
-        nav(`/blog/list/search/${key}/0`);
+        useDelayNav(nav, `/blog/list/search/${key}/0`);
       }
     }
   };

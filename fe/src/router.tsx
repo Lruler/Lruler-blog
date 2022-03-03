@@ -1,31 +1,32 @@
+import React, { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
 import Home from "./pages/home";
 import Blog from "./pages/intro/list";
 import Edit from "./pages/intro/edit";
 import Detail from "./pages/intro/detail";
 import Resume from "./pages/intro/resume";
 import { List, ListByTag, ListBySearch } from "./pages/intro/list";
+import "./styles/animation.less";
+
+let isSkip: boolean = false;
+
+export let changeSkip: any;
 
 const App: React.FC = () => {
-  // const [skip, setSkip] = useState(false);
-  // const location = useLocation();
-  // useEffect(() => {
-  //   setSkip(true);
-  //   setTimeout(() => {
-  //     setSkip(false);
-  //   }, 1000);
-  // }, [location.pathname]);
+  const location = useLocation()
+  const [skip, setSkip] = useState(false);
 
-  /*
-   
-   TODO: 
-   1. Detail页面
-   3. 路由跳转动画 
-  */
+  changeSkip = setSkip;
+
+  useEffect(() => {
+    setSkip(false)
+  }, [location.pathname]);
 
   return (
-    <div className="router-change-animation">
+    <div
+      className="router-animation"
+      style={{ filter: skip ? `blur(10px)` : "none" }}
+    >
       <Routes>
         <Route path="blog/list" element={<Blog />}>
           <Route path=":page" element={<List />} />

@@ -1,6 +1,6 @@
 // 官方库导入
 import React, { useEffect, useState, useContext, SetStateAction } from "react";
-import { Outlet, useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams, useOutlet } from "react-router-dom";
 import { useNavigate } from "react-router";
 // 组件导入
 import Header from "../components/header";
@@ -13,6 +13,7 @@ import useTime from "../../../hooks/useTime";
 import useFetch from "../../../services/fetch";
 // less导入
 import "./index.less";
+import useDelayNav from "../../../hooks/useDelayNac";
 
 type BlogCtx = {
   blogList: Blog[];
@@ -27,7 +28,7 @@ export const List: React.FC = () => {
   const nav = useNavigate();
   const { setPage, page, blogList } = useContext(BlogCtx);
   const getBlog = (id: number) => {
-    nav(`/blog/list/item/${id}`);
+    useDelayNav(nav, `/blog/list/item/${id}`);
   };
   const list =
     blogList.length !== 0 ? (
@@ -56,7 +57,7 @@ export const List: React.FC = () => {
           disabled={!page}
           onClick={() => {
             setPage((p) => p - 1);
-            nav(`/blog/list/page=${page - 1}`);
+            useDelayNav(nav, `/blog/list/page=${page - 1}`);
           }}
         >
           上一页
@@ -65,7 +66,7 @@ export const List: React.FC = () => {
           disabled={blogList.length === 0}
           onClick={() => {
             setPage((p) => p + 1);
-            nav(`/blog/list/page=${page + 1}`);
+            useDelayNav(nav, `/blog/list/page=${page + 1}`);
           }}
         >
           下一页
@@ -80,7 +81,7 @@ export const ListByTag: React.FC = () => {
   const params = useParams();
   const { setPage, page, blogList } = useContext(BlogCtx);
   const getBlog = (id: number) => {
-    nav(`/blog/list/item/${id}`);
+    useDelayNav(nav, `/blog/list/item/${id}`);
   };
   const list =
     blogList.length !== 0 ? (
@@ -109,7 +110,7 @@ export const ListByTag: React.FC = () => {
           disabled={!page}
           onClick={() => {
             setPage((p) => p - 1);
-            nav(`/blog/list/tag/${params.tag}/page=${page - 1}`);
+            useDelayNav(nav, `/blog/list/tag/${params.tag}/page=${page - 1}`);
           }}
         >
           上一页
@@ -118,7 +119,7 @@ export const ListByTag: React.FC = () => {
           disabled={blogList.length === 0}
           onClick={() => {
             setPage((p) => p + 1);
-            nav(`/blog/list/tag/${params.tag}/page=${page + 1}`);
+            useDelayNav(nav, `/blog/list/tag/${params.tag}/page=${page + 1}`);
           }}
         >
           下一页
@@ -133,7 +134,7 @@ export const ListBySearch: React.FC = () => {
   const params = useParams();
   const { setPage, page, blogList } = useContext(BlogCtx);
   const getBlog = (id: number) => {
-    nav(`/blog/list/item/${id}`);
+    useDelayNav(nav, `/blog/list/item/${id}`);
   };
   const list =
     blogList.length !== 0 ? (
@@ -162,7 +163,10 @@ export const ListBySearch: React.FC = () => {
           disabled={!page}
           onClick={() => {
             setPage((p) => p - 1);
-            nav(`/blog/list/search/${params.key}/page=${page - 1}`);
+            useDelayNav(
+              nav,
+              `/blog/list/search/${params.key}/page=${page - 1}`
+            );
           }}
         >
           上一页
@@ -171,7 +175,10 @@ export const ListBySearch: React.FC = () => {
           disabled={blogList.length === 0}
           onClick={() => {
             setPage((p) => p + 1);
-            nav(`/blog/list/search/${params.key}/page=${page + 1}`);
+            useDelayNav(
+              nav,
+              `/blog/list/search/${params.key}/page=${page + 1}`
+            );
           }}
         >
           下一页
@@ -202,6 +209,7 @@ const BlogLayout: React.FC = ({ children }) => {
 const BlogList: React.FC = () => {
   const location = useLocation();
   const { pathname } = location;
+  const outlet = useOutlet();
   const params = useParams();
   const [blogList, setBlogList] = useState<Blog[]>([]);
   const [page, setPage] = useState(0);
@@ -236,9 +244,7 @@ const BlogList: React.FC = () => {
 
   return (
     <BlogCtx.Provider value={{ blogList, page, setBlogList, setPage }}>
-      <BlogLayout>
-        <Outlet />
-      </BlogLayout>
+      <BlogLayout>{outlet}</BlogLayout>
     </BlogCtx.Provider>
   );
 };

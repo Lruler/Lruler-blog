@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import useDelayNav from "../../hooks/useDelayNac";
 import useFetch from "../../services/fetch";
 import Message from "../message";
 import "./index.less";
@@ -12,7 +13,7 @@ const LoginInput: React.FC = () => {
     if (e.keyCode === 13) {
       const res = await useFetch("login", { password: pwd }, "POST");
       if (res.code === 0) {
-        nav("/blog/list/page=0");
+        useDelayNav(nav, "/blog/list/page=0");
         localStorage.setItem("token", res.data.token);
       } else Message.error(res.msg);
     }

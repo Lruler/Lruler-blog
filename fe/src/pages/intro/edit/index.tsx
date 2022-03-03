@@ -8,6 +8,7 @@ import Message from "../../../components/message";
 import FileUpload from "../../../components/fileUpload";
 import useFetch from "../../../services/fetch";
 import "./index.less";
+import useDelayNav from "../../../hooks/useDelayNac";
 
 interface editPro {
   html: string;
@@ -41,7 +42,7 @@ export default function Edit() {
       const data = await useFetch("postBlog", blog, "POST");
       if (data.msg === "success") {
         Message.success(data.msg);
-        nav(`/blog/list/page=0`);
+        useDelayNav(nav, `/blog/list/page=0`);
       }
     } else {
       Message.error("请填写完整!");
@@ -49,7 +50,7 @@ export default function Edit() {
   };
 
   const back = () => {
-    nav("/blog/list/page=0");
+    useDelayNav(nav, "/blog/list/page=0");
   };
 
   const uploadImg = async (e: React.ChangeEvent<HTMLInputElement>) => {
