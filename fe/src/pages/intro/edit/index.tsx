@@ -43,7 +43,14 @@ export default function Edit() {
       const data = await useFetch("postBlog", blog, "POST");
       if (data.msg === "success") {
         Message.success(data.msg);
+        localStorage.removeItem("content");
+        localStorage.removeItem("title");
+        localStorage.removeItem("tags");
+        localStorage.removeItem("intro");
         useDelayNav(nav, `/blog/list/page=0`);
+      } else {
+        localStorage.removeItem("token");
+        useDelayNav(nav, "/home");
       }
     } else {
       Message.error("请填写完整!");
@@ -73,10 +80,21 @@ export default function Edit() {
 
   useEffect(() => {
     const oldContent = localStorage.getItem("content");
-    if (oldContent) {
+    const ointro = localStorage.getItem("intro");
+    const oTags = localStorage.getItem("tags");
+    const oTitle = localStorage.getItem("title");
+    if (oldContent || oTitle || ointro || oTitle) {
       const r = confirm("检测到你有缓存,是否继续");
-      if (r) setContent(oldContent);
-      else localStorage.removeItem("content")
+      if (r) {
+        setContent(oldContent as string);
+        setIntro(ointro as string);
+        setBlogMsg({ title: oTitle as string, tags: oTags as string });
+      } else {
+        localStorage.removeItem("content");
+        localStorage.removeItem("intro");
+        localStorage.removeItem("title");
+        localStorage.removeItem("tags");
+      }
     }
   }, []);
 
@@ -89,22 +107,29 @@ export default function Edit() {
           title:
           <input
             type="text"
-            onChange={(e) =>
-              setBlogMsg((pre) => ({ ...pre, title: e.target.value }))
-            }
+            value={blogMsg.title}
+            onChange={(e) => {
+              setBlogMsg((pre) => ({ ...pre, title: e.target.value }));
+              localStorage.setItem("title", e.target.value);
+            }}
           />
           tag:
           <input
             type="text"
-            onChange={(e) =>
-              setBlogMsg((pre) => ({ ...pre, tags: e.target.value }))
-            }
+            value={blogMsg.tags}
+            onChange={(e) => {
+              setBlogMsg((pre) => ({ ...pre, tags: e.target.value }));
+              localStorage.setItem("tags", e.target.value);
+            }}
           />
         </form>
         <textarea
           placeholder="输入文章简介"
           value={intro}
-          onChange={(e) => setIntro(e.target.value)}
+          onChange={(e) => {
+            setIntro(e.target.value);
+            localStorage.setItem("intro", e.target.value);
+          }}
         />
         <Editor
           value={content}
