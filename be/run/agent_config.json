@@ -157,6 +157,10 @@
       "secret": "<String len: 6>",
       "enable": false
     },
+    "cors": {
+      "origin": "*",
+      "allowMethods": "GET,HEAD,PUT,POST,DELETE,PATCH"
+    },
     "env": "local",
     "name": "222",
     "keys": "<String len: 22>",
@@ -194,6 +198,7 @@
         "@prisma/client": "^3.9.2",
         "await-stream-ready": "^1.0.1",
         "egg": "^2.6.1",
+        "egg-cors": "^2.2.3",
         "egg-jwt": "^3.1.7",
         "egg-scripts": "^2.6.0",
         "stream-wormhole": "^1.1.0"
@@ -494,6 +499,17 @@
       "from": "/Users/lruler/Desktop/lruler-blog/be/config/plugin.ts",
       "path": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-jwt",
       "version": "3.1.7"
+    },
+    "cors": {
+      "enable": true,
+      "package": "egg-cors",
+      "name": "cors",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/lruler/Desktop/lruler-blog/be/config/plugin.ts",
+      "path": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-cors",
+      "version": "2.2.3"
     }
   }
 }

@@ -23,6 +23,10 @@
     "secret": "/Users/lruler/Desktop/lruler-blog/be/config/config.default.ts",
     "enable": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg-jwt/config/config.default.js"
   },
+  "cors": {
+    "origin": "/Users/lruler/Desktop/lruler-blog/be/config/config.default.ts",
+    "allowMethods": "/Users/lruler/Desktop/lruler-blog/be/config/config.default.ts"
+  },
   "security": {
     "csrf": {
       "enable": "/Users/lruler/Desktop/lruler-blog/be/config/config.default.ts",
@@ -192,6 +196,7 @@
       "@prisma/client": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg/config/config.default.js",
       "await-stream-ready": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg/config/config.default.js",
       "egg": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg/config/config.default.js",
+      "egg-cors": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg/config/config.default.js",
       "egg-jwt": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg/config/config.default.js",
       "egg-scripts": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg/config/config.default.js",
       "stream-wormhole": "/Users/lruler/Desktop/lruler-blog/be/node_modules/egg/config/config.default.js"
