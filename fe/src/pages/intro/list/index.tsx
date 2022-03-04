@@ -241,7 +241,6 @@ const BlogList: React.FC = () => {
       }
     })();
   }, [pathname]);
-
   return (
     <BlogCtx.Provider value={{ blogList, page, setBlogList, setPage }}>
       <BlogLayout>{outlet}</BlogLayout>
