@@ -14,6 +14,9 @@ export default class BlogController extends Controller {
     const take = 10;
     const skip = +page * 10;
     const list = await prisma.articles.findMany({
+      orderBy: [{
+        createdAt: 'desc',
+      }],
       take,
       skip,
       select: {
@@ -116,6 +119,11 @@ export default class BlogController extends Controller {
     const { key, page } = ctx.request.query;
     const take = 10;
     let blogs = await prisma.articles.findMany({
+      orderBy: [
+        {
+          createdAt: 'desc',
+        },
+      ],
       where: {
         OR: [
           { title: { contains: key } },
