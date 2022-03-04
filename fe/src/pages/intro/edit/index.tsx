@@ -34,6 +34,7 @@ export default function Edit() {
 
   const handleContent = ({ html, text }: editPro) => {
     setContent(text);
+    localStorage.setItem("content", text);
   };
 
   const post = async () => {
@@ -68,6 +69,15 @@ export default function Edit() {
     img.addEventListener("click", () => {
       FileUpload.useUpload(uploadImg);
     });
+  }, []);
+
+  useEffect(() => {
+    const oldContent = localStorage.getItem("content");
+    if (oldContent) {
+      const r = confirm("检测到你有缓存,是否继续");
+      if (r) setContent(oldContent);
+      else localStorage.removeItem("content")
+    }
   }, []);
 
   return (
