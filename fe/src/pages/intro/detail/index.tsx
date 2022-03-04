@@ -77,20 +77,29 @@ const Detail: React.FC = () => {
   };
 
   useEffect(() => {
+    let isUnmount = false;
     (async () => {
       const res = await useFetch("getBlog", { id: id as string });
-      setContent(md.render(res.data.content));
-      setBlog(res.data);
+      if (res.code === 0 && !isUnmount) {
+        setContent(md.render(res.data.content));
+        setBlog(res.data);
+      }
     })();
+    return () => {
+      isUnmount = true;
+    };
   }, []);
   return (
     <>
       <div className="blog-detail-title">{blog?.title}</div>
       <div className="blog-detail-intro">
         <div className="tags">{getTag()}</div>
-        <div className="time">{String(blog?.createdAt).slice(0,10)}</div>
+        <div className="time">{String(blog?.createdAt).slice(0, 10)}</div>
       </div>
-
+      <div id="blogintro">
+        <p>{blog?.intro}</p>
+        <hr />
+      </div>
       <div id="blog-detail" dangerouslySetInnerHTML={{ __html: content }}></div>
     </>
   );

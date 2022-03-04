@@ -24,10 +24,12 @@ export const SidebarR: React.FC = () => {
 export const SidebarL: React.FC = () => {
   const [tags, setTags] = useState<TagRes[]>();
   useEffect(() => {
+    let isUnmount = false; //这里插入isUnmount
     (async () => {
       const res = await useFetch("getTags");
-      setTags(res.data);
+      if(res.code === 0 && !isUnmount) setTags(res.data);
     })();
+    return () => {isUnmount = true}
   }, []);
   return (
     <div className="blog-sidebar">
