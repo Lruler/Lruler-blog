@@ -1,9 +1,12 @@
 import { PrismaClient } from '@prisma/client';
 import Controller from '../core/base_controller';
-import path from 'path';
-import fs from 'fs';
-import sendToWormhole from 'stream-wormhole';
-import awaitWriteStream from 'await-stream-ready';
+import * as path from 'path';
+import * as fs from 'fs';
+import * as sendToWormhole from 'stream-wormhole';
+import * as awaitWriteStream from 'await-stream-ready';
+
+console.log(sendToWormhole);
+
 
 const prisma = new PrismaClient();
 
@@ -104,6 +107,7 @@ export default class BlogController extends Controller {
       url = `${ctx.origin}/public/upload/${filename}`;
     } catch (err) {
       // 必须将上传的文件流消费掉，要不然浏览器响应会卡死
+      console.log(sendToWormhole);
       await sendToWormhole(stream);
       ctx.status = 500;
       ctx.body = {

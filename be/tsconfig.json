@@ -19,11 +19,8 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "importHelpers": true,
-    "sourceMap": true,
-    "outDir": "dist",
-    "lib": ["esnext"],
-    "esModuleInterop": true
+    "inlineSourceMap": true,
+    "importHelpers": true
   },
-  "exclude": ["app/public", "app/views", "node_modules*"]
+  "exclude": ["app/public", "app/web", "app/views"]
 }
