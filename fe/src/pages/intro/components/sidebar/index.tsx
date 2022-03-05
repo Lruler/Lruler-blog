@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import useFetch from "../../../../services/fetch";
+import { permission } from "../../../../router";
 import Tag from "../tag";
 import LinkBtn from "../../../../components/linkBtn";
 import "./index.less";
 
 export const SidebarR: React.FC = () => {
+  console.log(permission)
   return (
     <div className="blog-sidebar sidebar-R">
       <div className="sidebar-link">
@@ -15,7 +17,20 @@ export const SidebarR: React.FC = () => {
         />
         <LinkBtn link={"/resume"} icon="bed" text="简历" />
         <LinkBtn link={"/"} icon="home" text="主页" isBlank={false} />
-        <LinkBtn link={"/blog/list/page=0"} icon="book" text="首页" isBlank={false} />
+        <LinkBtn
+          link={"/blog/list/page=0"}
+          icon="book"
+          text="首页"
+          isBlank={false}
+        />
+        {permission ? (
+          <LinkBtn
+            link={"/blog/edit"}
+            icon="pencil-square-o"
+            text="编辑"
+            isBlank={false}
+          />
+        ) : null}
       </div>
     </div>
   );
@@ -27,9 +42,11 @@ export const SidebarL: React.FC = () => {
     let isUnmount = false; //这里插入isUnmount
     (async () => {
       const res = await useFetch("getTags");
-      if(res.code === 0 && !isUnmount) setTags(res.data);
+      if (res.code === 0 && !isUnmount) setTags(res.data);
     })();
-    return () => {isUnmount = true}
+    return () => {
+      isUnmount = true;
+    };
   }, []);
   return (
     <div className="blog-sidebar">

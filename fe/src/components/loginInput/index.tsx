@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import { changePermission } from "../../router";
 import useDelayNav from "../../hooks/useDelayNac";
 import useFetch from "../../services/fetch";
 import Message from "../message";
@@ -15,6 +16,7 @@ const LoginInput: React.FC = () => {
       if (res.code === 0) {
         useDelayNav(nav, "/blog/list/page=0");
         localStorage.setItem("token", res.data.token);
+        changePermission(true);
       } else Message.error(res.msg);
     }
   };

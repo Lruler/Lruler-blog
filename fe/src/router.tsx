@@ -8,18 +8,19 @@ import Resume from "./pages/intro/resume";
 import { List, ListByTag, ListBySearch } from "./pages/intro/list";
 import "./styles/animation.less";
 
-let isSkip: boolean = false;
-
 export let changeSkip: any;
+export let changePermission: any;
+export let permission: boolean;
 
 const App: React.FC = () => {
-  const location = useLocation()
+  const location = useLocation();
   const [skip, setSkip] = useState(false);
-
+  const [isRuler, setIsRuler] = useState(false);
   changeSkip = setSkip;
-
+  changePermission = setIsRuler;
+  permission = isRuler;
   useEffect(() => {
-    setSkip(false)
+    setSkip(false);
   }, [location.pathname]);
 
   return (
