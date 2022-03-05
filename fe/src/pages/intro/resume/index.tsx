@@ -1,5 +1,5 @@
 import React from "react";
-import resume from "../../../assets/pdf/resume.pdf";
+import resume from '../../../assets/pdf/resume.pdf'
 import "./index.less";
 
 const Resume: React.FC = () => {

@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import Button from "../button";
-import useClipboard from "../../hooks/useClipboard";
 import "./index.less";
 
 type ChangeEvent = React.ChangeEventHandler<HTMLInputElement>;
@@ -22,9 +21,9 @@ const FileUpload: CompoundedFileUpload<UploadProps> = ({ onChange }) => {
   const [imgUrl, setImgUrl] = useState("");
 
   FileUpload.success = (url) => {
-    useClipboard(url);
     setUploadSuc(true);
     setImgUrl(url);
+    console.log(url)
   };
 
   const clickUpload = () => {
