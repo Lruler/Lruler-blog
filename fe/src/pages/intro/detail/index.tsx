@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import MarkdownIt from "markdown-it";
 import hljs from "highlight.js";
+import Message from "../../../components/message";
+import Button from "../../../components/button";
 import Tag from "../components/tag";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import useFetch from "../../../services/fetch";
@@ -17,6 +19,7 @@ const Detail: React.FC = () => {
   const [blog, setBlog] = useState<Blog>();
 
   useScrollToTop();
+  const nav = useNavigate();
 
   const md: MarkdownIt = new MarkdownIt({
     html: true,
@@ -76,6 +79,17 @@ const Detail: React.FC = () => {
       ));
   };
 
+  const goUpdate = () => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      nav(`/blog/edit`, { state: id });
+    } else Message.error("请登录!");
+  };
+
+  const deleteBlog = async () => {
+    Message.error("请登录!");
+  };
+
   useEffect(() => {
     let isUnmount = false;
     (async () => {
@@ -101,6 +115,10 @@ const Detail: React.FC = () => {
         <hr />
       </div>
       <div id="blog-detail" dangerouslySetInnerHTML={{ __html: content }}></div>
+      <div className="blog-detail-footer">
+        <Button onClick={goUpdate}>编辑</Button>
+        <Button onClick={deleteBlog}>删除</Button>
+      </div>
     </>
   );
 };

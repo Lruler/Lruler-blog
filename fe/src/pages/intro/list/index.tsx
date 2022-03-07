@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useContext, SetStateAction } from "react";
 import { useLocation, useParams, useOutlet } from "react-router-dom";
 import { useNavigate } from "react-router";
+import useDelayNav from "../../../hooks/useDelayNav";
 // 组件导入
 import Header from "../components/header";
 import Card from "../components/card";
@@ -13,7 +14,6 @@ import useTime from "../../../hooks/useTime";
 import useFetch from "../../../services/fetch";
 // less导入
 import "./index.less";
-import useDelayNav from "../../../hooks/useDelayNac";
 
 type BlogCtx = {
   blogList: Blog[];

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { changePermission } from "../../router";
-import useDelayNav from "../../hooks/useDelayNac";
+import useDelayNav from "../../hooks/useDelayNav";
 import useFetch from "../../services/fetch";
 import Message from "../message";
 import "./index.less";

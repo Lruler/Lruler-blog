@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router";
-import useDelayNav from "../../../../hooks/useDelayNac";
+import useDelayNav from "../../../../hooks/useDelayNav";
 import { BlogCtx } from "../../list";
 
 const Header: React.FC = () => {

@@ -39,3 +39,8 @@ interface searchBlogReq extends getListReq {
 interface searchBlogRes {
   rows: Blog[];
 }
+
+interface updateBlogReq {
+  id: number;
+  content: string;
+}

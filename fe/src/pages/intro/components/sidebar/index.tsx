@@ -6,7 +6,6 @@ import LinkBtn from "../../../../components/linkBtn";
 import "./index.less";
 
 export const SidebarR: React.FC = () => {
-  console.log(permission)
   return (
     <div className="blog-sidebar sidebar-R">
       <div className="sidebar-link">
@@ -16,7 +15,7 @@ export const SidebarR: React.FC = () => {
           text="Github"
         />
         <LinkBtn link={"/resume"} icon="bed" text="简历" />
-        <LinkBtn link={"/"} icon="home" text="主页" isBlank={false} />
+        <LinkBtn link={"/home"} icon="home" text="主页" isBlank={false} />
         <LinkBtn
           link={"/blog/list/page=0"}
           icon="book"

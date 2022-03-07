@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import MarkdownIt from "markdown-it";
 import Editor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
+import { useDebouncedEffect } from "../../../hooks/useDebounce";
+import useDelayNav from "../../../hooks/useDelayNav";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import Message from "../../../components/message";
 import FileUpload from "../../../components/fileUpload";
 import useFetch from "../../../services/fetch";
 import "./index.less";
-import useDelayNav from "../../../hooks/useDelayNac";
 
 interface editPro {
   html: string;
@@ -24,6 +25,7 @@ const mdRender = new MarkdownIt();
 
 export default function Edit() {
   const nav = useNavigate();
+  const location = useLocation();
   useScrollToTop();
   const [content, setContent] = useState("");
   const [blogMsg, setBlogMsg] = useState<BlogPro>({
@@ -34,7 +36,6 @@ export default function Edit() {
 
   const handleContent = ({ html, text }: editPro) => {
     setContent(text);
-    localStorage.setItem("content", text);
   };
 
   const post = async () => {
@@ -49,6 +50,7 @@ export default function Edit() {
         localStorage.removeItem("intro");
         useDelayNav(nav, `/blog/list/page=0`);
       } else {
+        console.log(222)
         localStorage.removeItem("token");
         useDelayNav(nav, "/home");
       }
@@ -57,6 +59,23 @@ export default function Edit() {
     }
   };
 
+  const update = async () => {
+    const t = localStorage.getItem('token')
+    console.log(t)
+    const res = await useFetch('updateBlog', { id: Number(location.state), content }, "POST")
+    if (res.msg === 'success') {
+      Message.success('更新成功');
+      localStorage.removeItem("content");
+      localStorage.removeItem("title");
+      localStorage.removeItem("tags");
+      localStorage.removeItem("intro");
+      useDelayNav(nav, `/blog/list/page=0`);
+    }
+    // } else {
+    //   localStorage.removeItem("token");
+    //   useDelayNav(nav, "/home");
+    // }
+  }
   const back = () => {
     useDelayNav(nav, "/blog/list/page=0");
   };
@@ -79,29 +98,61 @@ export default function Edit() {
   }, []);
 
   useEffect(() => {
-    const oldContent = localStorage.getItem("content");
-    const ointro = localStorage.getItem("intro");
-    const oTags = localStorage.getItem("tags");
-    const oTitle = localStorage.getItem("title");
-    if (oldContent || oTitle || ointro || oTitle) {
-      const r = confirm("检测到你有缓存,是否继续");
-      if (r) {
-        setContent(oldContent as string);
-        setIntro(ointro as string);
-        setBlogMsg({ title: oTitle as string, tags: oTags as string });
-      } else {
-        localStorage.removeItem("content");
-        localStorage.removeItem("intro");
-        localStorage.removeItem("title");
-        localStorage.removeItem("tags");
+    if (location.state) {
+      (async () => {
+        const res = await useFetch("getBlog", { id: location.state as string });
+        let t: string = "";
+        for (let v of res.data.tags as TagRes[]) {
+          t += v.tag + ",";
+        }
+        t = t.slice(0, -1);
+        setBlogMsg({ tags: t, title: res.data.title });
+        setIntro(res.data.intro);
+        setContent(res.data.content);
+      })();
+    } else {
+      const oldContent = localStorage.getItem("content");
+      const ointro = localStorage.getItem("intro");
+      const oTags = localStorage.getItem("tags");
+      const oTitle = localStorage.getItem("title");
+      if (oldContent || oTitle || ointro || oTitle) {
+        const r = confirm("检测到你有缓存,是否继续");
+        if (r) {
+          setContent(oldContent as string);
+          setIntro(ointro as string);
+          setBlogMsg({ title: oTitle as string, tags: oTags as string });
+        } else {
+          localStorage.removeItem("content");
+          localStorage.removeItem("intro");
+          localStorage.removeItem("title");
+          localStorage.removeItem("tags");
+        }
       }
     }
   }, []);
 
+  useDebouncedEffect(
+    () => {
+      const draft = localStorage.getItem("content");
+      if (content !== "" && content !== draft) {
+        localStorage.removeItem("content");
+        localStorage.setItem("content", content);
+        Message.success("自动保存成功！");
+      }
+    },
+    2000,
+    [content]
+  );
+
   return (
     <>
       <div className="edit-wrapper">
-        <button onClick={post}>发表文章</button>
+        {location.state ? (
+          <button onClick={update}>更新文章</button>
+        ) : (
+          <button onClick={post}>发表文章</button>
+        )}
+
         <button onClick={back}>返回主页</button>
         <form>
           title:

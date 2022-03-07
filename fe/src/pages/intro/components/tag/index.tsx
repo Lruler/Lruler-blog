@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router";
+import useDelayNav from "../../../../hooks/useDelayNav";
 import classNames from "classnames";
 import "./index.less";
 import { BlogCtx } from "../../list";
-import useDelayNav from "../../../../hooks/useDelayNac";
+
 
 interface TagProps {
   tag: string;
