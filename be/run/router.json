@@ -111,6 +111,7 @@
     "path": "/blog/upload",
     "regexp": "/^\\/blog\\/upload(?:\\/(?=$))?$/",
     "stack": [
+      "jwtV",
       "wrappedController"
     ]
   },
@@ -123,6 +124,7 @@
     "path": "/blog/delete",
     "regexp": "/^\\/blog\\/delete(?:\\/(?=$))?$/",
     "stack": [
+      "jwtV",
       "wrappedController"
     ]
   },

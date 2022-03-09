@@ -17,7 +17,7 @@ export default (app: Application) => {
 
   // 主人权限 CRUD
   router.post('/blog/add', jwt, controller.blog.addBlog);
-  router.post('/blog/upload', controller.blog.uploadImg);
-  router.delete('/blog/delete', controller.blog.deleteBlog);
+  router.post('/blog/upload', jwt, controller.blog.uploadImg);
+  router.delete('/blog/delete', jwt, controller.blog.deleteBlog);
   router.post('/blog/update', controller.blog.updateBlog);
 };

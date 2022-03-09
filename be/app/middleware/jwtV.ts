@@ -3,6 +3,7 @@ export default options => {
     const token = ctx.request.header.token;
     if (token) {
       try {
+        console.log(token);
         ctx.app.jwt.verify(token, options.secret); // 验证token
         await next();
       } catch (error) {
