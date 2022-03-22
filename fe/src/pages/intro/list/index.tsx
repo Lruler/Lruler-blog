@@ -200,7 +200,7 @@ const BlogLayout: React.FC = ({ children }) => {
       </div>
       <footer>
         {time}
-        <i className="fa fa-heart" aria-hidden="true" />
+        <i className="fa fa-heart" aria-hidden="true" /> 
       </footer>
     </div>
   );

@@ -35,7 +35,7 @@ const Login: React.FC = () => {
           <div className="look" style={{ opacity: index ? 1 : 0 }}>
             <LinkBtn
               link="/blog/list/page=0"
-              text="goBlog"
+              text="Blog"
               icon="book"
               isBlank={false}
             />
